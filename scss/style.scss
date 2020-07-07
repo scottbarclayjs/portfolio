@@ -1,0 +1,82 @@
+@import 'resets';
+@import 'variables';
+
+a {
+	color: $text-color;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.nav {
+	height: 100vh;
+	width: 20vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 2rem 2.5rem;
+	box-shadow: 0 0 25px $box-shadow;
+	color: $text-color;
+	&-name .name {
+		background-color: $text-color;
+		color: #fff;
+		padding: 0.5rem 1.25rem;
+		letter-spacing: 2px;
+		line-height: 1.4;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.5rem;
+	}
+	&-links {
+		display: flex;
+		flex-direction: column;
+		transform: translateY(-75px);
+		list-style: none;
+		& li {
+			padding: 0.25rem 0;
+			margin: 0.25rem 0;
+			font-size: 0.8rem;
+			letter-spacing: 2px;
+			text-align: right;
+			align-self: flex-end;
+			border-bottom: 1px solid #fff;
+			&:hover {
+				border-bottom: 1px solid $text-color;
+				transition: all 0.5s;
+			}
+			&.projects {
+				color: rgba(128, 128, 128, 0.664);
+				&:hover {
+					cursor: default;
+					border-bottom: 1px solid #fff;
+				}
+			}
+		}
+	}
+	&-bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+	}
+	&-message {
+		margin-bottom: 1rem;
+	}
+	&-icons a {
+		margin-left: 0.75rem;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+.content {
+	height: 100vh;
+	width: 80vw;
+	background-image: url(/assets/background.jpg);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 20vw;
+	z-index: -999;
+}
