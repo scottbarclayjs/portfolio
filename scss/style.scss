@@ -79,7 +79,8 @@ a {
 .content {
 	height: 100vh;
 	width: 80vw;
-	background-image: url(/assets/background.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.4)),
+		url(/assets/background.jpg);
 	background-size: cover;
 	background-position: center;
 	position: absolute;
