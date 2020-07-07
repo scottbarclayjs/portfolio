@@ -1,5 +1,6 @@
 @import 'resets';
 @import 'variables';
+@import 'queries';
 
 a {
 	color: $text-color;
@@ -26,15 +27,15 @@ a {
 		text-transform: uppercase;
 		font-weight: 300;
 		font-size: 1.5rem;
+		box-shadow: 0 0 15px $box-shadow;
 	}
 	&-links {
 		display: flex;
 		flex-direction: column;
-		transform: translateY(-75px);
 		list-style: none;
 		& li {
 			padding: 0.25rem 0;
-			margin: 0.25rem 0;
+			margin: 0.75rem 0;
 			font-size: 0.8rem;
 			letter-spacing: 2px;
 			text-align: right;
@@ -42,7 +43,8 @@ a {
 			border-bottom: 1px solid #fff;
 			&:hover {
 				border-bottom: 1px solid $text-color;
-				transition: all 0.5s;
+				transform: translateX(-5px);
+				transition: all 0.7s;
 			}
 			&.projects {
 				color: rgba(128, 128, 128, 0.664);
@@ -60,12 +62,16 @@ a {
 		text-align: right;
 	}
 	&-message {
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
+		max-width: 150px;
 	}
 	&-icons a {
-		margin-left: 0.75rem;
+		max-width: 150px;
+		margin: 0.25rem;
+		font-size: 1.25rem;
 		&:hover {
-			color: $primary-color;
+			color: $secondary-color;
+			transform: translateY(-5px);
 		}
 	}
 }
@@ -73,8 +79,9 @@ a {
 .content {
 	height: 100vh;
 	width: 80vw;
-	background-image: url(/dist/assets/background.jpg);
+	background-image: url(/assets/background.jpg);
 	background-size: cover;
+	background-position: center;
 	position: absolute;
 	top: 0;
 	left: 20vw;

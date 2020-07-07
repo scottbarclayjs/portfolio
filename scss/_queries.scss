@@ -1,0 +1,38 @@
+@media screen and (max-width: 830px) {
+	nav.nav {
+		height: 20vh;
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #fff;
+		& ul.nav-links {
+			display: flex;
+			flex-direction: row;
+			& li {
+				margin: 0 0.75rem;
+				&:hover {
+					transform: translateX(0);
+				}
+				&.projects:hover {
+					letter-spacing: 0px;
+				}
+			}
+		}
+	}
+
+	.nav-bottom {
+		flex-direction: row;
+		align-items: flex-start;
+		& p {
+			display: none;
+		}
+	}
+
+	div.content {
+		position: absolute;
+		left: 0;
+		width: 100vw;
+	}
+}
