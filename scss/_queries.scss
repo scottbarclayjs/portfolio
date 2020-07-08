@@ -43,10 +43,20 @@
 		}
 		& .nav-name {
 			height: 100%;
-			width: 75px;
+			width: 50px;
+			& .name {
+				font-size: 1.35rem;
+			}
 		}
 		& .nav-bottom .nav-icons {
 			transform: translateY(-20px);
+			display: flex;
+			flex-direction: column;
+			& a {
+				font-size: 0.75rem;
+				max-width: 100px;
+				margin: 0.25rem 0.25rem 0.25rem 0;
+			}
 		}
 	}
 }
