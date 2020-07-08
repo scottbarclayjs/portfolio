@@ -11,23 +11,21 @@
 			display: flex;
 			flex-direction: row;
 			& li {
-				margin: 0 0.75rem;
+				margin: 0 1rem;
 				&:hover {
 					transform: translateX(0);
+					transform: scale(1.1);
 				}
 			}
 		}
 	}
 
-	.nav-bottom {
-		flex-direction: row;
-		align-items: flex-start;
-		& p {
-			display: none;
-		}
+	.nav-bottom .nav-message,
+	.nav-icons {
+		display: none;
 	}
 
-	div.content {
+	div.header {
 		position: absolute;
 		left: 0;
 		width: 100vw;
@@ -48,15 +46,19 @@
 				font-size: 1.35rem;
 			}
 		}
-		& .nav-bottom .nav-icons {
-			transform: translateY(-20px);
-			display: flex;
-			flex-direction: column;
-			& a {
-				font-size: 0.75rem;
-				max-width: 100px;
-				margin: 0.25rem 0.25rem 0.25rem 0;
-			}
-		}
+	}
+
+	.header {
+		transform: translateY(50px);
+		padding: 0.25rem;
+		line-height: 1.5;
+	}
+	.header h1 {
+		font-size: 1rem;
+		letter-spacing: 1px;
+	}
+
+	.header .contact-btn {
+		padding: 1rem 2.25rem;
 	}
 }

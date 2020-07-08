@@ -15,8 +15,11 @@ a {
 	justify-content: space-between;
 	align-items: flex-end;
 	padding: 2rem 2.5rem;
-	box-shadow: 0 0 25px $box-shadow;
+	box-shadow: 0 0 35px $box-shadow;
 	color: $text-color;
+	position: absolute;
+	top: 0;
+	left: 0;
 	&-name .name {
 		background-color: $text-color;
 		color: #fff;
@@ -49,7 +52,6 @@ a {
 			&.projects {
 				color: rgba(128, 128, 128, 0.664);
 				&:hover {
-					cursor: default;
 					border-bottom: 1px solid #fff;
 				}
 			}
@@ -67,24 +69,49 @@ a {
 	}
 	&-icons a {
 		max-width: 150px;
-		margin: 0.25rem;
+		margin: 0.5rem;
 		font-size: 1.25rem;
 		&:hover {
-			color: darker($text-color);
+			color: rgb(158, 124, 81);
 			transform: translateY(-5px);
 		}
 	}
 }
 
-.content {
+.header {
 	height: 100vh;
 	width: 80vw;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.4)),
-		url(/assets/background.jpg);
+	background-image: url(/assets/background.jpg);
 	background-size: cover;
 	background-position: center;
 	position: absolute;
 	top: 0;
 	left: 20vw;
-	z-index: -999;
+	text-align: center;
+	z-index: -1;
+	&-content {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	& h1 {
+		font-weight: 300;
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+		text-shadow: 0 -5px 10px $box-shadow;
+	}
+}
+
+.contact-btn {
+	padding: 1.5rem 3rem;
+	font-size: 1.25rem;
+	margin: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.608);
+	border: none;
+	border-radius: 76% 24% 80% 20% / 32% 25% 75% 68%;
+	color: $text-color;
+	text-transform: uppercase;
+	z-index: 999;
 }
