@@ -20,6 +20,7 @@ a {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	&-name .name {
 		background-color: $text-color;
 		color: #fff;
@@ -115,7 +116,7 @@ a {
 	border-radius: 76% 24% 80% 20% / 32% 25% 75% 68%;
 	color: $text-color;
 	text-transform: uppercase;
-	z-index: 999;
+	z-index: 0;
 	box-shadow: 0 0 15px $box-shadow;
 }
 
@@ -138,12 +139,12 @@ a {
 	& .fullScreen,
 	& .download {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 50%;
+		left: 50%;
 		background-color: $text-color;
 		color: #fff;
 		text-transform: uppercase;
-		border: none;
+		border: 1px solid #fff;
 		letter-spacing: 2px;
 		text-align: center;
 		width: 140px;
@@ -153,12 +154,10 @@ a {
 	& .fullScreen {
 		top: 50%;
 		left: 47%;
-		transform: translate(-100%, -25%);
+		transform: translate(-100%, -50%);
 	}
 	& .download {
-		top: 50%;
-		left: 47%;
-		transform: translate(50%, -25%);
+		transform: translate(0, -50%);
 	}
 	& button.visible {
 		opacity: 1;

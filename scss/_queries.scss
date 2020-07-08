@@ -1,3 +1,21 @@
+@media screen and (max-width: 1100px) {
+	.resume img.resume-img {
+		height: 50vh;
+	}
+
+	section.resume .fullScreen,
+	section.resume .download {
+		height: 25px;
+		width: 100px;
+		font-size: 0.5rem;
+	}
+
+	section.resume button.fullScreen:hover,
+	section.resume button.download:hover {
+		letter-spacing: 5px;
+	}
+}
+
 @media screen and (max-width: 830px) {
 	nav.nav {
 		height: 20vh;
@@ -25,10 +43,12 @@
 		display: none;
 	}
 
-	div.header {
-		position: absolute;
-		left: 0;
-		width: 100vw;
+	header.header {
+		margin-left: 0;
+	}
+
+	section.resume {
+		margin-left: 0;
 	}
 }
 
