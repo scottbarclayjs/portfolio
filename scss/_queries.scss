@@ -15,9 +15,6 @@
 				&:hover {
 					transform: translateX(0);
 				}
-				&.projects:hover {
-					letter-spacing: 0px;
-				}
 			}
 		}
 	}
@@ -34,5 +31,22 @@
 		position: absolute;
 		left: 0;
 		width: 100vw;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	nav.nav {
+		padding: 0;
+		& ul.nav-links li {
+			margin: 0.5rem;
+			letter-spacing: 1px;
+		}
+		& .nav-name {
+			height: 100%;
+			width: 75px;
+		}
+		& .nav-bottom .nav-icons {
+			transform: translateY(-20px);
+		}
 	}
 }

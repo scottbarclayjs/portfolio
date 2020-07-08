@@ -70,7 +70,7 @@ a {
 		margin: 0.25rem;
 		font-size: 1.25rem;
 		&:hover {
-			color: $secondary-color;
+			color: darker($text-color);
 			transform: translateY(-5px);
 		}
 	}
