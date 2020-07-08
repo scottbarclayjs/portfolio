@@ -17,7 +17,7 @@ a {
 	padding: 2rem 2.5rem;
 	box-shadow: 0 0 35px $box-shadow;
 	color: $text-color;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	&-name .name {
@@ -55,6 +55,9 @@ a {
 					border-bottom: 1px solid #fff;
 				}
 			}
+			&.active {
+				border-bottom: 1px solid $text-color;
+			}
 		}
 	}
 	&-bottom {
@@ -80,13 +83,12 @@ a {
 
 .header {
 	height: 100vh;
-	width: 80vw;
+	overflow-x: hidden;
 	background-image: url(/assets/background.jpg);
 	background-size: cover;
 	background-position: center;
-	position: absolute;
-	top: 0;
-	left: 20vw;
+	background-attachment: fixed;
+	margin-left: 20vw;
 	text-align: center;
 	z-index: -1;
 	&-content {
@@ -100,7 +102,7 @@ a {
 		font-weight: 300;
 		font-size: 2.5rem;
 		letter-spacing: 2px;
-		text-shadow: 0 -5px 10px $box-shadow;
+		text-shadow: 0 -5px 10px rgba(0, 0, 0, 0.505);
 	}
 }
 
@@ -114,4 +116,73 @@ a {
 	color: $text-color;
 	text-transform: uppercase;
 	z-index: 999;
+	box-shadow: 0 0 15px $box-shadow;
+}
+
+.resume {
+	margin-left: 20vw;
+	padding: 5rem 0;
+	text-align: center;
+	position: relative;
+	& h1 {
+		font-weight: 300;
+		font-size: 2.5rem;
+		letter-spacing: 5px;
+		text-shadow: 0 -1px 5px rgba(0, 0, 0, 0.505);
+		margin-bottom: 2rem;
+	}
+	& img {
+		height: 82vh;
+		box-shadow: 0 0 25px $box-shadow;
+	}
+	& .fullScreen,
+	& .download {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $text-color;
+		color: #fff;
+		text-transform: uppercase;
+		border: none;
+		letter-spacing: 2px;
+		text-align: center;
+		width: 140px;
+		height: 30px;
+		opacity: 0;
+	}
+	& .fullScreen {
+		top: 50%;
+		left: 47%;
+		transform: translate(-100%, -25%);
+	}
+	& .download {
+		top: 50%;
+		left: 47%;
+		transform: translate(50%, -25%);
+	}
+	& button.visible {
+		opacity: 1;
+		transition: all 1s;
+		cursor: pointer;
+		&:hover {
+			letter-spacing: 10px;
+			font-size: 0.5rem;
+		}
+	}
+	& button.hidden {
+		opacity: 0;
+		transition: all 1s;
+	}
+}
+
+.resume-img.imgHover {
+	opacity: 0.3;
+	transform: scale(0.9);
+	transition: all 1s;
+}
+
+.resume-img.imgBlur {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 1s;
 }
