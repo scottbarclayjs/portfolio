@@ -102,7 +102,7 @@ textarea {
 	justify-content: center;
 	align-items: center;
 	&-content {
-		height: 80vh;
+		height: 85vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -111,7 +111,7 @@ textarea {
 		background-color: rgba(255, 255, 255, 0.608);
 	}
 	& i {
-		font-size: 12rem;
+		font-size: 10rem;
 		margin: 2rem 0;
 	}
 	& h1 {
