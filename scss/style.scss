@@ -2,6 +2,10 @@
 @import 'variables';
 @import 'queries';
 
+html {
+	scroll-behavior: smooth;
+}
+
 a {
 	color: $text-color;
 	text-decoration: none;
@@ -200,12 +204,15 @@ textarea {
 }
 
 .contact {
-	padding-top: 5rem;
+	padding-top: 3rem;
 	margin-left: 15vw;
-	height: 120vh;
 	position: relative;
 	text-align: center;
 	color: #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	& h1 {
 		font-weight: 300;
 		font-size: 2.5rem;
@@ -225,7 +232,7 @@ textarea {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 120vh;
+		height: 130vh;
 		width: 85vw;
 		background-size: cover;
 		background-position: center;

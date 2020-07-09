@@ -37,6 +37,16 @@
 	}
 }
 
+@media screen and (max-width: 1025px) {
+	section.contact {
+		& .contact-background,
+		& .contact-backgroundTwo,
+		& .contact-backgroundThree {
+			height: 100vh;
+		}
+	}
+}
+
 @media screen and (max-width: 830px) {
 	nav.nav {
 		height: 20vh;
@@ -68,11 +78,14 @@
 		margin-left: 0;
 		& .header-content {
 			transform: translateY(100px);
+			padding: 1rem;
+			height: 60vh;
 			& i {
-				font-size: 8rem;
+				font-size: 6rem;
+				margin: 1.5rem 0;
 			}
 			& h1 {
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 			}
 		}
 	}
@@ -122,7 +135,7 @@
 	}
 
 	header.header .header-content {
-		height: 60vh;
+		// height: 60vh;
 		padding: 1rem;
 		transform: translateY(25px);
 		& i {
