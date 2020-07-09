@@ -37,16 +37,6 @@
 	}
 }
 
-@media screen and (max-width: 1025px) {
-	section.contact {
-		& .contact-background,
-		& .contact-backgroundTwo,
-		& .contact-backgroundThree {
-			height: 100vh;
-		}
-	}
-}
-
 @media screen and (max-width: 830px) {
 	nav.nav {
 		height: 20vh;
