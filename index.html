@@ -8,10 +8,6 @@
 			src="https://kit.fontawesome.com/08faad1d73.js"
 			crossorigin="anonymous"
 		></script>
-		<!-- <link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
-			rel="stylesheet"
-		/> -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300&display=swap"
 			rel="stylesheet"
@@ -32,7 +28,9 @@
 					<li class="link resume-link">
 						<a href="#resumeSection">Resume</a>
 					</li>
-					<li class="link contact"><a href="#">Contact</a></li>
+					<li class="link contact-link">
+						<a href="#contact">Contact</a>
+					</li>
 				</ul>
 			</div>
 			<div class="nav-bottom">
@@ -60,18 +58,53 @@
 		</nav>
 		<header class="header">
 			<div class="header-content">
-				<h1>Projects coming soon.</h1>
+				<h1>Projects coming soon...</h1>
 				<h1>Thank you for your patience.</h1>
 				<h1>Please reach out in the meantime.</h1>
-				<button class="btn contact-btn">Get in touch</button>
+				<button class="btn contact-btn">
+					<a href="#contact">Get in touch</a>
+				</button>
 			</div>
 		</header>
 		<section class="resume">
 			<h1 id="resumeSection">Resume</h1>
-			<img src="/assets/Resume.jpg" class="resume-img" alt="" />
+			<img src="/assets/Resume.jpg" alt="Resume" class="resume-img" />
 			<button class="fullScreen">
 				<a href="/assets/Resume.pdf">View</a>
 			</button>
+		</section>
+		<section class="contact" id="contact">
+			<div class="contact-background"></div>
+			<div class="contact-backgroundTwo"></div>
+			<div class="contact-backgroundThree"></div>
+			<h1>Get In Touch</h1>
+			<p>
+				Thank you for your time. I look forward to hearing from you!
+			</p>
+			<form action="" method="post" class="form" netlify>
+				<div class="form-head form-section">
+					<div class="name-input">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="email-input">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+					</div>
+				</div>
+				<div class="form-body form-section">
+					<label for="message">Message</label>
+					<textarea
+						name="message"
+						id="message"
+						cols="30"
+						rows="10"
+					></textarea>
+				</div>
+				<div class="form-footer form-section">
+					<button class="submit">Submit</button>
+				</div>
+			</form>
 		</section>
 		<script src="jS/app.js"></script>
 	</body>

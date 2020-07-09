@@ -1,18 +1,39 @@
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1280px) {
+	nav.nav {
+		padding: 2rem 2rem 2rem 0;
+		& .nav-message {
+			display: none;
+		}
+		& .nav-icons a {
+			margin: 0.4rem;
+			& i {
+				font-size: 1rem;
+			}
+		}
+	}
+
 	.resume img.resume-img {
 		height: 50vh;
 	}
 
-	section.resume .fullScreen,
-	section.resume .download {
+	section.resume .fullScreen {
 		height: 25px;
 		width: 100px;
 		font-size: 0.5rem;
 	}
 
-	section.resume button.fullScreen:hover,
-	section.resume button.download:hover {
+	section.resume button.fullScreen:hover {
 		letter-spacing: 5px;
+	}
+
+	form.form {
+		width: 550px;
+		& .form-head input {
+			width: 160px;
+		}
+		& .form-body {
+			width: 95%;
+		}
 	}
 }
 
@@ -50,6 +71,19 @@
 	section.resume {
 		margin-left: 0;
 	}
+
+	section.contact {
+		margin-left: 0;
+		& p {
+			font-size: 1.25rem;
+			width: 500px;
+		}
+		& .contact-background,
+		& .contact-backgroundTwo,
+		& .contact-backgroundThree {
+			width: 100vw;
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -80,5 +114,35 @@
 
 	.header .contact-btn {
 		padding: 1rem 2.25rem;
+	}
+
+	section.contact h1 {
+		font-size: 1.5rem;
+		letter-spacing: 10px;
+	}
+
+	section.contact p {
+		width: 350px;
+		font-size: 1rem;
+	}
+
+	form.form {
+		border-radius: 0;
+		padding: 3rem 1rem;
+		width: 350px;
+		margin: 2rem auto 0 auto;
+		& .form-head {
+			flex-direction: column;
+			align-items: center;
+			& input {
+				width: 275px;
+			}
+			& .name-input {
+				margin-right: 0;
+			}
+			& .email-input {
+				margin-left: 0;
+			}
+		}
 	}
 }
