@@ -66,6 +66,15 @@
 
 	header.header {
 		margin-left: 0;
+		& .header-content {
+			transform: translateY(100px);
+			& i {
+				font-size: 8rem;
+			}
+			& h1 {
+				font-size: 1.5rem;
+			}
+		}
 	}
 
 	section.resume {
@@ -143,6 +152,12 @@
 			& .email-input {
 				margin-left: 0;
 			}
+		}
+		&.formHover {
+			border-radius: 0;
+		}
+		&.formBlur {
+			border-radius: 0;
 		}
 	}
 }
