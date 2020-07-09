@@ -23,22 +23,31 @@ for (let link of navLinks) {
 }
 
 resume.addEventListener('mouseenter', function () {
-	resumeBtn.classList.add('visible');
-	resumeBtn.classList.remove('hidden');
-	this.classList.add('imgHover');
-	this.classList.remove('imgBlur');
+	resumeHover();
 });
 
 resume.addEventListener('mouseleave', function () {
-	resumeBtn.classList.remove('visible');
-	resumeBtn.classList.add('hidden');
-	this.classList.remove('imgHover');
-	this.classList.add('imgBlur');
+	resumeLeave();
 });
 
 resumeBtn.addEventListener('mouseover', function () {
+	resumeHover();
+});
+
+resume.addEventListener('blur', function () {
+	resumeLeave();
+});
+
+function resumeHover() {
 	resume.classList.add('imgHover');
 	resume.classList.remove('imgBlur');
 	resumeBtn.classList.add('visible');
 	resumeBtn.classList.remove('hidden');
-});
+}
+
+function resumeLeave() {
+	resumeBtn.classList.remove('visible');
+	resumeBtn.classList.add('hidden');
+	resume.classList.remove('imgHover');
+	resume.classList.add('imgBlur');
+}
