@@ -2,6 +2,7 @@ const contactBtn = document.querySelector('.contact-btn');
 const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
+const form = document.querySelector('.form');
 
 contactBtn.addEventListener('mouseover', function () {
 	this.style.borderRadius = '17% 83% 16% 84% / 73% 77% 23% 27%';
@@ -51,3 +52,13 @@ function resumeLeave() {
 	resume.classList.remove('imgHover');
 	resume.classList.add('imgBlur');
 }
+
+form.addEventListener('mouseenter', function () {
+	this.classList.add('formHover');
+	this.classList.remove('formBlur');
+});
+
+form.addEventListener('mouseleave', function () {
+	this.classList.remove('formHover');
+	this.classList.add('formBlur');
+});

@@ -109,7 +109,6 @@ textarea {
 		font-weight: 300;
 		font-size: 2.5rem;
 		letter-spacing: 2px;
-		text-shadow: 0 -5px 10px rgba(0, 0, 0, 0.505);
 	}
 	& h1:nth-of-type(1) {
 		color: rgba(26, 64, 154, 0.8);
@@ -255,6 +254,14 @@ form {
 	border-radius: 34% 66% 59% 41% / 71% 30% 70% 29%;
 	box-shadow: 0 0 25px $box-shadow;
 	z-index: 99;
+	&.formHover {
+		border-radius: 71% 30% 70% 29% / 34% 66% 59% 41%;
+		transition: all 0.5s;
+	}
+	&.formBlur {
+		border-radius: 34% 66% 59% 41% / 71% 30% 70% 29%;
+		transition: all 0.5s;
+	}
 	& .form-head {
 		display: flex;
 		width: 100%;
