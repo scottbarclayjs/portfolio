@@ -1,7 +1,7 @@
 const contactBtn = document.querySelector('.contact-btn');
 const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
-const resumeBtns = document.querySelectorAll('.resume button');
+const resumeBtn = document.querySelector('.resume button');
 
 contactBtn.addEventListener('mouseover', function () {
 	this.style.borderRadius = '17% 83% 16% 84% / 73% 77% 23% 27%';
@@ -23,30 +23,22 @@ for (let link of navLinks) {
 }
 
 resume.addEventListener('mouseenter', function () {
-	for (let btn of resumeBtns) {
-		btn.classList.add('visible');
-		btn.classList.remove('hidden');
-	}
+	resumeBtn.classList.add('visible');
+	resumeBtn.classList.remove('hidden');
 	this.classList.add('imgHover');
 	this.classList.remove('imgBlur');
 });
 
 resume.addEventListener('mouseleave', function () {
-	for (let btn of resumeBtns) {
-		btn.classList.remove('visible');
-		btn.classList.add('hidden');
-	}
+	resumeBtn.classList.remove('visible');
+	resumeBtn.classList.add('hidden');
 	this.classList.remove('imgHover');
 	this.classList.add('imgBlur');
 });
 
-for (let btn of resumeBtns) {
-	btn.addEventListener('mouseover', function () {
-		resume.classList.add('imgHover');
-		resume.classList.remove('imgBlur');
-		for (let btn of resumeBtns) {
-			btn.classList.add('visible');
-			btn.classList.remove('hidden');
-		}
-	});
-}
+resumeBtn.addEventListener('mouseover', function () {
+	resume.classList.add('imgHover');
+	resume.classList.remove('imgBlur');
+	resumeBtn.classList.add('visible');
+	resumeBtn.classList.remove('hidden');
+});
