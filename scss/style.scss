@@ -98,12 +98,17 @@ textarea {
 	margin-left: 15vw;
 	text-align: center;
 	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&-content {
-		height: 100vh;
+		height: 80vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding: 2rem;
+		background-color: rgba(255, 255, 255, 0.608);
 	}
 	& i {
 		font-size: 12rem;

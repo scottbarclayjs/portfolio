@@ -121,8 +121,20 @@
 		letter-spacing: 1px;
 	}
 
+	header.header .header-content {
+		height: 60vh;
+		padding: 1rem;
+		transform: translateY(25px);
+		& i {
+			margin: 1rem;
+			font-size: 5rem;
+		}
+	}
+
 	.header .contact-btn {
 		padding: 1rem 2.25rem;
+		font-size: 1rem;
+		margin-top: 1rem;
 	}
 
 	section.contact h1 {
