@@ -131,6 +131,7 @@ function skillsBgAnimation() {
 	skillsColorRandomizer(bgShapes);
 	skillsShapeRandomizer(bgShapes);
 	skillsLocationRandomizer(bgShapes);
+	skillsRotationRandomizer(bgShapes);
 
 	// setTimeout(skillsBgAnimation, 500);
 }
@@ -164,5 +165,14 @@ function skillsLocationRandomizer(arr) {
 		let itemWidth = `${width}px`;
 		item.style.top = itemHeight;
 		item.style.left = itemWidth;
+	});
+}
+
+// Rotation
+function skillsRotationRandomizer(arr) {
+	arr.forEach((item) => {
+		let rotation = Math.floor(Math.random() * 360);
+		let randomRotation = `rotate(${rotation}deg)`;
+		item.style.transform = randomRotation;
 	});
 }
