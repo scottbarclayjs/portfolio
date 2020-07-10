@@ -6,7 +6,7 @@ const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
 
 contactBtn.addEventListener('mouseover', function () {
-	this.style.borderRadius = '17% 83% 16% 84% / 73% 77% 23% 27%';
+	this.style.borderRadius = '0';
 	this.style.transition = 'all .4s';
 });
 
