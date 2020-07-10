@@ -80,6 +80,10 @@
 		}
 	}
 
+	section.skills {
+		margin-left: 0;
+	}
+
 	section.resume {
 		margin-left: 0;
 	}
@@ -125,12 +129,34 @@
 	}
 
 	header.header .header-content {
-		// height: 60vh;
 		padding: 1rem;
 		transform: translateY(25px);
 		& i {
 			margin: 1rem;
 			font-size: 5rem;
+		}
+	}
+
+	section.skills {
+		padding: 1rem;
+		& h1 {
+			font-size: 1.5rem;
+			margin: 1rem;
+		}
+		& .mySkills {
+			& .skill {
+				width: 14vw;
+				margin: 1rem;
+				text-align: center;
+			}
+			& i.fab,
+			& i.fas {
+				font-size: 2rem;
+				text-align: center;
+			}
+			& h2.skillLabel {
+				font-size: 0.8rem;
+			}
 		}
 	}
 

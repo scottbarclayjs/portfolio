@@ -144,6 +144,87 @@ textarea {
 .skills {
 	height: 100vh;
 	margin-left: 15vw;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	& h1 {
+		font-size: 2.5rem;
+		margin: 2rem;
+		text-transform: uppercase;
+		letter-spacing: 10px;
+	}
+	& .mySkills {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		& .skill {
+			width: 15vw;
+			margin: 1rem;
+			& i {
+				color: $text-color;
+				font-size: 3.5rem;
+				margin-bottom: 0.5rem;
+				&:hover {
+					transform: rotate(360deg);
+					transition: all 0.5s;
+				}
+				&.fa-html5:hover {
+					color: #df4b25;
+				}
+				&.fa-css3-alt:hover {
+					color: #249ddb;
+				}
+				&.fa-js:hover {
+					color: #f0d91d;
+				}
+				&.fa-bootstrap:hover {
+					color: #543b79;
+				}
+				&.fa-sass:hover {
+					color: #c76396;
+				}
+				&.fa-node-js:hover {
+					color: #73b258;
+				}
+				&.fa-git:hover {
+					color: #e94e32;
+				}
+				&.fa-github-square:hover {
+					color: #1a1e22;
+				}
+				&.fa-wordpress:hover {
+					color: #21759b;
+				}
+				&.fa-image:hover {
+					color: #31a8ff;
+				}
+				&.fa-adjust:hover {
+					color: #001e36;
+				}
+				&.fa-adobe:hover {
+					color: #fa0f00;
+				}
+				&.fa-file-excel:hover {
+					color: #01723a;
+				}
+				&.fa-terminal:hover {
+					color: #8dd35f;
+				}
+				&.fa-laptop:hover {
+					color: #02c1ba;
+				}
+				&.fa-npm:hover {
+					color: #e32e37;
+				}
+			}
+			& h2 {
+				font-size: 1.2rem;
+			}
+		}
+	}
 }
 
 .resume {
