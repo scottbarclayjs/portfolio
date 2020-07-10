@@ -109,21 +109,3 @@ form.addEventListener('submit', function (e) {
 		message.parentElement.classList.remove('invalid');
 	}
 });
-
-// function checkRequired(inputArr) {
-// 	inputArr.forEach((input) => {
-// 		if (input.value === '') {
-// 			input.parentElement.classList.add('invalid');
-// 		} else {
-// 			input.parentElement.classList.remove('invalid');
-// 		}
-// 	});
-// }
-
-// form.addEventListener('submit', function (e) {
-// 	checkRequired([name, email, message]);
-// 	checkEmail(email);
-// 	if (valid === false) {
-// 		e.preventDefault();
-// 	}
-// });
