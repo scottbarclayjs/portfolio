@@ -76,3 +76,54 @@ function skillDisplay() {
 }
 
 skillDisplay();
+
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+
+function validEmail(email) {
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+}
+
+form.addEventListener('submit', function (e) {
+	if (name.value === '') {
+		name.parentElement.classList.add('invalid');
+		e.preventDefault();
+	} else {
+		name.parentElement.classList.remove('invalid');
+	}
+	if (email.value === '') {
+		email.parentElement.classList.add('invalid');
+		e.preventDefault();
+	} else if (!validEmail(email.value)) {
+		email.parentElement.classList.add('invalid');
+		e.preventDefault();
+	} else {
+		email.parentElement.classList.remove('invalid');
+	}
+	if (message.value === '') {
+		message.parentElement.classList.add('invalid');
+		e.preventDefault();
+	} else {
+		message.parentElement.classList.remove('invalid');
+	}
+});
+
+// function checkRequired(inputArr) {
+// 	inputArr.forEach((input) => {
+// 		if (input.value === '') {
+// 			input.parentElement.classList.add('invalid');
+// 		} else {
+// 			input.parentElement.classList.remove('invalid');
+// 		}
+// 	});
+// }
+
+// form.addEventListener('submit', function (e) {
+// 	checkRequired([name, email, message]);
+// 	checkEmail(email);
+// 	if (valid === false) {
+// 		e.preventDefault();
+// 	}
+// });
