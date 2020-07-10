@@ -3,6 +3,7 @@ const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
+const skillImage = document.querySelectorAll('.skill i');
 
 contactBtn.addEventListener('mouseover', function () {
 	this.style.borderRadius = '17% 83% 16% 84% / 73% 77% 23% 27%';
@@ -62,3 +63,16 @@ form.addEventListener('mouseleave', function () {
 	this.classList.remove('formHover');
 	this.classList.add('formBlur');
 });
+
+let skills = [];
+for (let img of skillImage) {
+	skills.push(img);
+}
+
+function skillDisplay() {
+	let randSkill = Math.floor(Math.random() * skills.length);
+	skills[randSkill].classList.toggle('skillColor');
+	setTimeout(skillDisplay, 1000);
+}
+
+skillDisplay();

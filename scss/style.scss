@@ -171,52 +171,68 @@ textarea {
 					transform: rotate(360deg);
 					transition: all 0.5s;
 				}
-				&.fa-html5:hover {
+				&.fa-html5:hover,
+				&.fa-html5.skillColor {
 					color: #df4b25;
 				}
-				&.fa-css3-alt:hover {
+				&.fa-css3-alt:hover,
+				&.fa-css3-alt.skillColor {
 					color: #249ddb;
 				}
-				&.fa-js:hover {
+				&.fa-js:hover,
+				&.fa-js.skillColor {
 					color: #f0d91d;
 				}
-				&.fa-bootstrap:hover {
+				&.fa-bootstrap:hover,
+				&.fa-bootstrap.skillColor {
 					color: #543b79;
 				}
-				&.fa-sass:hover {
+				&.fa-sass:hover,
+				&.fa-sass.skillColor {
 					color: #c76396;
 				}
-				&.fa-node-js:hover {
+				&.fa-node-js:hover,
+				&.fa-node-js.skillColor {
 					color: #73b258;
 				}
-				&.fa-git:hover {
+				&.fa-git:hover,
+				&.fa-git.skillColor {
 					color: #e94e32;
 				}
-				&.fa-github-square:hover {
+				&.fa-github-square:hover,
+				&.fa-github-square.skillColor {
 					color: #1a1e22;
 				}
-				&.fa-wordpress:hover {
+				&.fa-wordpress:hover,
+				&.fa-wordpress.skillColor {
 					color: #21759b;
 				}
-				&.fa-image:hover {
+				&.fa-image:hover,
+				&.fa-image.skillColor {
 					color: #31a8ff;
 				}
-				&.fa-adjust:hover {
+				&.fa-adjust:hover,
+				&.fa-adjust.skillColor {
 					color: #001e36;
 				}
-				&.fa-adobe:hover {
+				&.fa-adobe:hover,
+				&.fa-adobe.skillColor {
 					color: #fa0f00;
 				}
-				&.fa-file-excel:hover {
+				&.fa-file-excel:hover,
+				&.fa-file-excel.skillColor {
 					color: #01723a;
 				}
-				&.fa-terminal:hover {
+				&.fa-terminal:hover,
+				&.fa-terminal.skillColor {
 					color: #8dd35f;
 				}
-				&.fa-laptop:hover {
+				&.fa-laptop:hover,
+				&.fa-laptop.skillColor {
 					color: #02c1ba;
 				}
-				&.fa-npm:hover {
+				&.fa-npm:hover,
+				&.fa-npm.skillColor {
 					color: #e32e37;
 				}
 			}
