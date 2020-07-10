@@ -138,6 +138,7 @@ textarea {
 	z-index: 0;
 	box-shadow: 0 0 15px $box-shadow;
 	position: relative;
+	overflow: hidden;
 	& a {
 		position: absolute;
 		top: 50%;
@@ -149,7 +150,10 @@ textarea {
 	}
 }
 
+// Skills Section
+
 .skills {
+	position: relative;
 	height: 100vh;
 	margin-left: 15vw;
 	padding: 2rem 2rem 0 2rem;
@@ -157,6 +161,8 @@ textarea {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	overflow-x: hidden;
 	& h1 {
 		font-size: 2.5rem;
 		font-weight: 300;
@@ -248,12 +254,25 @@ textarea {
 			}
 			& h2 {
 				font-size: 1.1rem;
-				font-weight: 300;
+				font-weight: 400;
 				letter-spacing: 2px;
 			}
 		}
 	}
 }
+
+.skills .background-animation {
+	height: 20px;
+	width: 20px;
+	padding: 10px;
+	background: transparent;
+	border: 2px solid pink;
+	position: absolute;
+	z-index: -1;
+	overflow-x: hidden;
+}
+
+// Resume Secion
 
 .resume {
 	margin-left: 15vw;
@@ -295,7 +314,7 @@ textarea {
 		&:hover {
 			background-color: #222;
 			cursor: pointer;
-			letter-spacing: 7px;
+			letter-spacing: 5px;
 			padding: 0.3rem 2.25rem;
 			transition: all 0.5s;
 		}
@@ -317,6 +336,8 @@ textarea {
 	transform: scale(1);
 	transition: all 1s;
 }
+
+// Contact Section
 
 .contact {
 	padding-top: 3rem;

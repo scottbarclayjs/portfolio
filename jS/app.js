@@ -5,6 +5,8 @@ const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
 
+// Header Animation
+
 contactBtn.addEventListener('mouseover', function () {
 	this.style.borderRadius = '0';
 	this.style.transition = 'all .4s';
@@ -15,6 +17,8 @@ contactBtn.addEventListener('mouseleave', function () {
 	this.style.transition = 'all .4s';
 });
 
+// Link Animation
+
 for (let link of navLinks) {
 	link.addEventListener('click', function () {
 		for (link of navLinks) {
@@ -23,6 +27,8 @@ for (let link of navLinks) {
 		this.classList.add('active');
 	});
 }
+
+// Resume Animation
 
 resume.addEventListener('mouseenter', function () {
 	resumeHover();
@@ -54,6 +60,8 @@ function resumeLeave() {
 	resume.classList.add('imgBlur');
 }
 
+// Form Animation
+
 form.addEventListener('mouseenter', function () {
 	this.classList.add('formHover');
 	this.classList.remove('formBlur');
@@ -64,6 +72,8 @@ form.addEventListener('mouseleave', function () {
 	this.classList.add('formBlur');
 });
 
+// Skills Animation
+
 let skills = [];
 for (let img of skillImage) {
 	skills.push(img);
@@ -72,10 +82,12 @@ for (let img of skillImage) {
 function skillDisplay() {
 	let randSkill = Math.floor(Math.random() * skills.length);
 	skills[randSkill].classList.toggle('skillColor');
-	setTimeout(skillDisplay, 500);
+	setTimeout(skillDisplay, 1000);
 }
 
 skillDisplay();
+
+// Form Validation
 
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
@@ -109,3 +121,48 @@ form.addEventListener('submit', function (e) {
 		message.parentElement.classList.remove('invalid');
 	}
 });
+
+// Skills BG Animation
+let bgShapes = document.querySelectorAll('.background-animation');
+
+skillsBgAnimation(bgShapes);
+
+function skillsBgAnimation() {
+	skillsColorRandomizer(bgShapes);
+	skillsShapeRandomizer(bgShapes);
+	skillsLocationRandomizer(bgShapes);
+
+	// setTimeout(skillsBgAnimation, 500);
+}
+
+// Border Color
+function skillsColorRandomizer(arr) {
+	arr.forEach((item) => {
+		let r = Math.floor(Math.random() * 255);
+		let g = Math.floor(Math.random() * 255);
+		let b = Math.floor(Math.random() * 255);
+		let randomColor = `rgb(${r}, ${g}, ${b})`;
+		item.style.borderColor = randomColor;
+	});
+}
+
+// Shape
+function skillsShapeRandomizer(arr) {
+	arr.forEach((item) => {
+		let borRad = Math.floor(Math.random() * 50);
+		let randomRadius = `${borRad}%`;
+		item.style.borderRadius = randomRadius;
+	});
+}
+
+// Location
+function skillsLocationRandomizer(arr) {
+	arr.forEach((item) => {
+		let height = Math.floor(Math.random() * window.innerHeight);
+		let width = Math.floor(Math.random() * window.innerWidth);
+		let itemHeight = `${height}px`;
+		let itemWidth = `${width}px`;
+		item.style.top = itemHeight;
+		item.style.left = itemWidth;
+	});
+}
