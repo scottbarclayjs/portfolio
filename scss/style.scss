@@ -144,7 +144,7 @@ textarea {
 .skills {
 	height: 100vh;
 	margin-left: 15vw;
-	padding: 2rem;
+	padding: 2rem 2rem 0 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -240,6 +240,13 @@ textarea {
 				font-size: 1.2rem;
 			}
 		}
+	}
+	& hr {
+		margin-top: 3rem;
+		padding-bottom: 0.01rem;
+		border: none;
+		background-image: linear-gradient(to left, rgba(0, 0, 0, 0.119), black);
+		width: 75%;
 	}
 }
 
