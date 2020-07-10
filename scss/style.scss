@@ -147,6 +147,7 @@ textarea {
 	justify-content: center;
 	align-items: center;
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	& h1 {
 		font-size: 2.5rem;
 		margin: 2rem;
@@ -255,6 +256,7 @@ textarea {
 	position: relative;
 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(51, 51, 51, 0.5));
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	& h1 {
 		font-weight: 300;
 		font-size: 2.5rem;
@@ -322,6 +324,7 @@ textarea {
 	justify-content: center;
 	align-items: center;
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	& h1 {
 		font-weight: 300;
 		font-size: 2.5rem;
