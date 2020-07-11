@@ -122,8 +122,8 @@ form.addEventListener('submit', function (e) {
 	}
 });
 
-let skillsWindow = document.querySelector('.skills');
-console.log(skillsWindow.width);
+// let skillsWindow = document.querySelector('.skills');
+// console.log(skillsWindow.width);
 
 // Skills BG Animation
 let bgShapes = document.querySelectorAll('.background-animation');
@@ -136,7 +136,7 @@ function skillsBgAnimation() {
 	skillsLocationRandomizer(bgShapes);
 	skillsRotationRandomizer(bgShapes);
 
-	// setTimeout(skillsBgAnimation, 500);
+	setTimeout(skillsBgAnimation, 1000);
 }
 
 // Border Color
@@ -145,7 +145,8 @@ function skillsColorRandomizer(arr) {
 		let r = Math.floor(Math.random() * 255);
 		let g = Math.floor(Math.random() * 255);
 		let b = Math.floor(Math.random() * 255);
-		let randomColor = `rgb(${r}, ${g}, ${b})`;
+		let a = Math.random();
+		let randomColor = `rgba(${r}, ${g}, ${b}, ${a})`;
 		item.style.borderColor = randomColor;
 	});
 }
