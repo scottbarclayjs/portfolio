@@ -133,7 +133,7 @@ function skillsBgAnimation() {
 	skillsLocationRandomizer(bgShapes);
 	skillsRotationRandomizer(bgShapes);
 
-	setTimeout(skillsBgAnimation, 1000);
+	setTimeout(skillsBgAnimation, 5000);
 }
 
 // Border Color
