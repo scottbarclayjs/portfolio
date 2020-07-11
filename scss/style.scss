@@ -188,9 +188,10 @@ textarea {
 				color: $text-color;
 				font-size: 3.5rem;
 				margin-bottom: 0.5rem;
+				text-shadow: -1px -2px 5px $box-shadow;
 				&:hover {
 					transform: rotate(10deg) scale(1.1);
-					text-shadow: -1px -3px 5px $box-shadow;
+					text-shadow: -3px -4px 6px $box-shadow;
 					transition: all 0.5s;
 				}
 				&.fa-html5:hover,
