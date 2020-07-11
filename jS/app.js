@@ -122,9 +122,6 @@ form.addEventListener('submit', function (e) {
 	}
 });
 
-// let skillsWindow = document.querySelector('.skills');
-// console.log(skillsWindow.width);
-
 // Skills BG Animation
 let bgShapes = document.querySelectorAll('.background-animation');
 

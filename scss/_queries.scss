@@ -190,6 +190,13 @@
 		}
 	}
 
+	section.skills .background-animation,
+	section.resume .background-animation {
+		height: 0.25px;
+		width: 0.25px;
+		padding: 0px;
+	}
+
 	.header .contact-btn {
 		padding: 1rem 2.25rem;
 		font-size: 1rem;
