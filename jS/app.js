@@ -82,7 +82,7 @@ for (let img of skillImage) {
 function skillDisplay() {
 	let randSkill = Math.floor(Math.random() * skills.length);
 	skills[randSkill].classList.toggle('skillColor');
-	setTimeout(skillDisplay, 1000);
+	setTimeout(skillDisplay, 500);
 }
 
 skillDisplay();
