@@ -65,6 +65,14 @@
 		display: none;
 	}
 
+	header.header h1 {
+		font-size: 1.75rem;
+		transform: translateY(50px);
+		& .contact-btn {
+			transform: translateY(50px);
+		}
+	}
+
 	header.header,
 	section.skills,
 	section.resume,
