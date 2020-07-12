@@ -1,18 +1,44 @@
 const nav = document.querySelector('.nav');
+const skillsSection = document.querySelector('.skills');
+const resumeSection = document.querySelector('.resume');
+const contactSection = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
+const sections = [skillsSection, resumeSection, contactSection];
+
+// Nav load animation
+
+if (window.innerWidth > 1025) {
+	nav.style.animation = 'navPageLoad 3s ease-out';
+	for (let section of sections) {
+		section.style.animation = 'bodyPageLoad 3s ease-out';
+	}
+}
 
 // Nav hover animation
+
 nav.addEventListener('mouseenter', () => {
-	nav.classList.add('navHover');
-	nav.classList.remove('navBlur');
+	if (window.innerWidth > 1025) {
+		nav.classList.add('navHover');
+		nav.classList.remove('navBlur');
+		for (let section of sections) {
+			section.classList.add('sectionShift');
+			section.classList.remove('sectionUnshift');
+		}
+	}
 });
 nav.addEventListener('mouseleave', () => {
-	nav.classList.remove('navHover');
-	nav.classList.add('navBlur');
+	if (window.innerWidth > 1025) {
+		nav.classList.remove('navHover');
+		nav.classList.add('navBlur');
+		for (let section of sections) {
+			section.classList.add('sectionUnshift');
+			section.classList.remove('sectionShift');
+		}
+	}
 });
 
 // Link Animation

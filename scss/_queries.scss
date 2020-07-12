@@ -1,6 +1,7 @@
 @media screen and (max-width: 1280px) {
 	nav.nav {
 		padding: 2rem 2rem 2rem 0;
+		left: 0;
 		& .nav-message {
 			display: none;
 		}
@@ -315,13 +316,27 @@
 		transform: translateX(0vw);
 	}
 	15% {
-		width: 17vw;
+		transform: translateX(13vw);
 	}
 	30% {
 		transform: translateX(13vw);
-		width: 15vw;
 	}
 	100% {
 		transform: translateX(0vw);
+	}
+}
+
+@keyframes bodyPageLoad {
+	0% {
+		margin-left: 2vw;
+	}
+	15% {
+		margin-left: 15vw;
+	}
+	30% {
+		margin-left: 15vw;
+	}
+	100% {
+		margin-left: 2vw;
 	}
 }

@@ -26,10 +26,10 @@ textarea {
 	position: fixed;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	animation: navPageLoad 3s ease-out;
+	// animation: navPageLoad 3s ease-out;
 	top: 0;
 	left: -13vw;
-	z-index: 100;
+	z-index: 9999;
 	&.navHover {
 		transform: translateX(13vw);
 		transition: all 0.6s;
@@ -102,7 +102,7 @@ textarea {
 .header {
 	height: 100vh;
 	overflow-x: hidden;
-	margin-left: 15vw;
+	margin-left: 2vw;
 	text-align: center;
 	z-index: -1;
 	display: flex;
@@ -117,7 +117,7 @@ textarea {
 .skills {
 	position: relative;
 	height: 100vh;
-	margin-left: 15vw;
+	margin-left: 2vw;
 	padding: 2rem 2rem 0 2rem;
 	display: flex;
 	flex-direction: column;
@@ -126,6 +126,8 @@ textarea {
 	overflow: hidden;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	z-index: -999;
+	position: relative;
 	& h1 {
 		font-size: 2.5rem;
 		font-weight: 300;
@@ -233,7 +235,7 @@ textarea {
 	background: transparent;
 	border: 2px solid pink;
 	position: absolute;
-	z-index: -9999;
+	z-index: -999;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	overflow: hidden;
@@ -242,7 +244,7 @@ textarea {
 // Resume Secion
 
 .resume {
-	margin-left: 15vw;
+	margin-left: 2vw;
 	padding: 5rem 0;
 	text-align: center;
 	position: relative;
@@ -250,6 +252,7 @@ textarea {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	overflow: hidden;
+	z-index: 99;
 	& h1 {
 		font-weight: 300;
 		font-size: 2.5rem;
@@ -260,6 +263,8 @@ textarea {
 	& img {
 		height: 82vh;
 		box-shadow: 0 0 25px $box-shadow;
+		position: relative;
+		z-index: 999;
 	}
 	& .fullScreen {
 		position: absolute;
@@ -313,7 +318,8 @@ textarea {
 	background: transparent;
 	border: 2px solid pink;
 	position: absolute;
-	z-index: -9999;
+	// z-index: -9999;
+	z-index: 7;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	overflow: hidden;
@@ -323,7 +329,7 @@ textarea {
 
 .contact {
 	padding-top: 3rem;
-	margin-left: 15vw;
+	margin-left: 2vw;
 	position: relative;
 	text-align: center;
 	color: #333;
@@ -354,7 +360,7 @@ textarea {
 		top: 0;
 		left: 0;
 		height: 130vh;
-		width: 85vw;
+		width: 100vw;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
@@ -502,4 +508,42 @@ form {
 
 .footer {
 	display: none;
+}
+
+// all sections
+.skills,
+.resume,
+.contact {
+	// animation: bodyPageLoad 3s ease-out;
+}
+.skills.sectionShift,
+.resume.sectionShift,
+.contact.sectionShift {
+	margin-left: 15vw;
+	transition: all 0.6s;
+}
+
+.skills.sectionUnshift,
+.resume.sectionUnshift,
+.contact.sectionUnshift {
+	margin-left: 2vw;
+	transition: all 0.6s;
+}
+
+.contact.sectionShift {
+	& .contact-background,
+	& .contact-backgroundTwo,
+	& .contact-backgroundThree {
+		width: 85vw;
+		transition: all 0.6s;
+	}
+}
+
+.contact.sectionUnshift {
+	& .contact-background,
+	& .contact-backgroundTwo,
+	& .contact-backgroundThree {
+		width: 100vw;
+		transition: all 0.6s;
+	}
 }
