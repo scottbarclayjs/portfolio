@@ -23,6 +23,7 @@ textarea {
 	padding: 2rem 2.5rem 1rem 1rem;
 	box-shadow: 10px 0 35px $box-shadow;
 	color: $text-color;
+	background-color: #fff;
 	position: fixed;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -60,29 +61,13 @@ textarea {
 			letter-spacing: 2px;
 			text-align: right;
 			align-self: flex-end;
-			border-bottom: 1px solid #fff;
+			border-bottom: none;
 			&:hover {
-				border-bottom: 1px solid $text-color;
 				transform: translateX(-5px);
 				transition: all 0.7s;
 			}
 			&.active {
 				border-bottom: 1px solid $text-color;
-			}
-			&.projects-link {
-				position: relative;
-				border: none;
-				& .project-categories {
-					list-style-type: none;
-					display: none;
-					&.projectsClick {
-						display: block;
-					}
-					& li a {
-						border: none;
-						color: $primary-color;
-					}
-				}
 			}
 		}
 	}
@@ -112,45 +97,201 @@ textarea {
 	margin-left: 2vw;
 	overflow-x: hidden;
 	margin-left: 2vw;
-	text-align: center;
 	z-index: -1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	position: relative;
 	z-index: 99999;
-	& h1:nth-of-type(4) {
-		letter-spacing: 5px;
+}
+
+.header-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 1rem 3rem 5rem 3rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	width: 80vw;
+	height: 85vh;
+	box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.336);
+}
+
+/* Contains name and intro paragraph */
+.header .header-head {
+	max-width: 33rem;
+	margin-bottom: 1.5rem;
+}
+
+.header .header-head h1 {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 5px;
+	& span {
 		color: $primary-color;
 	}
-	.contact-btn {
-		padding: 0.75rem 3rem;
-		background: transparent;
-		border: 1px solid $primary-color;
-		color: $primary-color;
-		border-radius: 5px;
-		font-size: 1rem;
-		margin: 2rem;
-		position: relative;
-		z-index: 999999;
-		& a {
-			color: $primary-color;
-		}
-		&:hover {
-			cursor: pointer;
-			background: $primary-color;
-			color: #fff;
-			transition: all 0.6s;
-		}
-		&:hover a {
-			color: #fff;
-		}
-		&:focus {
-			outline: transparent;
-		}
-	}
+}
+
+.header .header-head h5 {
+	font-size: 0.8rem;
+}
+
+/* Makes left and right side of heading */
+.header-main {
+	display: flex;
+}
+
+/* Section containing all 4 project category cards */
+.header-main-cards {
+	display: flex;
+	flex-wrap: wrap;
+	width: 74%;
+	margin-right: 1rem;
+}
+
+/* Settings for each individual card */
+.header-main-cards .card {
+	width: 48%;
+	padding: 1.25rem 1.25rem 2rem 1.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	border-radius: 0.5rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Individual card hover effect */
+.header-main-cards .card:hover {
+	cursor: pointer;
+	background-color: $primary-color;
+	color: #fff;
+	transition: all 0.6s;
+}
+
+/* i within the card hover effect */
+.header-main-cards .card:hover i {
+	background-color: #fff;
+	color: #444;
+	transition: all 0.6s;
+}
+
+/* Activated through JS, sets colors when card is clicked */
+.header-main-cards .card.choose {
+	background-color: $primary-color;
+	color: #fff;
+}
+
+/* same as above for i */
+.header-main-cards .card i.choose {
+	background-color: #fff;
+	color: #444;
+}
+
+/* Sets top and bottom padding on each element within the cards */
+.header-main-cards .card * {
+	margin: 0.2rem 0;
+}
+
+/* settings for i within each card */
+.header-main-cards .card i {
+	padding: 1rem;
+	font-size: 1.2rem;
+	background-color: $primary-color;
+	color: #fff;
+	border-radius: 50%;
+}
+
+/* settings for card wording */
+.header-main-cards .card h4 {
+	letter-spacing: 2px;
+}
+
+.header-main-cards .card p {
+	font-size: 0.8rem;
+}
+
+/* Container for what goes inside right hand display */
+.header-card-list {
+	border: 1px solid #e4ebeb;
+	border-radius: 1rem 1rem 0 0;
+	min-width: 26%;
+	padding: 1rem 2rem;
+	box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.26);
+	text-align: center;
+	position: relative;
+	margin: 2rem 3rem 2.5rem 0;
+}
+
+/* This is what JS targets, set initial display to none and flex when activated */
+.project-category {
+	height: 100%;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* settings for content within display */
+.utilities h4,
+.games h4,
+.websites h4 {
+	font-size: 1.5rem;
+}
+
+.utilities i,
+.games i,
+.websites i {
+	font-size: 4rem;
+}
+
+.utilities i:hover,
+.games i:hover,
+.websites i:hover {
+	transform: rotate(1800deg);
+	transition: all 5s;
+}
+
+.project-category * {
+	margin: 0.5rem 0;
+}
+
+.project h2 {
+	font-size: 1rem;
+}
+
+.project p {
+	max-width: 80%;
+}
+
+/* settings for the blue overlay on display, this is what JS targets */
+.list-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 104%;
+	height: 100%;
+	padding: 50%;
+	transform: translateX(-2%);
+	background-color: $primary-color;
+	background-size: cover;
+	border-radius: 1rem 1rem 0 0;
+	z-index: 1;
+	box-shadow: 0 25px 8px -15px rgba(0, 0, 0, 0.438);
+	border: none;
+}
+
+/* Classes activated and deactivated through JS to show and hide display content */
+.list-overlay.hideOverlay {
+	height: 0px;
+	padding: 0 50%;
+	transition: all 1s;
+}
+
+.list-overlay.showOverlay {
+	height: 100%;
+	padding: 50%;
+	transition: all 1s;
 }
 
 // Skills Section

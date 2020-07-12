@@ -4,16 +4,61 @@ const skillsSection = document.querySelector('.skills');
 const resumeSection = document.querySelector('.resume');
 const contactSection = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav-links li');
-const projectsLink = document.querySelector('.projects-link a');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
 const sections = [headerSection, skillsSection, resumeSection, contactSection];
 
+// Header Content *********************************
+const projectCards = document.querySelectorAll('.card');
+const projectsOverlay = document.querySelector('.list-overlay');
+const header = document.querySelector('.header-container');
+const projectCategory = document.querySelectorAll('.project-category');
+
+// Removes overlay when a card is clicked
+for (let card of projectCards) {
+	card.addEventListener('click', () => {
+		projectsOverlay.classList.remove('showOverlay');
+		projectsOverlay.classList.add('hideOverlay');
+	});
+}
+
+// Replaces overlay when the user navigates away from header
+for (let card of projectCards) {
+	header.addEventListener('mouseleave', () => {
+		projectsOverlay.classList.remove('hideOverlay');
+		projectsOverlay.classList.add('showOverlay');
+		card.classList.remove('choose');
+		card.firstElementChild.classList.remove('choose');
+	});
+}
+
+// Changes chosen card when a card is clicked
+for (let card of projectCards) {
+	card.addEventListener('click', () => {
+		for (let card of projectCards) {
+			card.classList.remove('choose');
+			card.firstElementChild.classList.remove('choose');
+		}
+		card.classList.add('choose');
+		card.firstElementChild.classList.add('choose');
+	});
+}
+
+// Show the projects in the display that correspond to the card clicked
+for (let i = 0; i < projectCategory.length; i++) {
+	projectCards[i].addEventListener('click', () => {
+		for (let category of projectCategory) {
+			category.style.display = 'none';
+		}
+		projectCategory[i].style.display = 'flex';
+	});
+}
+
 // Nav load animation
 
-if (window.innerWidth > 1025) {
+if (window.innerWidth > 1151) {
 	nav.style.animation = 'navPageLoad 2s ease-out';
 	for (let section of sections) {
 		section.style.animation = 'bodyPageLoad 2s ease-out';
@@ -23,7 +68,7 @@ if (window.innerWidth > 1025) {
 // Nav hover animation
 
 nav.addEventListener('mouseenter', () => {
-	if (window.innerWidth > 1025) {
+	if (window.innerWidth > 1151) {
 		nav.classList.add('navHover');
 		nav.classList.remove('navBlur');
 		for (let section of sections) {
@@ -33,7 +78,7 @@ nav.addEventListener('mouseenter', () => {
 	}
 });
 nav.addEventListener('mouseleave', () => {
-	if (window.innerWidth > 1025) {
+	if (window.innerWidth > 1151) {
 		nav.classList.remove('navHover');
 		nav.classList.add('navBlur');
 		for (let section of sections) {
@@ -42,6 +87,13 @@ nav.addEventListener('mouseleave', () => {
 		}
 	}
 });
+
+// When nav hover animation stops at 1151px, shift all sections right 15vw;
+if (window.innerWidth < 1150) {
+	for (let section of sections) {
+		section.style.marginLeft = '15vw';
+	}
+}
 
 // Link Animation
 
@@ -53,13 +105,6 @@ for (let link of navLinks) {
 		this.classList.add('active');
 	});
 }
-
-// Projects list toggle
-
-projectsLink.addEventListener('click', function (e) {
-	e.preventDefault();
-	projectsLink.nextElementSibling.classList.toggle('projectsClick');
-});
 
 // Resume Animation
 
