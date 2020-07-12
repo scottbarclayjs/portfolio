@@ -21,15 +21,14 @@ textarea {
 	justify-content: space-between;
 	align-items: flex-end;
 	padding: 2rem 2.5rem 1rem 1rem;
-	box-shadow: 0 0 35px $box-shadow;
+	box-shadow: 10px 0 35px $box-shadow;
 	color: $text-color;
 	position: fixed;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	// animation: navPageLoad 3s ease-out;
 	top: 0;
 	left: -13vw;
-	z-index: 9999;
+	z-index: 9989;
 	&.navHover {
 		transform: translateX(13vw);
 		transition: all 0.6s;
@@ -67,14 +66,23 @@ textarea {
 				transform: translateX(-5px);
 				transition: all 0.7s;
 			}
-			&.projects {
-				color: rgba(128, 128, 128, 0.664);
-				&:hover {
-					border-bottom: 1px solid #fff;
-				}
-			}
 			&.active {
 				border-bottom: 1px solid $text-color;
+			}
+			&.projects-link {
+				position: relative;
+				border: none;
+				& .project-categories {
+					list-style-type: none;
+					display: none;
+					&.projectsClick {
+						display: block;
+					}
+					& li a {
+						border: none;
+						color: $primary-color;
+					}
+				}
 			}
 		}
 	}
@@ -101,6 +109,7 @@ textarea {
 
 .header {
 	height: 100vh;
+	margin-left: 2vw;
 	overflow-x: hidden;
 	margin-left: 2vw;
 	text-align: center;
@@ -110,6 +119,39 @@ textarea {
 	align-items: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	position: relative;
+	& h1:nth-of-type(4) {
+		letter-spacing: 5px;
+		color: $primary-color;
+	}
+	.contact-btn {
+		padding: 0.75rem 3rem;
+		background: transparent;
+		border: 1px solid $primary-color;
+		color: $primary-color;
+		border-radius: 5px;
+		font-size: 1rem;
+		margin: 2rem;
+		&:hover {
+			cursor: pointer;
+			background: $primary-color;
+			color: #fff;
+			transition: all 0.6s;
+		}
+	}
+}
+
+.header .background-animation {
+	height: 20px;
+	width: 20px;
+	padding: 10px;
+	background: transparent;
+	border: 2px solid pink;
+	position: absolute;
+	z-index: -99999;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	overflow: hidden;
 }
 
 // Skills Section
@@ -141,19 +183,20 @@ textarea {
 		justify-content: center;
 		text-align: center;
 		overflow-x: hidden;
+		z-index: -999;
+		position: relative;
 		& .skill {
 			width: 15vw;
 			margin: 1rem;
+			position: relative;
+			z-index: -999;
 			& i {
 				color: $text-color;
 				font-size: 3.5rem;
 				margin-bottom: 0.5rem;
 				text-shadow: -1px -2px 5px $box-shadow;
-				&:hover {
-					transform: rotate(10deg) scale(1.1);
-					text-shadow: -3px -4px 6px $box-shadow;
-					transition: all 0.5s;
-				}
+				position: relative;
+				z-index: -99;
 				&.fa-html5:hover,
 				&.fa-html5.skillColor {
 					color: #df4b25;
@@ -252,7 +295,7 @@ textarea {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	overflow: hidden;
-	z-index: 99;
+	z-index: 999;
 	& h1 {
 		font-weight: 300;
 		font-size: 2.5rem;
@@ -278,6 +321,7 @@ textarea {
 		text-align: center;
 		padding: 0.5rem 2rem;
 		opacity: 0;
+		z-index: 9999;
 		& a {
 			color: #fff;
 		}
@@ -318,7 +362,7 @@ textarea {
 	background: transparent;
 	border: 2px solid pink;
 	position: absolute;
-	// z-index: -9999;
+	z-index: -999;
 	z-index: 7;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -511,11 +555,13 @@ form {
 }
 
 // all sections
+.header,
 .skills,
 .resume,
 .contact {
 	// animation: bodyPageLoad 3s ease-out;
 }
+.header.sectionShift,
 .skills.sectionShift,
 .resume.sectionShift,
 .contact.sectionShift {
@@ -523,6 +569,7 @@ form {
 	transition: all 0.6s;
 }
 
+.header.sectionUnshift,
 .skills.sectionUnshift,
 .resume.sectionUnshift,
 .contact.sectionUnshift {

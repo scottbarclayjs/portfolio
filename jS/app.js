@@ -1,20 +1,22 @@
 const nav = document.querySelector('.nav');
+const headerSection = document.querySelector('.header');
 const skillsSection = document.querySelector('.skills');
 const resumeSection = document.querySelector('.resume');
 const contactSection = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav-links li');
+const projectsLink = document.querySelector('.projects-link a');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
-const sections = [skillsSection, resumeSection, contactSection];
+const sections = [headerSection, skillsSection, resumeSection, contactSection];
 
 // Nav load animation
 
 if (window.innerWidth > 1025) {
-	nav.style.animation = 'navPageLoad 3s ease-out';
+	nav.style.animation = 'navPageLoad 2s ease-out';
 	for (let section of sections) {
-		section.style.animation = 'bodyPageLoad 3s ease-out';
+		section.style.animation = 'bodyPageLoad 2s ease-out';
 	}
 }
 
@@ -51,6 +53,13 @@ for (let link of navLinks) {
 		this.classList.add('active');
 	});
 }
+
+// Projects list toggle
+
+projectsLink.addEventListener('click', function (e) {
+	e.preventDefault();
+	projectsLink.nextElementSibling.classList.toggle('projectsClick');
+});
 
 // Resume Animation
 

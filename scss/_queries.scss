@@ -1,4 +1,4 @@
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1150px) {
 	nav.nav {
 		padding: 2rem 2rem 2rem 0;
 		left: 0;
@@ -65,20 +65,14 @@
 		display: none;
 	}
 
-	header.header {
-		margin-left: 0;
-	}
-
-	section.skills {
-		margin-left: 0;
-	}
-
-	section.resume {
+	header.header,
+	section.skills,
+	section.resume,
+	section.contact {
 		margin-left: 0;
 	}
 
 	section.contact {
-		margin-left: 0;
 		& p {
 			font-size: 1.25rem;
 			width: 500px;

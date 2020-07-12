@@ -15,6 +15,7 @@ for (let i = 0; i < themes.length; i++) {
 	themeTxtColor[i].style.color = themeTxtColor[i].innerText;
 	themeTxtColor[i].style.backgroundColor = themes[i].style.backgroundColor;
 	themeName[i].style.color = themeTxtColor[i].innerText;
+
 	// When theme is clicked
 	themeCards[i].addEventListener('click', function () {
 		chosenTheme = themes[i];
