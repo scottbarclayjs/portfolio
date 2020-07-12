@@ -1,21 +1,8 @@
-const contactBtn = document.querySelector('.contact-btn');
 const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
-
-// Header Animation
-
-contactBtn.addEventListener('mouseover', function () {
-	this.style.borderRadius = '0';
-	this.style.transition = 'all .4s';
-});
-
-contactBtn.addEventListener('mouseleave', function () {
-	this.style.borderRadius = '76% 24% 80% 20% / 32% 25% 75% 68%';
-	this.style.transition = 'all .4s';
-});
 
 // Link Animation
 

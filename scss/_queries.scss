@@ -66,18 +66,6 @@
 
 	header.header {
 		margin-left: 0;
-		& .header-content {
-			transform: translateY(100px);
-			padding: 1rem;
-			height: 60vh;
-			& i {
-				font-size: 6rem;
-				margin: 1.5rem 0;
-			}
-			& h1 {
-				font-size: 1.3rem;
-			}
-		}
 	}
 
 	section.skills {
@@ -151,19 +139,6 @@
 		padding: 0.25rem;
 		line-height: 1.5;
 	}
-	.header h1 {
-		font-size: 1rem;
-		letter-spacing: 1px;
-	}
-
-	header.header .header-content {
-		padding: 1rem;
-		transform: translateY(25px);
-		& i {
-			margin: 1rem;
-			font-size: 5rem;
-		}
-	}
 
 	section.skills {
 		padding: 1rem;
@@ -195,12 +170,6 @@
 		height: 8px;
 		width: 8px;
 		padding: 4px;
-	}
-
-	.header .contact-btn {
-		padding: 1rem 2.25rem;
-		font-size: 1rem;
-		margin-top: 1rem;
 	}
 
 	section.contact h1 {
@@ -269,13 +238,6 @@
 
 	header.header {
 		height: 80vh;
-		& .header-content {
-			margin: 0 2rem;
-			height: 50vh;
-			& h1 {
-				font-size: 1rem;
-			}
-		}
 	}
 
 	section.skills {
