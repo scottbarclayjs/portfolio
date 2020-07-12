@@ -28,7 +28,7 @@ textarea {
 	overflow-y: hidden;
 	top: 0;
 	left: -13vw;
-	z-index: 9989;
+	z-index: 998999;
 	&.navHover {
 		transform: translateX(13vw);
 		transition: all 0.6s;
@@ -120,6 +120,7 @@ textarea {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	position: relative;
+	z-index: 99999;
 	& h1:nth-of-type(4) {
 		letter-spacing: 5px;
 		color: $primary-color;
@@ -132,11 +133,22 @@ textarea {
 		border-radius: 5px;
 		font-size: 1rem;
 		margin: 2rem;
+		position: relative;
+		z-index: 999999;
+		& a {
+			color: $primary-color;
+		}
 		&:hover {
 			cursor: pointer;
 			background: $primary-color;
 			color: #fff;
 			transition: all 0.6s;
+		}
+		&:hover a {
+			color: #fff;
+		}
+		&:focus {
+			outline: transparent;
 		}
 	}
 }
