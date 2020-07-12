@@ -1,8 +1,19 @@
+const nav = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
+
+// Nav hover animation
+nav.addEventListener('mouseenter', () => {
+	nav.classList.add('navHover');
+	nav.classList.remove('navBlur');
+});
+nav.addEventListener('mouseleave', () => {
+	nav.classList.remove('navHover');
+	nav.classList.add('navBlur');
+});
 
 // Link Animation
 

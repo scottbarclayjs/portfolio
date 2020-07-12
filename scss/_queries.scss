@@ -309,3 +309,19 @@
 		}
 	}
 }
+
+@keyframes navPageLoad {
+	0% {
+		transform: translateX(0vw);
+	}
+	15% {
+		width: 17vw;
+	}
+	30% {
+		transform: translateX(13vw);
+		width: 15vw;
+	}
+	100% {
+		transform: translateX(0vw);
+	}
+}

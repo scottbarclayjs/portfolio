@@ -20,15 +20,24 @@ textarea {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
-	padding: 2rem 2.5rem 2rem 1rem;
+	padding: 2rem 2.5rem 1rem 1rem;
 	box-shadow: 0 0 35px $box-shadow;
 	color: $text-color;
 	position: fixed;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	animation: navPageLoad 3s ease-out;
 	top: 0;
-	left: 0;
+	left: -13vw;
 	z-index: 100;
+	&.navHover {
+		transform: translateX(13vw);
+		transition: all 0.6s;
+	}
+	&.navBlur {
+		transform: translateX(0vw);
+		transition: all 0.6s;
+	}
 	&-name .name {
 		background-color: $primary-color;
 		color: #ddd;
@@ -93,11 +102,6 @@ textarea {
 .header {
 	height: 100vh;
 	overflow-x: hidden;
-	background-image: linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.6)),
-		url(/assets/backgroundResize.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
 	margin-left: 15vw;
 	text-align: center;
 	z-index: -1;
