@@ -160,7 +160,7 @@ for (let img of skillImage) {
 function skillDisplay() {
 	let randSkill = Math.floor(Math.random() * skills.length);
 	skills[randSkill].classList.toggle('skillColor');
-	setTimeout(skillDisplay, 500);
+	setTimeout(skillDisplay, 250);
 }
 
 skillDisplay();
@@ -206,12 +206,14 @@ let bgShapes = document.querySelectorAll('.background-animation');
 shapesBgAnimation(bgShapes);
 
 function shapesBgAnimation() {
-	shapesColorRandomizer(bgShapes);
+	// shapesColorRandomizer(bgShapes);
 	shapesShapeRandomizer(bgShapes);
 	shapesLocationRandomizer(bgShapes);
 	shapesRotationRandomizer(bgShapes);
 
-	setTimeout(shapesBgAnimation, 5000);
+	if (window.innerWidth > 800) {
+		setTimeout(shapesBgAnimation, 3000);
+	}
 }
 
 // Border Color
