@@ -13,6 +13,10 @@ textarea {
 	outline: transparent;
 }
 
+// =================================
+// ======== Nav Section =========
+// =================================
+
 .nav {
 	height: 100vh;
 	width: 15vw;
@@ -91,6 +95,10 @@ textarea {
 		}
 	}
 }
+
+// =================================
+// ======== Header Section =========
+// =================================
 
 .header {
 	margin-left: 2vw;
@@ -297,12 +305,14 @@ textarea {
 	transition: all 1s;
 }
 
-// Skills Section
+// =================================
+// ======== Skills Section =========
+// =================================
 
 .skills {
 	position: relative;
 	margin-left: 2vw;
-	padding: 2rem 2rem 0 2rem;
+	padding: 2rem 9.1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -413,7 +423,9 @@ textarea {
 	}
 }
 
-// Resume Secion
+// =================================
+// ======== Resume Section =========
+// =================================
 
 .resume {
 	margin-left: 2vw;
@@ -498,7 +510,9 @@ textarea {
 	overflow: hidden;
 }
 
-// Contact Section
+// =================================
+// ======== Contact Section =========
+// =================================
 
 .contact {
 	padding-top: 3rem;
@@ -564,8 +578,8 @@ form {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 600px;
-	height: 550px;
+	// width: 600px;
+	// height: 550px;
 	margin: 2rem auto;
 	padding: 6rem 6rem;
 	background-color: rgba(255, 255, 255, 0.808);

@@ -42,6 +42,10 @@
 		}
 	}
 
+	section.skills {
+		padding: 2rem 2rem;
+	}
+
 	.resume img.resume-img {
 		height: 50vh;
 	}
@@ -125,6 +129,7 @@
 			display: flex;
 			justify-content: space-between;
 			margin: 0 2rem;
+			padding: 1.5rem 0;
 			& .footer-left {
 				display: flex;
 				& p:nth-of-type(2) {
@@ -163,19 +168,28 @@
 		& .header-head {
 			text-align: center;
 		}
+		& .header-main .header-main-cards {
+			margin: 0;
+			& .card {
+				margin-right: 0;
+				width: 100%;
+			}
+		}
+
 		& .header-card-list {
 			margin: 0;
+			margin-top: 1.5rem;
 			padding: 1rem;
 			width: 90%;
 		}
 	}
 
 	section.skills {
-		padding: 1rem;
+		padding: 0;
 		margin-bottom: 2.5rem;
 		& h1 {
 			font-size: 2.5rem;
-			margin: 3rem 0 1rem 0;
+			margin: 1rem 0 1rem 0;
 		}
 		& .mySkills {
 			& .skill {
@@ -212,15 +226,6 @@
 		width: 350px;
 		font-size: 1rem;
 		color: #fff;
-	}
-
-	section.contact {
-		& .contact-background,
-		& .contact-backgroundTwo,
-		& .contact-backgroundThree {
-			width: 100vw;
-			height: 110vh;
-		}
 	}
 
 	form.form {
@@ -268,7 +273,6 @@
 
 	section.skills {
 		height: 85vh;
-		padding-top: 5rem;
 	}
 
 	section.resume {
@@ -276,16 +280,9 @@
 	}
 
 	section.contact {
-		height: 100vh;
-		& .contact-background,
-		& .contact-backgroundTwo,
-		& .contact-backgroundThree {
-			height: 120vh;
-		}
 		& form.form {
 			padding: 1rem;
 			width: 300px;
-			height: 500px;
 			& .form-head {
 				& input {
 					width: 250px;
@@ -322,16 +319,6 @@
 			padding-top: 1rem;
 			margin: 0 0.25rem;
 			font-size: 1rem;
-		}
-	}
-}
-
-@media screen and (max-width: 376px) {
-	section.contact {
-		& .contact-background,
-		& .contact-backgroundTwo,
-		& .contact-backgroundThree {
-			height: 131vh;
 		}
 	}
 }
