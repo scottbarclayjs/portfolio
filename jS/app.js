@@ -60,9 +60,6 @@ for (let i = 0; i < projectCategory.length; i++) {
 
 if (window.innerWidth > 1151) {
 	nav.style.animation = 'navPageLoad 2s ease-out';
-	for (let section of sections) {
-		section.style.animation = 'bodyPageLoad 2s ease-out';
-	}
 }
 
 // Header bg Circles animation
@@ -83,20 +80,12 @@ nav.addEventListener('mouseenter', () => {
 	if (window.innerWidth > 1151) {
 		nav.classList.add('navHover');
 		nav.classList.remove('navBlur');
-		for (let section of sections) {
-			section.classList.add('sectionShift');
-			section.classList.remove('sectionUnshift');
-		}
 	}
 });
 nav.addEventListener('mouseleave', () => {
 	if (window.innerWidth > 1151) {
 		nav.classList.remove('navHover');
 		nav.classList.add('navBlur');
-		for (let section of sections) {
-			section.classList.add('sectionUnshift');
-			section.classList.remove('sectionShift');
-		}
 	}
 });
 

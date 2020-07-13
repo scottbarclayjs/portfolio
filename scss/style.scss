@@ -29,7 +29,7 @@ textarea {
 	overflow-y: hidden;
 	top: 0;
 	left: -13vw;
-	z-index: 998999;
+	z-index: 998999 !important;
 	&.navHover {
 		transform: translateX(13vw);
 		transition: all 0.6s;
@@ -301,7 +301,6 @@ textarea {
 
 .skills {
 	position: relative;
-	// height: 100vh;
 	margin-left: 2vw;
 	padding: 2rem 2rem 0 2rem;
 	display: flex;
@@ -683,38 +682,4 @@ form {
 
 .footer {
 	display: none;
-}
-
-.header.sectionShift,
-.skills.sectionShift,
-.resume.sectionShift,
-.contact.sectionShift {
-	margin-left: 15vw;
-	transition: all 0.6s;
-}
-
-.header.sectionUnshift,
-.skills.sectionUnshift,
-.resume.sectionUnshift,
-.contact.sectionUnshift {
-	margin-left: 2vw;
-	transition: all 0.6s;
-}
-
-.contact.sectionShift {
-	& .contact-background,
-	& .contact-backgroundTwo,
-	& .contact-backgroundThree {
-		width: 85vw;
-		transition: all 0.6s;
-	}
-}
-
-.contact.sectionUnshift {
-	& .contact-background,
-	& .contact-backgroundTwo,
-	& .contact-backgroundThree {
-		width: 100vw;
-		transition: all 0.6s;
-	}
 }
