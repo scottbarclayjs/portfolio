@@ -172,7 +172,7 @@ for (let img of skillImage) {
 function skillDisplay() {
 	let randSkill = Math.floor(Math.random() * skills.length);
 	skills[randSkill].classList.toggle('skillColor');
-	setTimeout(skillDisplay, 250);
+	setTimeout(skillDisplay, 500);
 }
 
 skillDisplay();
@@ -224,7 +224,7 @@ function shapesBgAnimation() {
 	shapesRotationRandomizer(bgShapes);
 
 	if (window.innerWidth > 800) {
-		setTimeout(shapesBgAnimation, 3000);
+		setTimeout(shapesBgAnimation, 6000);
 	}
 }
 
