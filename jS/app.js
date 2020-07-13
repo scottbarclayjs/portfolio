@@ -89,10 +89,8 @@ nav.addEventListener('mouseleave', () => {
 });
 
 // When nav hover animation stops at 1151px, shift all sections right 15vw;
-if (window.innerWidth < 1150) {
-	for (let section of sections) {
-		section.style.marginLeft = '15vw';
-	}
+for (let i = 0; i < sections.length; i++) {
+	sections[i].style.margin = '0 0 0 15vw';
 }
 
 // Link Animation
@@ -200,22 +198,22 @@ form.addEventListener('submit', function (e) {
 	}
 });
 
-// Skills BG Animation
+// Shapes BG Animation
 let bgShapes = document.querySelectorAll('.background-animation');
 
-skillsBgAnimation(bgShapes);
+shapesBgAnimation(bgShapes);
 
-function skillsBgAnimation() {
-	skillsColorRandomizer(bgShapes);
-	skillsShapeRandomizer(bgShapes);
-	skillsLocationRandomizer(bgShapes);
-	skillsRotationRandomizer(bgShapes);
+function shapesBgAnimation() {
+	shapesColorRandomizer(bgShapes);
+	shapesShapeRandomizer(bgShapes);
+	shapesLocationRandomizer(bgShapes);
+	shapesRotationRandomizer(bgShapes);
 
-	setTimeout(skillsBgAnimation, 5000);
+	setTimeout(shapesBgAnimation, 5000);
 }
 
 // Border Color
-function skillsColorRandomizer(arr) {
+function shapesColorRandomizer(arr) {
 	arr.forEach((item) => {
 		let r = Math.floor(Math.random() * 255);
 		let g = Math.floor(Math.random() * 255);
@@ -227,7 +225,7 @@ function skillsColorRandomizer(arr) {
 }
 
 // Shape
-function skillsShapeRandomizer(arr) {
+function shapesShapeRandomizer(arr) {
 	arr.forEach((item) => {
 		let borRad = Math.floor(Math.random() * 50);
 		let randomRadius = `${borRad}%`;
@@ -236,7 +234,7 @@ function skillsShapeRandomizer(arr) {
 }
 
 // Location
-function skillsLocationRandomizer(arr) {
+function shapesLocationRandomizer(arr) {
 	arr.forEach((item) => {
 		let height = Math.floor(Math.random() * window.innerHeight);
 		let width = Math.floor(Math.random() * window.innerWidth);
@@ -248,7 +246,7 @@ function skillsLocationRandomizer(arr) {
 }
 
 // Rotation
-function skillsRotationRandomizer(arr) {
+function shapesRotationRandomizer(arr) {
 	arr.forEach((item) => {
 		let rotation = Math.floor(Math.random() * 360);
 		let randomRotation = `rotate(${rotation}deg)`;
