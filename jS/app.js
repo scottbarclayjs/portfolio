@@ -89,8 +89,10 @@ nav.addEventListener('mouseleave', () => {
 });
 
 // When nav hover animation stops at 1151px, shift all sections right 15vw;
-for (let i = 0; i < sections.length; i++) {
-	sections[i].style.margin = '0 0 0 15vw';
+if (window.innerWidth < 1152) {
+	for (let i = 0; i < sections.length; i++) {
+		sections[i].style.margin = '0 0 0 15vw';
+	}
 }
 
 // Link Animation
