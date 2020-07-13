@@ -95,9 +95,18 @@ textarea {
 .header {
 	margin-left: 2vw;
 	overflow-x: hidden;
-	// overflow-y: hidden;
+	overflow-y: hidden;
 	position: relative;
 	z-index: 99999;
+	& .background-circle {
+		position: absolute;
+		height: 400px;
+		width: 400px;
+		padding: 200px;
+		background-color: $primary-color;
+		border-radius: 50%;
+		z-index: -99;
+	}
 }
 
 .header-container {
@@ -226,19 +235,22 @@ textarea {
 /* settings for content within display */
 .utilities h4,
 .games h4,
-.websites h4 {
+.websites h4,
+.components h4 {
 	font-size: 1.5rem;
 }
 
 .utilities i,
 .games i,
-.websites i {
+.websites i,
+.components i {
 	font-size: 4rem;
 }
 
 .utilities i:hover,
 .games i:hover,
-.websites i:hover {
+.websites i:hover,
+.components:hover {
 	transform: rotate(1800deg);
 	transition: all 5s;
 }

@@ -65,6 +65,18 @@ if (window.innerWidth > 1151) {
 	}
 }
 
+// Header bg Circles animation
+let circles = document.querySelectorAll('.background-circle');
+
+circleBgAnimation(circles);
+
+function circleBgAnimation(arr) {
+	// shapesColorRandomizer(bgShapes);
+	shapesShapeRandomizer(arr);
+	shapesLocationRandomizer(arr);
+	shapesRotationRandomizer(arr);
+}
+
 // Nav hover animation
 
 nav.addEventListener('mouseenter', () => {

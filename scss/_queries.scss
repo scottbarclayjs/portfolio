@@ -98,14 +98,13 @@
 				& .card {
 					width: 25%;
 					min-width: 12rem;
-					// flex-wrap: wrap;
 					text-align: center;
 					align-items: center;
 				}
 			}
 			& .header-card-list {
 				width: 75%;
-				margin: 1rem;
+				margin: 2.5rem 1rem 1rem 1rem;
 				& .list-overlay {
 					display: none;
 				}
