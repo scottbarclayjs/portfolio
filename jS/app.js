@@ -10,11 +10,26 @@ const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
 const sections = [headerSection, skillsSection, resumeSection, contactSection];
 
-// Header Content *********************************
+// **************************************
+// *********** Header Content ***********
+// **************************************
+
 const projectCards = document.querySelectorAll('.card');
 const projectsOverlay = document.querySelector('.list-overlay');
 const header = document.querySelector('.header-container');
 const projectCategory = document.querySelectorAll('.project-category');
+
+// Header bg Circles animation
+let circles = document.querySelectorAll('.background-circle');
+
+circleBgAnimation(circles);
+
+function circleBgAnimation(arr) {
+	// shapesColorRandomizer(bgShapes);
+	shapesShapeRandomizer(arr);
+	shapesLocationRandomizer(arr);
+	shapesRotationRandomizer(arr);
+}
 
 // Removes overlay when a card is clicked
 for (let card of projectCards) {
@@ -56,22 +71,22 @@ for (let i = 0; i < projectCategory.length; i++) {
 	});
 }
 
+// Go to project when project is clicked
+let projectThumb = document.querySelectorAll('.project-category img');
+for (let i = 0; i < projectCategory.length; i++) {
+	projectCards[i].addEventListener('click', () => {
+		for (let j = 0; j < projectThumb.length; j++) {
+			projectThumb[j].addEventListener('mouseenter', () => {
+				projectThumb[j].classList.add('chosenProject');
+			});
+		}
+	});
+}
+
 // Nav load animation
 
 if (window.innerWidth > 1151) {
 	nav.style.animation = 'navPageLoad 2s ease-out';
-}
-
-// Header bg Circles animation
-let circles = document.querySelectorAll('.background-circle');
-
-circleBgAnimation(circles);
-
-function circleBgAnimation(arr) {
-	// shapesColorRandomizer(bgShapes);
-	shapesShapeRandomizer(arr);
-	shapesLocationRandomizer(arr);
-	shapesRotationRandomizer(arr);
 }
 
 // Nav hover animation
