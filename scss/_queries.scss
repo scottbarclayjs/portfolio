@@ -13,6 +13,19 @@
 		}
 	}
 
+	.header {
+		& .utilities h4,
+		.games h4,
+		.websites h4 {
+			font-size: 1rem;
+		}
+		& .utilities i,
+		.games i,
+		.websites i {
+			font-size: 2.5rem;
+		}
+	}
+
 	.resume img.resume-img {
 		height: 50vh;
 	}
@@ -38,7 +51,7 @@
 	}
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1150px) {
 	nav.nav {
 		height: 20vh;
 		width: 100vw;
@@ -65,19 +78,39 @@
 		display: none;
 	}
 
-	header.header h1 {
-		font-size: 1.75rem;
-		transform: translateY(50px);
-		& .contact-btn {
-			transform: translateY(50px);
-		}
-	}
-
 	header.header,
 	section.skills,
 	section.resume,
 	section.contact {
-		margin-left: 0;
+		margin-left: 0 !important;
+	}
+
+	header.header {
+		margin-top: 20vh !important;
+		& .header-container {
+			margin: 3rem 1.5rem;
+		}
+		& .header-main {
+			flex-direction: column;
+			align-items: center;
+			& .header-main-cards {
+				width: 100%;
+				& .card {
+					width: 25%;
+					min-width: 12rem;
+					// flex-wrap: wrap;
+					text-align: center;
+					align-items: center;
+				}
+			}
+			& .header-card-list {
+				width: 75%;
+				margin: 1rem;
+				& .list-overlay {
+					display: none;
+				}
+			}
+		}
 	}
 
 	section.contact {
@@ -137,10 +170,14 @@
 		}
 	}
 
-	.header {
-		transform: translateY(50px);
-		padding: 0.25rem;
-		line-height: 1.5;
+	header.header .header-container {
+		margin: 3rem 0.5rem;
+		padding: 1rem 0.5rem 5rem 0.5rem;
+		& .header-card-list {
+			margin: 0;
+			padding: 1rem;
+			width: 90%;
+		}
 	}
 
 	section.skills {
@@ -237,10 +274,6 @@
 				padding: 0.5rem 1rem;
 			}
 		}
-	}
-
-	header.header {
-		height: 80vh;
 	}
 
 	section.skills {

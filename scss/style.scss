@@ -93,28 +93,44 @@ textarea {
 }
 
 .header {
-	height: 100vh;
 	margin-left: 2vw;
 	overflow-x: hidden;
-	margin-left: 2vw;
-	z-index: -1;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	// overflow-y: hidden;
 	position: relative;
 	z-index: 99999;
 }
 
 .header-container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
 	padding: 1rem 3rem 5rem 3rem;
 	background-color: #fff;
 	border-radius: 1rem;
-	width: 80vw;
-	height: 85vh;
 	box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.336);
+	max-width: 70rem;
+	margin: 5rem auto;
+	& .header-main {
+		display: flex;
+		justify-content: center;
+		& .header-main-cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-right: 1rem;
+			width: 60%;
+			& .card {
+				width: 48%;
+				padding: 1.25rem 1.25rem 2rem 1.25rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-start;
+				border-radius: 0.5rem;
+				margin-right: 0.5rem;
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
 }
 
 /* Contains name and intro paragraph */
@@ -134,32 +150,6 @@ textarea {
 
 .header .header-head h5 {
 	font-size: 1rem;
-}
-
-/* Makes left and right side of heading */
-.header-main {
-	display: flex;
-}
-
-/* Section containing all 4 project category cards */
-.header-main-cards {
-	display: flex;
-	flex-wrap: wrap;
-	width: 74%;
-	margin-right: 1rem;
-}
-
-/* Settings for each individual card */
-.header-main-cards .card {
-	width: 48%;
-	padding: 1.25rem 1.25rem 2rem 1.25rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-	border-radius: 0.5rem;
-	margin-right: 0.5rem;
-	margin-bottom: 0.5rem;
 }
 
 /* Individual card hover effect */
@@ -214,9 +204,10 @@ textarea {
 
 /* Container for what goes inside right hand display */
 .header-card-list {
+	height: 23rem;
 	border: 1px solid #e4ebeb;
 	border-radius: 1rem 1rem 0 0;
-	min-width: 26%;
+	width: 25%;
 	padding: 1rem 2rem;
 	box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.26);
 	text-align: center;
@@ -298,7 +289,7 @@ textarea {
 
 .skills {
 	position: relative;
-	height: 100vh;
+	// height: 100vh;
 	margin-left: 2vw;
 	padding: 2rem 2rem 0 2rem;
 	display: flex;
@@ -503,7 +494,7 @@ textarea {
 	margin-left: 2vw;
 	position: relative;
 	text-align: center;
-	color: #333;
+	color: #444;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -540,7 +531,7 @@ textarea {
 	}
 
 	&-background {
-		background-color: rgb(51, 51, 51);
+		background-color: rgba(64, 95, 166, 0.15);
 		clip-path: polygon(100% 25%, 100% 100%, 0% 100%, 0% 90%);
 		z-index: -90;
 	}
@@ -550,7 +541,7 @@ textarea {
 		z-index: -98;
 	}
 	&-backgroundThree {
-		background-color: rgba(51, 51, 51, 0.2);
+		background-color: rgba(64, 95, 166, 0.6);
 		clip-path: polygon(50% 0%, 50% 70%, 0% 90%, 0% 0%);
 		z-index: -100;
 	}
@@ -569,6 +560,7 @@ form {
 	border-radius: 34% 66% 59% 41% / 71% 30% 70% 29%;
 	box-shadow: 0 0 25px $box-shadow;
 	z-index: 99;
+	color: #444;
 	&.formHover {
 		border-radius: 0;
 		transition: all 0.5s;
