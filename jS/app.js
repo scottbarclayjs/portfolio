@@ -8,6 +8,7 @@ const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
+const projectLink = document.querySelectorAll('.project-category a');
 const sections = [headerSection, skillsSection, resumeSection, contactSection];
 
 // **************************************
@@ -17,6 +18,7 @@ const sections = [headerSection, skillsSection, resumeSection, contactSection];
 const projectCards = document.querySelectorAll('.card');
 const projectsOverlay = document.querySelector('.list-overlay');
 const header = document.querySelector('.header-container');
+const mainHeader = document.querySelector('.header-main');
 const projectCategory = document.querySelectorAll('.project-category');
 
 // Header bg Circles animation
@@ -46,6 +48,9 @@ for (let card of projectCards) {
 		projectsOverlay.classList.add('showOverlay');
 		card.classList.remove('choose');
 		card.firstElementChild.classList.remove('choose');
+		for (let thumb of projectThumb) {
+			thumb.classList.remove('chosenProject');
+		}
 	});
 }
 
@@ -73,10 +78,14 @@ for (let i = 0; i < projectCategory.length; i++) {
 
 // Go to project when project is clicked
 let projectThumb = document.querySelectorAll('.project-category img');
+
 for (let i = 0; i < projectCategory.length; i++) {
 	projectCards[i].addEventListener('click', () => {
 		for (let j = 0; j < projectThumb.length; j++) {
 			projectThumb[j].addEventListener('mouseenter', () => {
+				for (let project of projectThumb) {
+					project.classList.remove('chosenProject');
+				}
 				projectThumb[j].classList.add('chosenProject');
 			});
 		}
