@@ -17,12 +17,11 @@ body {
 
 .content {
 	position: relative;
-	height: 550px;
-	width: 700px;
+	width: 42rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 6rem;
+	padding: 4.5rem;
 	background-color: #24141c;
 	color: #b2aaab;
 	border-radius: 10px;
@@ -35,11 +34,19 @@ body {
 
 .basic,
 .pro {
-	height: 100%;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 0 4rem;
+}
+
+.pro {
+	padding-left: 5%;
+}
+
+.basic .section,
+.pro .section {
+	margin: 1.5rem 0;
 }
 
 .basic h1,
@@ -66,7 +73,7 @@ body {
 }
 
 .basic-btn {
-	width: 187px;
+	width: 90%;
 	text-align: center;
 	padding: 0.8rem 0;
 	background: transparent;
@@ -82,9 +89,9 @@ body {
 }
 
 .pro-btn {
-	width: 187px;
+	width: 100%;
 	text-align: center;
-	padding: 0.8rem 4rem;
+	padding: 0.8rem 0;
 	background: #aa2b33;
 	border: 1px solid #aa2b33;
 	color: #b2aaab;
@@ -103,52 +110,56 @@ body {
 }
 
 .content-shadow {
-	width: 90px;
-	height: 840px;
-	padding: 420px 45px;
+	width: 40rem;
+	height: 6rem;
+	padding: 45px 420px;
 	border-radius: 100%;
 	background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-	transform: rotate(90deg);
 	position: absolute;
-	top: 24%;
-	left: 43.5%;
-	z-index: -999;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
 }
 
-@media screen and (max-width: 1030px) {
-	.content {
-		height: 450px;
-		width: 550px;
-		padding: 4rem;
-	}
-
-	.basic,
-	.pro {
-		padding: 0 2.5rem;
-	}
-
+@media screen and (max-width: 769px) {
 	.content-shadow {
-		width: 80px;
-		height: 725px;
-		padding: 250px 40px;
-		top: 20%;
-		left: 42%;
+		display: none;
 	}
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 750px) {
 	.content {
-		height: 250px;
-		width: 300px;
-		padding: 1rem;
-		font-size: 10px;
-		position: absolute;
-		/* top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%); */
+		width: 95vw;
+		padding: 1.5rem;
+		overflow: hidden;
 	}
-}
 
-body {
-	background-image: url;
+	.basic .section,
+	.pro .section {
+		margin: 1rem 0;
+	}
+
+	.basic h1,
+	.pro h1 {
+		font-size: 1.25rem;
+	}
+
+	.basic h3,
+	.pro h3 {
+		font-size: 0.9rem;
+		font-weight: 300;
+	}
+
+	.basic p,
+	.pro p {
+		font-size: 0.7rem;
+		font-weight: 300;
+	}
+
+	.basic li,
+	.pro li {
+		font-size: 0.7rem;
+		font-weight: 300;
+	}
 }
