@@ -51,6 +51,9 @@ for (let card of projectCards) {
 		for (let thumb of projectThumb) {
 			thumb.classList.remove('chosenProject');
 		}
+		for (let category of projectCategory) {
+			category.style.display = 'none';
+		}
 	});
 }
 
