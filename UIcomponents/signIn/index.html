@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/08faad1d73.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container hide">
+        <div class="container-content">
+            <h1>Sign In</h1>
+            <form action="" method="get" class="form">
+                <div class="form-header">
+                    <div class="inputs">
+                        <input type="email" name="email" id="email" class="email-input" placeholder="Email">
+                        <h6>Please enter a valid email</h6>
+                        <input type="password" name="password" id="password" class="password-input" placeholder="Password">
+                        <h6>Password must be between 8 and 12 characters</h6>
+                    </div>
+                    <div class="options">
+                        <div class="keep-signed-in">
+                            <div class="checkbox-overlay">
+                                <i class="fas fa-check"></i>
+                                <input type="checkbox" name="keep-signed-in" id="keep-signed-in" class="keep-signed-in-input">
+                            </div>
+                            <label for="keep-signed-in">Keep me signed in</label>
+                        </div>
+                        <a href="" class="forgot-password">Forgot your password?</a>
+                    </div>
+                    <div class="sign-in-input">
+                        <p>By continuing, you agree to our <span>Conditions of Use</span> and <span>Privacy Notice.</span></p>
+                        <button type="submit" id="sign-in-btn">Sign In</button>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <div class="footer-title">
+                        <div class="line line-left"></div>
+                        <h4>New on our platform?</h4>
+                        <div class="line line-right"></div>
+                    </div>
+                    <div class="footer-input">
+                        <button type="submit" class="create-account">Create an Account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container hide">
+        <div class="back-btn">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="container-content">
+            <h1>Create Account</h1>
+            <form action="" method="get" class="form">
+                <div class="form-header">
+                    <div class="inputs">
+                        <input type="text" name="first-name" id="first-name" class="first-name" placeholder="First Name">
+                        <h6>Please enter your first name</h6>
+                        <input type="text" name="last-name" id="last-name" class="last-name" placeholder="Last Name">
+                        <h6>Please enter your last name</h6>
+                        <input type="email" name="email" id="emailCreate" class="email-input" placeholder="Email">
+                        <h6>Please enter a valid email</h6>
+                        <input type="password" name="password" id="passwordCreate" class="password-input" placeholder="Password">
+                        <h6>Password must be between 8 and 12 characters</h6>
+                    </div>
+                    <div class="sign-in-input">
+                        <p>By continuing, you agree to our <span>Conditions of Use</span> and <span>Privacy Notice.</span></p>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <div class="footer-input">
+                        <button type="submit" class="create-account" id="acct-create">Create My Account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
