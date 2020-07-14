@@ -95,6 +95,16 @@ for (let i = 0; i < projectCategory.length; i++) {
 	});
 }
 
+// Mobile: scroll to window when project category is selected
+if (window.innerWidth < 420) {
+	for (let card of projectCards) {
+		card.addEventListener('click', () => {
+			console.log('success');
+			window.scrollTo(0, 1050);
+		});
+	}
+}
+
 // Nav load animation
 
 if (window.innerWidth > 1151) {

@@ -162,19 +162,22 @@ textarea {
 .header .header-head {
 	max-width: 33rem;
 	margin-bottom: 2.5rem;
-}
-
-.header .header-head h1 {
-	font-size: 2.75rem;
-	font-weight: 300;
-	letter-spacing: 5px;
-	& span {
-		color: $primary-color;
+	& h1 {
+		font-size: 2.75rem;
+		font-weight: 300;
+		letter-spacing: 5px;
+		& span {
+			color: $primary-color;
+		}
+	}
+	& h5 {
+		font-size: 1rem;
 	}
 }
 
-.header .header-head h5 {
-	font-size: 1rem;
+// Instruction for mobile
+.header-main h4 {
+	display: none;
 }
 
 /* Individual card hover effect */
