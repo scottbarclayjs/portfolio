@@ -67,11 +67,18 @@ textarea {
 			align-self: flex-end;
 			border-bottom: none;
 			&:hover {
+				color: $primary-color;
 				transform: translateX(-5px);
 				transition: all 0.7s;
+				& a {
+					color: $primary-color;
+				}
 			}
 			&.active {
-				border-bottom: 1px solid $text-color;
+				transform: translateX(-5px);
+				a {
+					color: $primary-color;
+				}
 			}
 		}
 	}
