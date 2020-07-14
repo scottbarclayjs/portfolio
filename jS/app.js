@@ -99,7 +99,6 @@ for (let i = 0; i < projectCategory.length; i++) {
 if (window.innerWidth < 420) {
 	for (let card of projectCards) {
 		card.addEventListener('click', () => {
-			console.log('success');
 			window.scrollTo(0, 1050);
 		});
 	}
