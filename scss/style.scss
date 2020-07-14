@@ -238,10 +238,10 @@ textarea {
 	height: 100%;
 	display: none;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	& img {
 		opacity: 0.8;
-		height: 33%;
+		height: 33.333333%;
 		margin: 0;
 		border-radius: 0.5rem 0.5rem 0 0;
 		&:hover {
@@ -310,14 +310,14 @@ textarea {
 	top: 0;
 	left: 0;
 	width: 104%;
-	height: 100%;
+	height: 103%;
 	padding: 50%;
-	transform: translateX(-2%);
-	background-color: $secondary-color;
+	transform: translate(-2%, -1%);
+	background-color: #fff;
 	background-size: cover;
 	border-radius: 1rem 1rem 0 0;
 	z-index: 1;
-	box-shadow: 0 25px 8px -15px rgba(0, 0, 0, 0.438);
+	box-shadow: 0 30px 7px -15px rgba(0, 0, 0, 0.438);
 	border: none;
 }
 
