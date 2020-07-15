@@ -109,16 +109,9 @@
 			font-size: 1.25rem;
 			width: 500px;
 		}
-		& .contact-background,
-		& .contact-backgroundTwo,
-		& .contact-backgroundThree {
-			width: 100vw;
-			height: 93vh;
-		}
 	}
 
 	footer.footer {
-		margin-top: 2rem;
 		display: block;
 		color: $text-color;
 		font-weight: 400;
@@ -232,7 +225,10 @@
 		border-radius: 0;
 		padding: 3rem 1rem;
 		width: 350px;
-		margin: 2rem auto 0 auto;
+		margin: 1rem auto;
+		& label {
+			font-size: 0.8rem;
+		}
 		& .form-head {
 			flex-direction: column;
 			align-items: center;
@@ -285,6 +281,12 @@
 	}
 
 	section.contact {
+		& h1 {
+			margin: 1rem 0;
+		}
+		& p {
+			margin: 0 auto;
+		}
 		& form.form {
 			padding: 1rem;
 			width: 300px;
@@ -325,14 +327,6 @@
 			margin: 0 0.25rem;
 			font-size: 1rem;
 		}
-	}
-}
-
-@media screen and (min-width: 1800px) {
-	.header-container {
-		padding: 2rem 3rem 5rem 3rem;
-		max-width: 80rem;
-		margin: 5rem auto;
 	}
 }
 
