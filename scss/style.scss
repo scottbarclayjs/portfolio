@@ -109,7 +109,7 @@ textarea {
 // =================================
 
 .header {
-	margin-left: 2vw;
+	margin-left: 2rem;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	position: relative;
@@ -133,7 +133,7 @@ textarea {
 	border-radius: 1rem;
 	box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.336);
 	max-width: 70rem;
-	margin: 3rem auto;
+	margin: 2.75rem auto;
 	& .header-main {
 		display: flex;
 		justify-content: center;
@@ -381,7 +381,7 @@ textarea {
 .skills {
 	position: relative;
 	margin-left: 2vw;
-	padding: 2rem 9.1rem;
+	padding: 5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -391,12 +391,14 @@ textarea {
 	overflow-y: hidden;
 	z-index: -999;
 	position: relative;
+	background-color: $primary-color;
 	& h1 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 		font-weight: 300;
 		margin: 2rem;
 		text-transform: uppercase;
 		letter-spacing: 15px;
+		color: #fff;
 	}
 	& .mySkills {
 		display: flex;
@@ -404,15 +406,16 @@ textarea {
 		justify-content: center;
 		text-align: center;
 		overflow-x: hidden;
-		z-index: -999;
+		z-index: -99999;
 		position: relative;
 		& .skill {
-			width: 15vw;
+			width: 22vw;
 			margin: 1rem;
 			position: relative;
 			z-index: -999;
+			color: rgba(255, 255, 255, 0.75);
 			& i {
-				color: $text-color;
+				color: rgba(255, 255, 255, 0.75);
 				font-size: 3.5rem;
 				margin-bottom: 0.5rem;
 				text-shadow: -1px -2px 5px $box-shadow;
@@ -508,7 +511,7 @@ textarea {
 	z-index: 999;
 	& h1 {
 		font-weight: 300;
-		font-size: 2.5rem;
+		font-size: 3rem;
 		letter-spacing: 15px;
 		margin-bottom: 2rem;
 		text-transform: uppercase;
@@ -584,11 +587,11 @@ textarea {
 // =================================
 
 .contact {
-	padding-top: 3rem;
+	padding: 5rem 0;
 	margin-left: 2vw;
 	position: relative;
 	text-align: center;
-	color: #444;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -599,14 +602,14 @@ textarea {
 	& h1 {
 		margin-top: 2rem;
 		font-weight: 300;
-		font-size: 2.5rem;
+		font-size: 3rem;
 		letter-spacing: 15px;
 		margin-bottom: 2rem;
 		text-transform: uppercase;
 	}
 	& p {
 		width: 700px;
-		font-size: 1.75rem;
+		font-size: 1.25rem;
 		margin: 0 auto 2rem auto;
 	}
 
@@ -627,18 +630,18 @@ textarea {
 
 	&-background {
 		background-color: $primary-color;
-		opacity: 0.15;
+		opacity: 0.8;
 		clip-path: polygon(100% 25%, 100% 100%, 0% 100%, 0% 90%);
 		z-index: -90;
 	}
 	&-backgroundTwo {
-		background-color: rgba(51, 51, 51, 0.39);
+		background-color: rgba(51, 51, 51, 0.5);
 		clip-path: polygon(100% 0%, 100% 50%, 50% 70%, 50% 0%);
 		z-index: -98;
 	}
 	&-backgroundThree {
 		background-color: $primary-color;
-		opacity: 0.6;
+		opacity: 1;
 		clip-path: polygon(50% 0%, 50% 70%, 0% 90%, 0% 0%);
 		z-index: -100;
 	}
@@ -650,27 +653,36 @@ form {
 	justify-content: center;
 	align-items: center;
 	margin: 2rem auto;
-	padding: 6rem 6rem;
-	background-color: rgba(255, 255, 255, 0.808);
-	border-radius: 34% 66% 59% 41% / 71% 30% 70% 29%;
-	box-shadow: 0 0 25px $box-shadow;
+	padding: 6rem 4rem;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 25px;
+	box-shadow: 0 0 30px $box-shadow;
 	z-index: 99;
-	color: #444;
+	color: $text-color;
+	max-width: 50vw;
 	&.formHover {
 		border-radius: 0;
+		transform: scale(1.025);
 		transition: all 0.5s;
 	}
 	&.formBlur {
-		border-radius: 34% 66% 59% 41% / 71% 30% 70% 29%;
+		border-radius: 25px;
 		transition: all 0.5s;
 	}
 	& .form-head {
+		margin-top: 2rem;
 		display: flex;
 		width: 100%;
 		justify-content: flex-start;
 		& input {
-			width: 186px;
-			padding: 0.5rem 1rem;
+			margin: 1.5rem 0;
+			max-width: 100%;
+			padding: 1rem 1rem;
+			border: 1px solid rgba(51, 51, 51, 0.582);
+			background-color: transparent;
+			color: $text-color;
+			font-size: 1.1rem;
+			letter-spacing: 2px;
 		}
 		& .name-input {
 			margin-right: 1rem;
@@ -717,6 +729,7 @@ form {
 		margin: 0;
 		& textarea {
 			padding: 1rem;
+			border: 1px solid rgba(51, 51, 51, 0.582);
 		}
 		& p {
 			font-size: 0.75rem;
