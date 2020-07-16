@@ -366,15 +366,6 @@ textarea {
 	overflow-y: hidden;
 	z-index: -999;
 	position: relative;
-	& .background-circle {
-		position: absolute;
-		height: 400px;
-		width: 400px;
-		padding: 200px;
-		background-color: $box-shadow;
-		border-radius: 50%;
-		z-index: -99999;
-	}
 	& h1 {
 		font-size: 3rem;
 		font-weight: 300;
@@ -391,9 +382,13 @@ textarea {
 		overflow-x: hidden;
 		z-index: -99999;
 		position: relative;
+		background-color: $primary-color;
+		box-shadow: 0 0 35px $box-shadow;
+		max-width: 80vw;
+		padding: 2rem 0;
 		& .skill {
 			width: 18vw;
-			margin: 2rem 1rem;
+			margin: 2rem 0.5rem;
 			position: relative;
 			z-index: -999;
 			color: $secondary-color;
@@ -491,15 +486,6 @@ textarea {
 	overflow-y: hidden;
 	overflow: hidden;
 	z-index: 999;
-	& .background-circle {
-		position: absolute;
-		height: 400px;
-		width: 400px;
-		padding: 200px;
-		background-color: $box-shadow;
-		border-radius: 50%;
-		z-index: -99999;
-	}
 	& h1 {
 		font-weight: 300;
 		font-size: 3rem;
@@ -591,15 +577,6 @@ textarea {
 	overflow: hidden;
 	overflow-y: hidden;
 	overflow-x: hidden;
-	& .background-circle {
-		position: absolute;
-		height: 400px;
-		width: 400px;
-		padding: 200px;
-		background-color: $box-shadow;
-		border-radius: 50%;
-		z-index: -99;
-	}
 	& h1 {
 		margin-top: 2rem;
 		font-weight: 300;

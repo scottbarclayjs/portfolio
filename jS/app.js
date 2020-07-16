@@ -8,6 +8,7 @@ const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const skillImage = document.querySelectorAll('.skill i');
+const body = document.querySelector('body');
 const projectLink = document.querySelectorAll('.project-category a');
 const sections = [headerSection, skillsSection, resumeSection, contactSection];
 
@@ -237,22 +238,6 @@ form.addEventListener('submit', function (e) {
 	}
 });
 
-// Shapes BG Animation
-let bgShapes = document.querySelectorAll('.background-animation');
-
-shapesBgAnimation(bgShapes);
-
-function shapesBgAnimation() {
-	// shapesColorRandomizer(bgShapes);
-	shapesShapeRandomizer(bgShapes);
-	shapesLocationRandomizer(bgShapes);
-	shapesRotationRandomizer(bgShapes);
-
-	if (window.innerWidth > 800) {
-		setTimeout(shapesBgAnimation, 6000);
-	}
-}
-
 // Border Color
 function shapesColorRandomizer(arr) {
 	arr.forEach((item) => {
@@ -277,7 +262,7 @@ function shapesShapeRandomizer(arr) {
 // Location
 function shapesLocationRandomizer(arr) {
 	arr.forEach((item) => {
-		let height = Math.floor(Math.random() * window.innerHeight);
+		let height = Math.floor(Math.random() * body.offsetHeight);
 		let width = Math.floor(Math.random() * window.innerWidth);
 		let itemHeight = `${height}px`;
 		let itemWidth = `${width}px`;
