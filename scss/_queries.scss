@@ -1,4 +1,7 @@
 @media screen and (max-width: 1150px) {
+	body .background-circle {
+		display: none;
+	}
 	nav.nav {
 		padding: 2rem 2rem 2rem 0;
 		left: 0;
@@ -8,7 +11,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		background-color: #fff;
+		background-color: $primary-color;
 		& ul.nav-links {
 			display: flex;
 			flex-direction: row;
@@ -44,6 +47,7 @@
 
 	section.skills {
 		padding: 2rem 2rem;
+		background-color: $box-shadow;
 	}
 
 	.resume img.resume-img {
@@ -58,6 +62,10 @@
 
 	section.resume button.fullScreen:hover {
 		letter-spacing: 5px;
+	}
+
+	section.contact {
+		background-color: $box-shadow;
 	}
 
 	form.form {
@@ -113,7 +121,7 @@
 
 	footer.footer {
 		display: block;
-		color: $text-color;
+		color: $secondary-color;
 		font-weight: 400;
 		font-size: 0.8rem;
 		position: relative;
@@ -201,13 +209,6 @@
 		}
 	}
 
-	section.skills .background-animation,
-	section.resume .background-animation {
-		height: 8px;
-		width: 8px;
-		padding: 4px;
-	}
-
 	section.contact h1 {
 		font-size: 1.5rem;
 		letter-spacing: 10px;
@@ -270,7 +271,14 @@
 	}
 
 	section.skills {
-		height: 85vh;
+		height: 100vh;
+		& h1 {
+			margin-top: 4rem;
+		}
+		& .mySkills {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	section.resume {
@@ -328,7 +336,7 @@
 			}
 		}
 		& i {
-			color: $text-color;
+			color: $secondary-color;
 			padding-top: 1rem;
 			margin: 0 0.25rem;
 			font-size: 1rem;

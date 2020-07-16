@@ -68,12 +68,10 @@ textarea {
 			border-bottom: none;
 			color: $secondary-color;
 			&:hover {
-				color: $text-color;
 				transform: translateX(-5px);
 				transition: all 0.7s;
 			}
 			&.active {
-				color: $text-color;
 				transform: translateX(-5px);
 			}
 		}
@@ -385,6 +383,7 @@ textarea {
 		background-color: $primary-color;
 		box-shadow: 0 0 35px $box-shadow;
 		max-width: 80vw;
+		margin: auto;
 		padding: 2rem 0;
 		& .skill {
 			width: 18vw;
@@ -454,10 +453,6 @@ textarea {
 				&.fa-terminal:hover,
 				&.fa-terminal.skillColor {
 					color: #8dd35f;
-				}
-				&.fa-laptop:hover,
-				&.fa-laptop.skillColor {
-					color: #02c1ba;
 				}
 				&.fa-npm:hover,
 				&.fa-npm.skillColor {
@@ -569,7 +564,7 @@ textarea {
 	margin-left: 2vw;
 	position: relative;
 	text-align: center;
-	color: $text-color;
+	color: $secondary-color;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -618,7 +613,7 @@ form {
 	border-radius: 25px;
 	box-shadow: 0 0 30px $box-shadow;
 	z-index: 99;
-	color: $text-color;
+	color: $secondary-color;
 	max-width: 45vw;
 	&.formHover {
 		border-radius: 0;
