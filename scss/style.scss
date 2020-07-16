@@ -147,7 +147,7 @@ textarea {
 		}
 		& h5 {
 			font-size: 1rem;
-			color: $primary-color;
+			color: $secondary-color;
 		}
 	}
 	& .header-main {
@@ -204,6 +204,7 @@ textarea {
 				}
 				& h4 {
 					letter-spacing: 2px;
+					color: $secondary-color;
 				}
 				& p {
 					font-size: 0.8rem;
