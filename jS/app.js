@@ -216,25 +216,25 @@ function validEmail(email) {
 
 form.addEventListener('submit', function (e) {
 	if (name.value === '') {
-		name.parentElement.classList.add('invalid');
+		name.classList.add('invalid');
 		e.preventDefault();
 	} else {
-		name.parentElement.classList.remove('invalid');
+		name.classList.remove('invalid');
 	}
 	if (email.value === '') {
-		email.parentElement.classList.add('invalid');
+		email.classList.add('invalid');
 		e.preventDefault();
 	} else if (!validEmail(email.value)) {
-		email.parentElement.classList.add('invalid');
+		email.classList.add('invalid');
 		e.preventDefault();
 	} else {
-		email.parentElement.classList.remove('invalid');
+		email.classList.remove('invalid');
 	}
 	if (message.value === '') {
-		message.parentElement.classList.add('invalid');
+		message.classList.add('invalid');
 		e.preventDefault();
 	} else {
-		message.parentElement.classList.remove('invalid');
+		message.classList.remove('invalid');
 	}
 });
 

@@ -262,7 +262,7 @@
 		<section class="resume">
 			<h1 id="resumeSection">Resume</h1>
 			<img
-				src="/assets/resume.jpg"
+				src="/assets/resume-min.jpg"
 				alt="Resume image"
 				class="resume-img"
 				role="document"
@@ -272,43 +272,73 @@
 			</button>
 		</section>
 		<section class="contact">
-			<h1 id="contact">Get In Touch</h1>
-			<p>
-				Thank you for your time. I look forward to hearing from you!
-			</p>
+			<div class="contact-intro">
+				<h1 id="contact">Get In Touch</h1>
+				<p>
+					Thank you for your time. I look forward to hearing from you!
+				</p>
+			</div>
+			<div class="contact-info">
+				<h2>Contact Information</h2>
+				<div class="contact-links">
+					<a
+						href="https://github.com/scottbarclayjs"
+						class="gitHub"
+						target="_blank"
+						><i class="fab fa-github-square"></i> GitHub</a
+					>
+					<a href="#"><i class="fas fa-phone"></i>+ (206) 819-2891</a>
+					<a href="#"
+						><i class="fas fa-envelope"></i
+						>scottbarclay.js@gmail.com</a
+					>
+				</div>
+				<div class="contact-icons">
+					<a
+						href="https://www.linkedin.com/in/scott-barclay-aa54491b0/"
+						target="_blank"
+						class="linkedIn"
+						><i class="fab fa-linkedin"></i
+					></a>
+					<a href="#contact" class="email"
+						><i class="fas fa-envelope"></i
+					></a>
+					<a
+						href="https://github.com/scottbarclayjs"
+						class="gitHub"
+						target="_blank"
+						><i class="fab fa-github-square"></i
+					></a>
+				</div>
+			</div>
 			<form action="" method="post" class="form" netlify>
-				<div class="form-head form-section">
-					<div class="name-input">
-						<input
-							type="text"
-							name="name"
-							id="name"
-							placeholder="Name"
-						/>
-						<p>Please enter your name.</p>
+				<div class="form-content">
+					<div class="name-email">
+						<div class="name">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="email">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
 					</div>
-					<div class="email-input">
-						<input
-							type="text"
-							name="email"
-							id="email"
-							placeholder="Email"
-						/>
-						<p>Please enter a valid email.</p>
+					<div class="company">
+						<label for="company">Company</label>
+						<input type="text" name="company" id="company" />
 					</div>
-				</div>
-				<div class="form-body form-section">
-					<textarea
-						name="message"
-						id="message"
-						cols="30"
-						rows="10"
-						placeholder="How can I help you?"
-					></textarea>
-					<p>How can I help you today?</p>
-				</div>
-				<div class="form-footer form-section">
-					<button class="submit">Submit</button>
+					<div class="message">
+						<label for="message">Let's Talk</label>
+						<textarea
+							name="message"
+							id="message"
+							cols="30"
+							rows="10"
+						></textarea>
+					</div>
+					<div class="submit">
+						<button type="submit">Submit</button>
+					</div>
 				</div>
 			</form>
 		</section>
