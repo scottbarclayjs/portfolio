@@ -599,6 +599,19 @@
 			padding: 2.5rem 0;
 			width: 65%;
 			margin-left: auto;
+			& .form-content-header {
+				display: flex;
+				justify-content: space-between;
+				padding: 0 2rem 2rem 0;
+				& h2 {
+					font-weight: 300;
+					letter-spacing: 3px;
+				}
+				& i {
+					font-size: 1.5rem;
+					text-shadow: -15px 10px 3px #576d7b;
+				}
+			}
 			& .name-email {
 				display: flex;
 				justify-content: space-between;
@@ -649,21 +662,25 @@
 					border-bottom: 1px solid $primary-color;
 				}
 			}
-			& .submit button {
-				padding: 0.75rem 3rem;
-				font-size: 1rem;
-				text-transform: uppercase;
-				background-color: $primary-color;
-				color: #576d7b;
-				border: 1px solid $primary-color;
-				border-radius: 0.5rem;
-				box-shadow: 0 0 10px #576d7b;
-				&:hover {
-					cursor: pointer;
-					background-color: $box-shadow;
-					color: $primary-color;
+			& .submit {
+				width: 50%;
+				& button {
+					padding: 0.75rem 3rem;
+					font-size: 1rem;
+					text-transform: uppercase;
+					background-color: $primary-color;
+					color: #576d7b;
 					border: 1px solid $primary-color;
-					transition: all 0.6s;
+					border-radius: 0.5rem;
+					box-shadow: 0 0 10px #576d7b;
+					text-align: start;
+					&:hover {
+						cursor: pointer;
+						background-color: $box-shadow;
+						color: $primary-color;
+						border: 1px solid $primary-color;
+						transition: all 0.6s;
+					}
 				}
 			}
 		}
