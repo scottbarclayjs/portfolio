@@ -262,8 +262,8 @@ function shapesShapeRandomizer(arr) {
 // Location
 function shapesLocationRandomizer(arr) {
 	arr.forEach((item) => {
-		let height = Math.floor(Math.random() * body.offsetHeight);
-		let width = Math.floor(Math.random() * window.innerWidth);
+		let height = Math.floor(Math.random() * body.offsetHeight - 500);
+		let width = Math.floor(Math.random() * window.innerWidth - 500);
 		let itemHeight = `${height}px`;
 		let itemWidth = `${width}px`;
 		item.style.top = itemHeight;
