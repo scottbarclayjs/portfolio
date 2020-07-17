@@ -2,17 +2,6 @@
 @import 'variables';
 @import 'queries';
 
-a {
-	color: $secondary-color;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-input,
-textarea {
-	outline: transparent;
-}
-
 // =================================
 // ======== Nav Section =========
 // =================================
@@ -219,6 +208,35 @@ textarea {
 			text-align: center;
 			position: relative;
 			margin: 1rem 3rem 2.5rem 0;
+			& .list-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 104%;
+				height: 102%;
+				padding: 50%;
+				transform: translate(-2%, -1%);
+				background: linear-gradient(
+						rgba(255, 255, 255, 0.5),
+						rgba(255, 255, 255, 0.5)
+					),
+					$secondary-color;
+				background-size: cover;
+				border-radius: 1rem 1rem 0 0;
+				z-index: 1999;
+				box-shadow: 0 30px 7px -15px rgba(0, 0, 0, 0.438);
+				border: none;
+				&.hideOverlay {
+					height: 0px;
+					padding: 0 50%;
+					transition: all 1s;
+				}
+				&.showOverlay {
+					height: 100%;
+					padding: 50%;
+					transition: all 1s;
+				}
+			}
 			& .project-category {
 				height: 100%;
 				display: none;
@@ -229,9 +247,15 @@ textarea {
 				& h4 {
 					font-weight: 300;
 					color: $secondary-color;
+					font-size: 1.5rem;
 				}
 				& i {
 					font-weight: 100;
+					font-size: 4rem;
+					&:hover {
+						transform: rotate(1800deg);
+						transition: all 5s;
+					}
 				}
 				& img {
 					opacity: 0.8;
@@ -278,73 +302,8 @@ textarea {
 	}
 }
 
-/* settings for content within display */
-.utilities h4,
-.games h4,
-.websites h4,
-.components h4 {
-	font-size: 1.5rem;
-}
-
-.utilities i,
-.games i,
-.websites i,
-.components i {
-	font-size: 4rem;
-}
-
-.utilities i:hover,
-.games i:hover,
-.websites i:hover,
-.components i:hover {
-	transform: rotate(1800deg);
-	transition: all 5s;
-}
-
 .project-category * {
 	margin: 0.5rem 0;
-}
-
-.project h2 {
-	font-size: 1rem;
-}
-
-.project p {
-	max-width: 80%;
-}
-
-/* settings for the overlay on display, this is what JS targets */
-.list-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 104%;
-	height: 102%;
-	padding: 50%;
-	transform: translate(-2%, -1%);
-	background: linear-gradient(
-			rgba(255, 255, 255, 0.5),
-			rgba(255, 255, 255, 0.5)
-		),
-		$secondary-color;
-	background-size: cover;
-	border-radius: 1rem 1rem 0 0;
-	z-index: 1999;
-	box-shadow: 0 30px 7px -15px rgba(0, 0, 0, 0.438);
-	border: none;
-}
-
-/* Classes activated and deactivated through JS to show and hide display content */
-.list-overlay.hideOverlay {
-	height: 0px;
-	padding: 0 50%;
-	transition: all 1s;
-}
-
-.list-overlay.showOverlay {
-	height: 100%;
-	padding: 50%;
-	transition: all 1s;
 }
 
 // =================================
@@ -493,6 +452,16 @@ textarea {
 		box-shadow: 0 0 25px $box-shadow;
 		position: relative;
 		z-index: 999;
+		&.imgHover {
+			opacity: 0.3;
+			transform: scale(0.9);
+			transition: all 1s;
+		}
+		&.imgBlur {
+			opacity: 1;
+			transform: scale(1);
+			transition: all 1s;
+		}
 	}
 	& .fullScreen {
 		position: absolute;
@@ -529,32 +498,6 @@ textarea {
 	}
 }
 
-.resume-img.imgHover {
-	opacity: 0.3;
-	transform: scale(0.9);
-	transition: all 1s;
-}
-
-.resume-img.imgBlur {
-	opacity: 1;
-	transform: scale(1);
-	transition: all 1s;
-}
-
-.resume .background-animation {
-	height: 20px;
-	width: 20px;
-	padding: 10px;
-	background: transparent;
-	border: 2px solid $box-shadow;
-	position: absolute;
-	z-index: -999;
-	z-index: 7;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	overflow: hidden;
-}
-
 // =================================
 // ======== Contact Section =========
 // =================================
@@ -585,142 +528,126 @@ textarea {
 		font-size: 1.25rem;
 		margin: 0 auto 2rem auto;
 	}
-
-	&-background,
-	&-backgroundTwo,
-	&-backgroundThree {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100vw;
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		overflow-y: hidden;
-		overflow-x: hidden;
-	}
-}
-
-form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: 2rem auto;
-	padding: 3rem 2rem;
-	background-color: rgba(255, 255, 255, 0.95);
-	border-radius: 25px;
-	box-shadow: 0 0 30px $box-shadow;
-	z-index: 99;
-	color: $secondary-color;
-	max-width: 45vw;
-	&.formHover {
-		border-radius: 0;
-		transform: scale(1.025);
-		transition: all 0.5s;
-	}
-	&.formBlur {
-		border-radius: 25px;
-		transition: all 0.5s;
-	}
-	& .form-head {
+	form {
 		display: flex;
-		width: 100%;
-		justify-content: flex-start;
-		& input {
-			margin: 1.5rem 0;
-			max-width: 100%;
-			padding: 0.75rem 1rem;
-			border: 1px solid $box-shadow;
-			background-color: transparent;
-			color: $secondary-color;
-			font-size: 1rem;
-			letter-spacing: 2px;
-		}
-		& .name-input {
-			margin-right: 0.5rem;
-			align-self: center;
-			& p {
-				font-size: 0.75rem;
-				max-width: 150px;
-				margin-right: 100%;
-				color: maroon;
-				visibility: hidden;
-				margin-bottom: 0;
-			}
-			&.invalid {
-				& input {
-					border: 1px solid maroon;
-				}
-				& p {
-					visibility: visible;
-				}
-			}
-		}
-		& .email-input {
-			margin-left: 0.5rem;
-			& p {
-				font-size: 0.75rem;
-				max-width: 150px;
-				margin-right: 100%;
-				color: maroon;
-				visibility: hidden;
-				margin-bottom: 0;
-			}
-			&.invalid {
-				& input {
-					border: 1px solid maroon;
-				}
-				& p {
-					visibility: visible;
-				}
-			}
-		}
-	}
-	& .form-body {
-		width: 100%;
-		margin: 0;
-		& textarea {
-			padding: 1rem;
-			border: 1px solid $box-shadow;
-		}
-		& p {
-			font-size: 0.75rem;
-			max-width: 150px;
-			margin-right: 100%;
-			color: maroon;
-			visibility: hidden;
-			margin-bottom: 0;
-		}
-		&.invalid {
-			& textarea {
-				border: 1px solid maroon;
-			}
-			& p {
-				visibility: visible;
-			}
-		}
-	}
-	& .submit {
-		padding: 0.8rem 2.5rem;
-		font-size: 1rem;
-		margin: 1.5rem;
-		background-color: $primary-color;
-		opacity: 0.8;
-		border: 1px solid $box-shadow;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 2rem auto;
+		padding: 3rem 2rem;
+		background-color: rgba(255, 255, 255, 0.95);
+		border-radius: 25px;
+		box-shadow: 0 0 30px $box-shadow;
+		z-index: 99;
 		color: $secondary-color;
-		text-transform: uppercase;
-		z-index: 0;
-		box-shadow: 0 0 5px $box-shadow;
-		&:hover {
-			background-color: $secondary-color;
-			color: $primary-color;
-			cursor: pointer;
-			letter-spacing: 3px;
-			margin-top: 2.1rem;
-			padding: 0.5rem 2.5rem;
-			transition: all 0.6s;
+		max-width: 45vw;
+		&.formHover {
+			border-radius: 0;
+			transform: scale(1.025);
+			transition: all 0.5s;
+		}
+		&.formBlur {
+			border-radius: 25px;
+			transition: all 0.5s;
+		}
+		& .form-head {
+			display: flex;
+			width: 100%;
+			justify-content: flex-start;
+			& input {
+				margin: 1.5rem 0;
+				max-width: 100%;
+				padding: 0.75rem 1rem;
+				border: 1px solid $box-shadow;
+				background-color: transparent;
+				color: $secondary-color;
+				font-size: 1rem;
+				letter-spacing: 2px;
+			}
+			& .name-input {
+				margin-right: 0.5rem;
+				align-self: center;
+				& p {
+					font-size: 0.75rem;
+					max-width: 150px;
+					margin-right: 100%;
+					color: maroon;
+					visibility: hidden;
+					margin-bottom: 0;
+				}
+				&.invalid {
+					& input {
+						border: 1px solid maroon;
+					}
+					& p {
+						visibility: visible;
+					}
+				}
+			}
+			& .email-input {
+				margin-left: 0.5rem;
+				& p {
+					font-size: 0.75rem;
+					max-width: 150px;
+					margin-right: 100%;
+					color: maroon;
+					visibility: hidden;
+					margin-bottom: 0;
+				}
+				&.invalid {
+					& input {
+						border: 1px solid maroon;
+					}
+					& p {
+						visibility: visible;
+					}
+				}
+			}
+		}
+		& .form-body {
+			width: 100%;
+			margin: 0;
+			& textarea {
+				padding: 1rem;
+				border: 1px solid $box-shadow;
+			}
+			& p {
+				font-size: 0.75rem;
+				max-width: 150px;
+				margin-right: 100%;
+				color: maroon;
+				visibility: hidden;
+				margin-bottom: 0;
+			}
+			&.invalid {
+				& textarea {
+					border: 1px solid maroon;
+				}
+				& p {
+					visibility: visible;
+				}
+			}
+		}
+		& .submit {
+			padding: 0.8rem 2.5rem;
+			font-size: 1rem;
+			margin: 1.5rem;
+			background-color: $primary-color;
+			opacity: 0.8;
+			border: 1px solid $box-shadow;
+			color: $secondary-color;
+			text-transform: uppercase;
+			z-index: 0;
+			box-shadow: 0 0 5px $box-shadow;
+			&:hover {
+				background-color: $secondary-color;
+				color: $primary-color;
+				cursor: pointer;
+				letter-spacing: 3px;
+				margin-top: 2.1rem;
+				padding: 0.5rem 2.5rem;
+				transition: all 0.6s;
+			}
 		}
 	}
 }

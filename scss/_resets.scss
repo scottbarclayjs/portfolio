@@ -37,3 +37,14 @@ body {
 .btn:focus {
 	outline: transparent;
 }
+
+a {
+	color: $secondary-color;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+input,
+textarea {
+	outline: transparent;
+}
