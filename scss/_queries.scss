@@ -56,7 +56,7 @@
 				width: 50%;
 				margin: 2.5rem 1rem 1rem 1rem;
 				& .list-overlay {
-					display: none;
+					// display: none;
 				}
 			}
 		}
@@ -227,17 +227,25 @@
 
 @media screen and (max-width: 415px) {
 	nav.nav {
+		height: 15vh;
+		& .nav-top {
+			height: 100%;
+			& .nav-name {
+				height: 100%;
+				width: 40px;
+				& .name {
+					height: 100%;
+					font-size: 1.1rem;
+					padding: 0.3rem 1rem;
+				}
+			}
+		}
+		& .nav-middle {
+			padding-right: 1rem;
+		}
 		& ul.nav-links li {
 			margin: 0.4rem;
 			letter-spacing: 0;
-		}
-		& .nav-name {
-			height: 100%;
-			width: 30px;
-			& .name {
-				font-size: 1.1rem;
-				padding: 0.5rem 1rem;
-			}
 		}
 	}
 
