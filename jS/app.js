@@ -190,19 +190,6 @@ form.addEventListener('mouseleave', function () {
 
 // Skills Animation
 
-let skills = [];
-for (let img of skillImage) {
-	skills.push(img);
-}
-
-function skillDisplay() {
-	let randSkill = Math.floor(Math.random() * skills.length);
-	skills[randSkill].classList.toggle('skillColor');
-	setTimeout(skillDisplay, 500);
-}
-
-skillDisplay();
-
 // Form Validation
 
 const name = document.querySelector('#name');

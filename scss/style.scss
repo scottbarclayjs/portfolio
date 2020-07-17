@@ -123,7 +123,7 @@
 	padding: 2rem 3rem 5rem 3rem;
 	background-color: $primary-color;
 	border-radius: 1rem;
-	box-shadow: 0 20px 25px -10px #576d7b;
+	box-shadow: 0 20px 25px -10px $alt-color;
 	max-width: 70rem;
 	margin: 3rem auto;
 	& .header-head {
@@ -172,7 +172,7 @@
 				&:hover {
 					color: $primary-color;
 					cursor: pointer;
-					background-color: $secondary-color;
+					background-color: $alt-color;
 					transition: all 0.6s;
 					& h4 {
 						color: $primary-color;
@@ -228,10 +228,7 @@
 				height: 100%;
 				padding: 50%;
 				transform: translate(-2%, -1%);
-				background: linear-gradient(
-						rgba(255, 255, 255, 0.1),
-						rgba(255, 255, 255, 0.5)
-					),
+				background: linear-gradient($alt-color, $secondary-color),
 					$secondary-color;
 				background-size: cover;
 				border-radius: 1rem 1rem 0 0;
@@ -330,113 +327,114 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
 	overflow-x: hidden;
-	overflow-y: hidden;
-	z-index: -999;
 	position: relative;
-	background-color: $secondary-color;
+	background: rgba(17, 17, 17, 0.97);
 	& h1 {
-		font-size: 3rem;
+		padding-bottom: 4rem;
+		font-size: 2.5rem;
 		font-weight: 300;
-		margin: 2rem;
-		text-transform: uppercase;
-		letter-spacing: 15px;
+		letter-spacing: 3px;
 		color: $primary-color;
+		align-self: flex-start;
 	}
-	& .mySkills {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		text-align: center;
-		overflow-x: hidden;
-		z-index: -99999;
-		position: relative;
-		background-color: $primary-color;
-		box-shadow: 0 0 35px $box-shadow;
-		max-width: 80vw;
-		margin: auto;
-		padding: 2rem 0;
-		& .skill {
-			width: 18vw;
-			margin: 2rem 0.5rem;
-			position: relative;
-			z-index: -999;
-			color: $secondary-color;
-			& i {
-				color: $secondary-color;
-				font-size: 3rem;
-				margin-bottom: 0.5rem;
-				text-shadow: -1px -2px 5px $box-shadow;
-				position: relative;
-				z-index: -99;
-				&.fa-html5:hover,
-				&.fa-html5.skillColor {
-					color: #df4b25;
-				}
-				&.fa-css3-alt:hover,
-				&.fa-css3-alt.skillColor {
-					color: #249ddb;
-				}
-				&.fa-js:hover,
-				&.fa-js.skillColor {
-					color: #f0d91d;
-				}
-				&.fa-bootstrap:hover,
-				&.fa-bootstrap.skillColor {
-					color: #543b79;
-				}
-				&.fa-sass:hover,
-				&.fa-sass.skillColor {
-					color: #c76396;
-				}
-				&.fa-node-js:hover,
-				&.fa-node-js.skillColor {
-					color: #73b258;
-				}
-				&.fa-git:hover,
-				&.fa-git.skillColor {
-					color: #e94e32;
-				}
-				&.fa-github-square:hover,
-				&.fa-github-square.skillColor {
-					color: #1a1e22;
-				}
-				&.fa-wordpress:hover,
-				&.fa-wordpress.skillColor {
-					color: #21759b;
-				}
-				&.fa-image:hover,
-				&.fa-image.skillColor {
-					color: #31a8ff;
-				}
-				&.fa-adjust:hover,
-				&.fa-adjust.skillColor {
-					color: #001e36;
-				}
-				&.fa-adobe:hover,
-				&.fa-adobe.skillColor {
-					color: #fa0f00;
-				}
-				&.fa-file-excel:hover,
-				&.fa-file-excel.skillColor {
-					color: #01723a;
-				}
-				&.fa-terminal:hover,
-				&.fa-terminal.skillColor {
-					color: #8dd35f;
-				}
-				&.fa-npm:hover,
-				&.fa-npm.skillColor {
-					color: #e32e37;
-				}
+	& .skill {
+		position: absolute;
+		border-radius: 50%;
+		letter-spacing: 1px;
+		height: 25px;
+		z-index: 999;
+		&:hover {
+			transform: scale(1.1);
+			transition: all 0.4s;
+		}
+		& h4 {
+			color: $alt-color;
+		}
+		& i {
+			opacity: 0;
+			display: none;
+			font-size: 3rem;
+		}
+		&.right {
+			& h4 {
+				display: none;
 			}
-			& h2 {
-				font-size: 1.1rem;
-				font-weight: 400;
-				letter-spacing: 2px;
+			& i {
+				display: block;
+				opacity: 1;
+				text-shadow: 1px 1px 5px $alt-color;
 			}
 		}
+		&.html {
+			top: 27%;
+			left: 28%;
+		}
+		&.css {
+			top: 27%;
+			right: 28%;
+			color: #2fa7da;
+		}
+		&.js {
+			top: 34%;
+			left: 20%;
+		}
+		&.scss {
+			top: 34%;
+			right: 20%;
+			color: #c96196;
+		}
+		&.node {
+			top: 43%;
+			left: 18%;
+		}
+		&.bootstrap {
+			top: 43%;
+			right: 18%;
+			color: #613f8f;
+		}
+		&.gitgithub {
+			top: 52%;
+			left: 13%;
+		}
+		&.wordpressnetlify {
+			top: 52%;
+			right: 16%;
+			color: #207297;
+		}
+
+		&.excel {
+			top: 61%;
+			left: 17%;
+		}
+		&.photoshop {
+			top: 61%;
+			right: 16%;
+			color: #34beeb;
+		}
+		&.debug {
+			top: 70%;
+			left: 16%;
+		}
+		&.lightroom {
+			top: 70%;
+			right: 18%;
+			color: #30a3f8;
+		}
+		&.seo {
+			top: 79%;
+			left: 24%;
+		}
+		&.adobeXd {
+			top: 79%;
+			right: 23%;
+			color: #f30f00;
+		}
+	}
+	& img {
+		opacity: 0.1;
+		padding: 2.5rem 0;
+		width: 45vw;
 	}
 }
 
@@ -484,7 +482,7 @@
 		background-color: $secondary-color;
 		text-transform: uppercase;
 		border: none;
-		border-radius: 0.5rem;
+		border-radius: 0.75rem;
 		letter-spacing: 2px;
 		text-align: center;
 		padding: 0.5rem 2rem;
@@ -497,11 +495,9 @@
 	& button.visible {
 		opacity: 1;
 		transition: all 1s;
-		cursor: pointer;
 		&:hover {
-			background-color: $secondary-color;
 			cursor: pointer;
-			letter-spacing: 4px;
+			border-radius: 0;
 			transition: all 0.4s;
 		}
 	}
@@ -549,7 +545,7 @@
 		top: 48%;
 		left: 25%;
 		transform: translate(-50%, -30%);
-		background-color: #576d7b;
+		background-color: $alt-color;
 		color: $primary-color;
 		z-index: 9999;
 		display: flex;
@@ -587,14 +583,14 @@
 		align-items: center;
 		margin: 2rem auto;
 		padding: 3rem 2rem;
-		border: 1px solid #576d7b;
+		border: 1px solid $alt-color;
 		border-radius: 25px;
 		box-shadow: 0 0 30px $box-shadow;
 		z-index: 99;
 		color: $primary-color;
 		background-color: $secondary-color;
 		width: 50vw;
-		box-shadow: 0 0 15px #576d7b;
+		box-shadow: 0 0 15px $alt-color;
 		& .form-content {
 			padding: 2.5rem 0;
 			width: 65%;
@@ -609,7 +605,7 @@
 				}
 				& i {
 					font-size: 1.5rem;
-					text-shadow: -15px 10px 3px #576d7b;
+					text-shadow: -15px 10px 3px $alt-color;
 				}
 			}
 			& .name-email {
@@ -669,10 +665,10 @@
 					font-size: 1rem;
 					text-transform: uppercase;
 					background-color: $primary-color;
-					color: #576d7b;
+					color: $alt-color;
 					border: 1px solid $primary-color;
 					border-radius: 0.5rem;
-					box-shadow: 0 0 10px #576d7b;
+					box-shadow: 0 0 10px $alt-color;
 					text-align: start;
 					&:hover {
 						cursor: pointer;
