@@ -100,7 +100,7 @@ for (let i = 0; i < projectCategory.length; i++) {
 if (window.innerWidth < 420) {
 	for (let card of projectCards) {
 		card.addEventListener('click', () => {
-			window.scrollTo(0, 1050);
+			window.scrollTo(0, 1075);
 		});
 	}
 }
