@@ -15,16 +15,16 @@
 	align-items: flex-end;
 	padding: 2rem 2.5rem 1rem 1rem;
 	box-shadow: 10px 0 35px $box-shadow;
-	color: $secondary-color;
-	background-color: $primary-color;
+	color: $primary-color;
+	background-color: $secondary-color;
 	position: fixed;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	top: 0;
-	left: -13vw;
+	left: -12.75vw;
 	z-index: 998999 !important;
 	&.navHover {
-		transform: translateX(13vw);
+		transform: translateX(12.75vw);
 		transition: all 0.6s;
 	}
 	&.navBlur {
@@ -32,9 +32,9 @@
 		transition: all 0.6s;
 	}
 	&-name {
-		background-color: $secondary-color;
+		background-color: $primary-color;
 		& .name {
-			color: $primary-color;
+			color: $secondary-color;
 			padding: 0.5rem 1.25rem;
 			letter-spacing: 2px;
 			line-height: 1.4;
@@ -42,7 +42,7 @@
 			text-transform: uppercase;
 			font-weight: 300;
 			font-size: 1.5rem;
-			box-shadow: 0 0 15px $box-shadow;
+			box-shadow: 0 0 25px $box-shadow;
 		}
 	}
 	&-links {
@@ -57,11 +57,11 @@
 			text-align: right;
 			align-self: flex-end;
 			border-bottom: none;
-			color: $secondary-color;
+			color: $primary-color;
 			padding: 0.25rem;
 			&:last-of-type a {
-				color: $primary-color;
-				background-color: $secondary-color;
+				color: $secondary-color;
+				background-color: $primary-color;
 				padding: 0.25rem;
 				border-radius: 0.25rem;
 			}
@@ -71,6 +71,9 @@
 			}
 			&.active {
 				transform: translateX(-5px);
+				& a {
+					color: $alt-color;
+				}
 			}
 		}
 	}
@@ -89,7 +92,7 @@
 		margin: 0.5rem;
 		font-size: 1.25rem;
 		&:hover {
-			color: $secondary-color;
+			color: $alt-color;
 			opacity: 0.8;
 			transform: translateY(-5px);
 		}
@@ -106,12 +109,13 @@
 	overflow-y: hidden;
 	position: relative;
 	z-index: 99999;
+	background: rgba(17, 17, 17, 0.97);
 	& .background-circle {
 		position: absolute;
 		height: 400px;
 		width: 400px;
 		padding: 200px;
-		background-color: $box-shadow;
+		background-color: $secondary-color;
 		border-radius: 50%;
 		z-index: -99;
 	}
@@ -121,7 +125,7 @@
 	display: flex;
 	flex-direction: column;
 	padding: 2rem 3rem 5rem 3rem;
-	background-color: $primary-color;
+	background-color: $secondary-color;
 	border-radius: 1rem;
 	box-shadow: 0 20px 25px -10px $alt-color;
 	max-width: 70rem;
@@ -133,17 +137,17 @@
 			font-size: 2.75rem;
 			font-weight: 300;
 			letter-spacing: 5px;
-			color: $secondary-color;
+			color: $alt-color;
 			& span {
 				color: $primary-color;
-				background-color: $secondary-color;
+				background-color: $alt-color;
 				border-radius: 0.5rem;
 				padding: 0 0.5rem;
 			}
 		}
 		& h5 {
 			font-size: 1rem;
-			color: $secondary-color;
+			color: $primary-color;
 		}
 	}
 	& .header-main {
@@ -168,30 +172,31 @@
 				border-radius: 0.5rem;
 				margin-right: 0.5rem;
 				margin-bottom: 0.5rem;
-				color: $secondary-color;
+				background-color: $secondary-color;
+				color: $primary-color;
 				&:hover {
-					color: $primary-color;
+					color: $secondary-color;
 					cursor: pointer;
-					background-color: $alt-color;
+					background-color: $primary-color;
 					transition: all 0.6s;
 					& h4 {
-						color: $primary-color;
+						color: $secondary-color;
 					}
 					& i {
-						background-color: $primary-color;
-						color: $secondary-color;
+						background-color: $alt-color;
+						color: $primary-color;
 						transition: all 0.6s;
 					}
 				}
 				&.choose {
-					background-color: $secondary-color;
+					background-color: $alt-color;
 					color: $primary-color;
 				}
 				& i {
 					padding: 1rem;
 					font-size: 1.2rem;
-					background-color: $box-shadow;
-					color: $primary-color;
+					background-color: $primary-color;
+					color: $alt-color;
 					border-radius: 50%;
 					&.choose {
 						background-color: $primary-color;
@@ -203,7 +208,7 @@
 				}
 				& h4 {
 					letter-spacing: 2px;
-					color: $secondary-color;
+					color: $primary-color;
 				}
 				& p {
 					font-size: 0.8rem;
@@ -216,7 +221,7 @@
 			border-radius: 1rem 1rem 0 0;
 			width: 25%;
 			padding: 0rem;
-			box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.26);
+			box-shadow: 0 5px 10px -3px $alt-color;
 			text-align: center;
 			position: relative;
 			margin: 1rem 3rem 2.5rem 0;
@@ -233,7 +238,7 @@
 				background-size: cover;
 				border-radius: 1rem 1rem 0 0;
 				z-index: 1999;
-				box-shadow: 0 30px 7px -15px rgba(0, 0, 0, 0.438);
+				box-shadow: 0 25px 25px -15px $box-shadow;
 				border: none;
 				&.hideOverlay {
 					height: 0px;
@@ -345,7 +350,7 @@
 		height: 25px;
 		z-index: 999;
 		&:hover {
-			transform: scale(1.1);
+			transform: scale(1.25);
 			transition: all 0.4s;
 		}
 		& h4 {
@@ -471,15 +476,17 @@
 	overflow-y: hidden;
 	overflow: hidden;
 	z-index: 999;
+	background: rgba(17, 17, 17, 0.97);
 	& h1 {
 		font-weight: 300;
 		font-size: 3rem;
 		letter-spacing: 15px;
 		margin-bottom: 2rem;
+		color: $primary-color;
 	}
 	& img {
 		height: 82vh;
-		box-shadow: 0 0 25px $box-shadow;
+		box-shadow: 0 0 25px $alt-color;
 		position: relative;
 		z-index: 999;
 		&.imgHover {
@@ -535,7 +542,7 @@
 	position: relative;
 	text-align: center;
 	color: $primary-color;
-	background-color: $secondary-color;
+	background: rgba(17, 17, 17, 0.97);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -610,7 +617,7 @@
 		width: 50vw;
 		box-shadow: 0 0 15px $alt-color;
 		& .form-content {
-			padding: 2.5rem 0;
+			padding: 0 0 2.5rem 0;
 			width: 65%;
 			margin-left: auto;
 			& .form-content-header {
