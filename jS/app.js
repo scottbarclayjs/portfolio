@@ -104,6 +104,26 @@ if (window.innerWidth < 420) {
 	}
 }
 
+// Mobile: Scroll to section when nav link is pressed
+if (window.innerWidth < 420) {
+	navLinks[0].addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo(0, 0);
+	});
+	navLinks[1].addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo(0, 1700);
+	});
+	navLinks[2].addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo(0, 2475);
+	});
+	navLinks[3].addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo(0, 3300);
+	});
+}
+
 // Nav load animation
 
 if (window.innerWidth > 1151) {
