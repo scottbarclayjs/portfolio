@@ -254,9 +254,6 @@
 		}
 	}
 
-	section.skills {
-	}
-
 	section.resume {
 		padding: 5rem 0;
 		& h1 {
@@ -266,9 +263,6 @@
 		& img {
 			max-width: 90vw;
 		}
-	}
-
-	section.contact {
 	}
 
 	footer.footer .footer-content {
@@ -287,10 +281,10 @@
 		transform: translateX(0vw);
 	}
 	15% {
-		transform: translateX(13vw);
+		transform: translateX(12.75vw);
 	}
 	30% {
-		transform: translateX(13vw);
+		transform: translateX(12.75vw);
 	}
 	100% {
 		transform: translateX(0vw);
