@@ -75,19 +75,19 @@ let addTheme = () => {
 // Edited content
 for (let i = 0; i < themeColor.length; i++) {
 	themeColor[i].addEventListener('blur', () => {
-		themes[i].style.backgroundColor = themeColor[i].innerText;
+		themes[i].style.backgroundColor = themeColor[i].innerText.trim();
 		themeColor[i].style.color = themes[i].style.backgroundColor;
 		themeTxtColor[i].style.backgroundColor =
 			themes[i].style.backgroundColor;
 	});
 	themeTxtColor[i].addEventListener('blur', () => {
-		themeTxtColor[i].style.color = themeTxtColor[i].textContent;
+		themeTxtColor[i].style.color = themeTxtColor[i].textContent.trim();
 		themeColor[i].style.backgroundColor = themeTxtColor[i].innerText;
 		themeName[i].style.color = themeTxtColor[i].innerText;
 	});
 	themeColor[i].addEventListener('keypress', (e) => {
 		if (e.which === 13) {
-			themes[i].style.backgroundColor = themeColor[i].innerText;
+			themes[i].style.backgroundColor = themeColor[i].innerText.trim();
 			themeColor[i].style.color = themes[i].style.backgroundColor;
 			themeTxtColor[i].style.backgroundColor =
 				themes[i].style.backgroundColor;
