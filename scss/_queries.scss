@@ -9,6 +9,7 @@
 		justify-content: space-between;
 		align-items: center;
 		background-color: $alt-color;
+		box-shadow: 0 0 15px $alt-color;
 		& ul.nav-links {
 			display: flex;
 			flex-direction: row;
@@ -105,21 +106,21 @@
 			margin: 0.5rem;
 			letter-spacing: 1px;
 			& a {
-				color: $secondary-color;
+				color: $primary-color;
 			}
 			&:last-of-type a {
-				color: $primary-color;
-				background-color: $secondary-color;
+				color: $secondary-color;
+				background-color: $primary-color;
 			}
 		}
 		& .nav-name {
 			height: 100%;
 			width: 50px;
-			background-color: $secondary-color;
+			background-color: $primary-color;
 			box-shadow: none;
 			& .name {
 				font-size: 1.35rem;
-				color: $primary-color;
+				color: $secondary-color;
 				box-shadow: none;
 			}
 		}
