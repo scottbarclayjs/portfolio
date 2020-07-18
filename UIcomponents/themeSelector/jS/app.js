@@ -26,6 +26,16 @@ for (let i = 0; i < themes.length; i++) {
 		chosenTheme.parentElement.classList.add('choose');
 		return chosenTheme, chosenThemeTxt;
 	});
+
+	// When theme is touched on mobile
+	themeCards[i].addEventListener('touchstart', () => {
+		chosenTheme = themes[i];
+		chosenThemeTxt = themeTxtColor[i];
+		for (let theme of themes) {
+			theme.parentElement.classList.remove('choose');
+		}
+		addTheme();
+	});
 }
 
 // When enter is pressed w/ active theme

@@ -117,7 +117,21 @@ body {
 	margin: 1rem;
 }
 
-h5:nth-of-type(2) {
+h5:nth-of-type(3) {
 	max-width: 675px;
 	text-align: center;
+}
+
+@media screen and (max-width: 416px) {
+	.theme-btn {
+		margin-bottom: 1rem;
+	}
+
+	.theme-btn + h5 {
+		display: none;
+	}
+
+	h5:last-of-type {
+		text-align: center;
+	}
 }
