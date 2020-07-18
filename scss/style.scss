@@ -373,7 +373,9 @@
 		&.css {
 			top: 27%;
 			right: 28%;
-			color: #2fa7da;
+			& i {
+				color: #2fa7da;
+			}
 		}
 		&.js {
 			top: 34%;
@@ -436,6 +438,24 @@
 		padding: 2.5rem 0;
 		width: 45vw;
 	}
+	& .skill-display {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		text-align: center;
+		color: $primary-color;
+		text-shadow: 0 0 25px $alt-color;
+		& i {
+			font-size: 10rem;
+			margin-bottom: 1rem;
+		}
+		& h3 {
+			font-size: 4rem;
+			font-weight: 300;
+			color: $alt-color;
+		}
+	}
 }
 
 // =================================
@@ -456,7 +476,6 @@
 		font-size: 3rem;
 		letter-spacing: 15px;
 		margin-bottom: 2rem;
-		text-transform: uppercase;
 	}
 	& img {
 		height: 82vh;
@@ -526,13 +545,12 @@
 	// z-index: -9999;
 	& .contact-intro {
 		padding: 4rem 0 2rem 0;
-		background-color: $primary-color;
-		color: $secondary-color;
+		background-color: $alt-color;
+		color: $primary-color;
 		& h1 {
 			font-weight: 300;
 			font-size: 3rem;
 			letter-spacing: 5px;
-			text-transform: uppercase;
 		}
 		& p {
 			width: 700px;

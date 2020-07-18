@@ -7,7 +7,6 @@ const navLinks = document.querySelectorAll('.nav-links li');
 const resume = document.querySelector('.resume-img');
 const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
-const skillImage = document.querySelectorAll('.skill i');
 const body = document.querySelector('body');
 const projectLink = document.querySelectorAll('.project-category a');
 const sections = [headerSection, skillsSection, resumeSection, contactSection];
@@ -189,6 +188,41 @@ form.addEventListener('mouseleave', function () {
 });
 
 // Skills Animation
+const skills = document.querySelectorAll('.skill');
+const allSkills = [];
+const skillDisplayIcon = document.querySelector('.skill-display .icon-display');
+const skillDisplayName = document.querySelector('.skill-display h3');
+
+for (let skill of skills) {
+	allSkills.push(skill);
+}
+
+function skillDisplay(skll) {
+	if (body.offsetWidth < 1500 && body.offsetWidth > 600) {
+		skll = Math.floor(Math.random() * allSkills.length);
+	}
+	skillDisplayName.textContent =
+		allSkills[skll].firstElementChild.textContent;
+	skillDisplayIcon.innerHTML =
+		allSkills[skll].firstElementChild.nextElementSibling.innerHTML;
+
+	if (body.offsetWidth < 1500 && body.offsetWidth > 600) {
+		setTimeout(skillDisplay, 2000);
+	}
+}
+
+if (body.offsetWidth < 1500 && body.offsetWidth > 600) {
+	let randomSkill = Math.floor(Math.random() * allSkills.length);
+	skillDisplay(randomSkill);
+}
+
+if (body.offsetWidth > 1500) {
+	for (let i = 0; i < allSkills.length; i++) {
+		allSkills[i].addEventListener('mouseover', () => {
+			skillDisplay(i);
+		});
+	}
+}
 
 // Form Validation
 
