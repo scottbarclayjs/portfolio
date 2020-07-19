@@ -244,6 +244,16 @@ if (body.offsetWidth > 1500) {
 	}
 }
 
+const skillBrain = document.querySelector('.skills img');
+console.log(skillBrain);
+
+function brainAnimation() {
+	skillBrain.classList.toggle('grow');
+	skillBrain.classList.toggle('shrink');
+	setTimeout(brainAnimation, 1000);
+}
+brainAnimation();
+
 // Form Validation
 
 const name = document.querySelector('#name');

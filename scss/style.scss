@@ -129,6 +129,7 @@
 	box-shadow: 0 20px 25px -10px $alt-color;
 	max-width: 70rem;
 	margin: 3rem auto;
+	z-index: 99999;
 	& .header-head {
 		max-width: 33rem;
 		margin-bottom: 2.5rem;
@@ -350,7 +351,7 @@
 		height: 25px;
 		z-index: 999;
 		&:hover {
-			transform: scale(1.25);
+			transform: scale(1.5) rotate(5deg);
 			transition: all 0.4s;
 		}
 		& h4 {
@@ -442,6 +443,16 @@
 		opacity: 0.1;
 		padding: 2.5rem 0;
 		width: 45vw;
+		&.grow {
+			transform: scale(1.1);
+			opacity: 0.4;
+			transition: all 1s;
+		}
+		&.shrink {
+			transform: scale(1);
+			opacity: 0.1;
+			transition: all 1s;
+		}
 	}
 	& .skill-display {
 		position: absolute;
@@ -548,7 +559,7 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	clip-path: polygon(0 0, 100% 0, 100% 55%, 65% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 100%, 0 100%);
 	// z-index: -9999;
 	& .contact-intro {
 		padding: 4rem 0 2rem 0;
