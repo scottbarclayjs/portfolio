@@ -147,6 +147,7 @@
 		}
 		& h5 {
 			font-size: 1rem;
+			font-weight: 300;
 			color: $primary-color;
 		}
 	}
@@ -457,7 +458,7 @@
 	& .skill-display {
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left: 51%;
 		transform: translate(-50%, -30%);
 		text-align: center;
 		color: $primary-color;
