@@ -276,6 +276,14 @@
 	}
 }
 
+@media screen and (min-width: 1700px) {
+	header.header {
+		& .header-container {
+			margin: 5rem auto;
+		}
+	}
+}
+
 @keyframes navPageLoad {
 	0% {
 		transform: translateX(0vw);
