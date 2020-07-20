@@ -217,35 +217,39 @@ for (let skill of skills) {
 	allSkills.push(skill);
 }
 
+if (body.offsetWidth > 600) {
+	skillDisplay();
+}
+
 function skillDisplay(skll) {
-	if (body.offsetWidth < 1500 && body.offsetWidth > 600) {
-		skll = Math.floor(Math.random() * allSkills.length);
-	}
-	skillDisplayName.textContent =
-		allSkills[skll].firstElementChild.textContent;
-	skillDisplayIcon.innerHTML =
-		allSkills[skll].firstElementChild.nextElementSibling.innerHTML;
-
-	if (body.offsetWidth < 1500 && body.offsetWidth > 600) {
-		setTimeout(skillDisplay, 2000);
-	}
-}
-
-if (body.offsetWidth < 1500 && body.offsetWidth > 600) {
-	let randomSkill = Math.floor(Math.random() * allSkills.length);
-	skillDisplay(randomSkill);
-}
-
-if (body.offsetWidth > 1500) {
 	for (let i = 0; i < allSkills.length; i++) {
 		allSkills[i].addEventListener('mouseover', () => {
-			skillDisplay(i);
+			for (let skill of allSkills) {
+				skill.classList.remove('hover');
+			}
+			clearTimeout(t);
+			skll = i;
+			skillDisplayName.textContent =
+				allSkills[i].firstElementChild.textContent;
+			skillDisplayIcon.innerHTML =
+				allSkills[i].firstElementChild.nextElementSibling.innerHTML;
 		});
 	}
+	if (skll === undefined) {
+		for (let skill of allSkills) {
+			skill.classList.remove('hover');
+		}
+		skll = Math.floor(Math.random() * allSkills.length);
+		skillDisplayName.textContent =
+			allSkills[skll].firstElementChild.textContent;
+		skillDisplayIcon.innerHTML =
+			allSkills[skll].firstElementChild.nextElementSibling.innerHTML;
+		allSkills[skll].classList.add('hover');
+	}
+	let t = setTimeout(skillDisplay, 1500);
 }
 
 const skillBrain = document.querySelector('.skills img');
-console.log(skillBrain);
 
 function brainAnimation() {
 	skillBrain.classList.toggle('grow');
