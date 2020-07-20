@@ -170,6 +170,11 @@
 		}
 	}
 
+	section.resume h1 {
+		text-align: center;
+		padding: 0;
+	}
+
 	section.contact {
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 100%, 0 100%);
 		& .contact-intro {
