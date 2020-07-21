@@ -53,6 +53,20 @@
 			& .header-card-list {
 				width: 50%;
 				margin: 2.5rem 1rem 1rem 1rem;
+				& .project-category {
+					& a {
+						opacity: 1;
+						padding: 2%;
+						z-index: 2;
+						font-size: 0.8rem;
+						font-weight: 400;
+						background-color: transparent;
+						color: $primary-color;
+						&:nth-of-type(odd) {
+							color: $alt-color;
+						}
+					}
+				}
 			}
 		}
 	}
