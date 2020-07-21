@@ -222,7 +222,8 @@
 		font-weight: 400;
 		font-size: 0.8rem;
 		position: relative;
-		background-color: #576d7b;
+		background-color: $secondary-color;
+		box-shadow: 0 0 25px $alt-color;
 		& .footer-content {
 			display: flex;
 			justify-content: space-between;
@@ -238,7 +239,7 @@
 		& i {
 			color: $primary-color;
 			padding-top: 0rem;
-			margin: 0 0.25rem;
+			margin: 0 0.5rem;
 			font-size: 1rem;
 		}
 	}
