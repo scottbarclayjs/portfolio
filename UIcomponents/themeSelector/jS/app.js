@@ -6,6 +6,12 @@ const themeBtn = document.querySelector('.theme-btn');
 const themeTxtColor = document.querySelectorAll('.text-color');
 const body = document.querySelector('body');
 let chosenTheme;
+const backgroundShapes = document.querySelector('.background-shape');
+let shapes = [];
+
+addShape();
+
+const shape = document.querySelectorAll('.shape');
 
 // Initial themes
 for (let i = 0; i < themes.length; i++) {
@@ -70,6 +76,10 @@ let addTheme = () => {
 	body.style.color = chosenThemeTxt.style.color;
 	themeBtn.style.backgroundColor = chosenThemeTxt.style.color;
 	themeBtn.style.color = chosenTheme.style.backgroundColor;
+	for (let shp of shape) {
+		shp.style.borderColor = chosenThemeTxt.style.color;
+	}
+	shapeRandomizer();
 };
 
 // Edited content
@@ -102,4 +112,21 @@ for (let i = 0; i < themeColor.length; i++) {
 			themeTxtColor[i].blur();
 		}
 	});
+}
+
+function addShape() {
+	for (let i = 0; i < 30; i++) {
+		let shape = document.createElement('div');
+		shape.classList.add('shape');
+		backgroundShapes.appendChild(shape);
+	}
+	return backgroundShapes;
+}
+
+function shapeRandomizer() {
+	for (let shp of shape) {
+		shp.style.top = `${Math.floor(Math.random() * body.offsetHeight)}px`;
+		shp.style.left = `${Math.floor(Math.random() * body.offsetWidth)}px`;
+		shp.style.borderRadius = `${Math.floor(Math.random() * 50)}%`;
+	}
 }
