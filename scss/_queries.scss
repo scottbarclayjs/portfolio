@@ -57,11 +57,11 @@
 				& .project-category {
 					& a {
 						opacity: 1;
-						padding: 2%;
+						padding: 5.45%;
 						z-index: 2;
 						font-size: 0.8rem;
 						font-weight: 400;
-						background-color: transparent;
+						background-color: rgba(0, 0, 0, 0.5);
 						color: $primary-color;
 						&:nth-of-type(odd) {
 							color: $alt-color;

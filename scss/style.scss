@@ -359,18 +359,6 @@
 	overflow-x: hidden;
 	position: relative;
 	background: rgba(17, 17, 17, 0.97);
-	// & .title-decoration {
-	// 	position: absolute;
-	// 	top: 11%;
-	// 	right: 0;
-	// 	width: 65%;
-	// 	height: 1px;
-	// 	padding: 0.5px 0;
-	// 	background-color: transparent;
-	// 	border: none;
-	// 	border-bottom: 1px solid $alt-color;
-	// 	box-shadow: 0 0 10px $alt-color;
-	// }
 	& h1 {
 		padding-bottom: 4rem;
 		font-size: 2.5rem;
@@ -528,18 +516,6 @@
 	overflow: hidden;
 	z-index: 999;
 	background: rgba(17, 17, 17, 0.97);
-	// & .title-decoration {
-	// 	position: absolute;
-	// 	top: 13%;
-	// 	left: 0;
-	// 	width: 77%;
-	// 	height: 1px;
-	// 	padding: 0.5px 0;
-	// 	background-color: transparent;
-	// 	border: none;
-	// 	border-bottom: 1px solid $alt-color;
-	// 	box-shadow: 0 0 10px $alt-color;
-	// }
 	& h1 {
 		font-weight: 300;
 		font-size: 3rem;
