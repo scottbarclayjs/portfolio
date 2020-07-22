@@ -1,0 +1,170 @@
+body {
+	background: radial-gradient(#01a0a6, #006873 60%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: relative;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+	width: 10rem;
+	padding: 0.5rem 0;
+	background-color: rgba(255, 255, 255, 0.801);
+	color: #006873;
+	border: none;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	border-radius: 10px;
+	margin: 1rem;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+}
+
+#start {
+	transform: translateX(-150%);
+}
+
+#restart {
+	transform: translateX(25%);
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #fff;
+	transition: all 0.5s;
+}
+
+button:focus {
+	outline: transparent;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 60vw;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 300;
+	color: #fff;
+	letter-spacing: 7px;
+	visibility: hidden;
+}
+
+h1 span {
+	opacity: 0;
+}
+
+h1 span.loading {
+	animation: loading 8s forwards;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 10px;
+	background: #014e5f;
+	border: none;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.overlay {
+	height: 100%;
+	width: 0%;
+	background: linear-gradient(to right, #68c5ee, #66ecc1);
+	border-radius: 10px;
+}
+
+.overlay.start {
+	animation: fill 10s linear forwards;
+}
+
+.percentage {
+	position: absolute;
+	top: 105%;
+	left: 0;
+	transform: translateX(-50%);
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.596);
+	font-size: 1.25rem;
+	padding: 0.25rem 0.75rem 0 0.75rem;
+	line-height: 0;
+	border-radius: 5px;
+	clip-path: polygon(
+		0 15%,
+		40% 15%,
+		50% 0,
+		60% 15%,
+		100% 15%,
+		100% 100%,
+		0 100%
+	);
+}
+
+.percentage.start {
+	animation: displayPercent 10s linear forwards;
+}
+
+@keyframes fill {
+	from {
+		width: 0%;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes displayPercent {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes loading {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 450px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	button {
+		font-size: 0.9rem;
+		width: 7rem;
+	}
+
+	#start {
+		transform: translateX(-125%);
+	}
+
+	#restart {
+		transform: translateX(0);
+	}
+
+	.percentage {
+		font-size: 1rem;
+	}
+}
