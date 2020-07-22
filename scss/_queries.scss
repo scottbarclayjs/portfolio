@@ -63,6 +63,9 @@
 						font-weight: 400;
 						background-color: rgba(0, 0, 0, 0.4);
 						color: $primary-color;
+						&:nth-of-type(1) {
+							border-radius: 5px 5px 0 0;
+						}
 						&:nth-of-type(odd) {
 							color: $secondary-color;
 							background-color: rgba(255, 255, 255, 0.4);
