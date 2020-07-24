@@ -347,9 +347,16 @@
 				& .card {
 					width: 45%;
 					margin: 0 2rem 3rem 0;
+					& h4 {
+						font-size: 1.5rem;
+					}
 					& p {
 						padding-top: 1rem;
 						font-size: 1rem;
+					}
+					& i {
+						font-size: 2rem;
+						padding: 1.5rem;
 					}
 				}
 			}
