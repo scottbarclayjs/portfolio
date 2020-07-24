@@ -302,9 +302,196 @@
 }
 
 @media screen and (min-width: 1650px) {
+	nav.nav {
+		padding-right: 4rem;
+		&.navHover {
+			transform: translateX(11vw);
+			transition: all 0.6s;
+		}
+		& .nav-name {
+			& .name {
+				font-size: 2rem;
+			}
+		}
+		& .nav-links {
+			& li {
+				font-size: 1.25rem;
+				margin: 1.5rem 0;
+			}
+		}
+		& .nav-icons a {
+			font-size: 2rem;
+		}
+	}
 	header.header {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		& .header-container {
-			margin: 7rem auto;
+			max-width: 75vw;
+			& .header-head {
+				max-width: 25vw;
+				margin-bottom: 7%;
+				& h1 {
+					font-size: 3.5rem;
+					margin-bottom: 1rem;
+				}
+				& h5 {
+					font-size: 1.25rem;
+				}
+			}
+		}
+		& .header-main {
+			& .header-main-cards {
+				& .card {
+					width: 45%;
+					margin: 0 2rem 3rem 0;
+					& p {
+						padding-top: 1rem;
+						font-size: 1rem;
+					}
+				}
+			}
+			& .header-card-list {
+				width: 22%;
+				height: 40vh;
+				margin: 0;
+				& .project-category {
+					& a {
+						padding: 7.9% 0;
+					}
+				}
+			}
+		}
+	}
+
+	section.skills {
+		& .skill {
+			font-size: 1.5rem;
+			& i {
+				font-size: 4rem;
+			}
+			&.html {
+				left: 30%;
+			}
+			&.css {
+				right: 30%;
+				& i {
+					color: #2fa7da;
+				}
+			}
+			&.js {
+				left: 25%;
+			}
+			&.scss {
+				right: 25%;
+				color: #c96196;
+			}
+			&.node {
+				left: 23%;
+			}
+			&.bootstrap {
+				right: 23%;
+				color: #613f8f;
+			}
+			&.gitgithub {
+				left: 20%;
+			}
+			&.wordpressnetlify {
+				right: 21.5%;
+				color: #207297;
+			}
+
+			&.excel {
+				left: 23%;
+			}
+			&.photoshop {
+				right: 22%;
+				color: #34beeb;
+			}
+			&.debug {
+				left: 23%;
+			}
+			&.lightroom {
+				right: 23%;
+				color: #30a3f8;
+			}
+			&.seo {
+				left: 29%;
+			}
+			&.adobeXd {
+				right: 26%;
+				color: #f30f00;
+			}
+		}
+		& .skill-display {
+			& i {
+				font-size: 15rem;
+			}
+			& h3 {
+				font-size: 5rem;
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+	section.resume {
+		& .fullScreen {
+			font-size: 1.75rem;
+			padding: 0.75rem 2.5rem;
+		}
+	}
+
+	section.contact {
+		height: 100vh;
+		& .contact-intro {
+			padding: 4rem 0;
+			margin-bottom: 2rem;
+			& h1 {
+				font-size: 3.5rem;
+			}
+		}
+		& .contact-info {
+			height: 50%;
+			top: 50%;
+			& .contact-icons {
+				justify-content: center;
+			}
+		}
+		form {
+			padding: 3.5rem 5rem;
+			width: 45vw;
+			& .form-content {
+				width: 80%;
+				& .form-content-header {
+					padding: 2rem 2rem 2rem 0;
+					& h2 {
+						font-size: 2.75rem;
+					}
+				}
+				& .name-email {
+					margin-bottom: 3rem;
+					& .name,
+					.email {
+						& input {
+							padding: 1rem;
+						}
+					}
+				}
+				& .company {
+					margin-bottom: 3rem;
+					& input {
+						padding: 1rem;
+					}
+				}
+				& .message {
+					margin-bottom: 3rem;
+					& textarea {
+						padding: 1rem;
+					}
+				}
+			}
 		}
 	}
 }
