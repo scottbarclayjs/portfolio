@@ -16,6 +16,7 @@ body {
 	background: #a3b2c2;
 	margin: 6rem 0.5rem 2rem 0.5rem;
 	position: relative;
+	height: 100vh;
 }
 
 .shape {
