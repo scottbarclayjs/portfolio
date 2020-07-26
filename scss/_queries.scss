@@ -66,18 +66,21 @@
 				& .project-category {
 					& a {
 						opacity: 1;
-						padding: 6.066%;
+						padding: 0.25rem 0;
 						z-index: 2;
 						font-size: 0.8rem;
 						font-weight: 400;
-						background-color: rgba(0, 0, 0, 0.4);
+						background-color: rgba(0, 0, 0, 0.301);
 						color: $primary-color;
+						width: 100px;
 						&:nth-of-type(1) {
 							border-radius: 5px 5px 0 0;
 						}
 						&:nth-of-type(odd) {
-							color: $secondary-color;
-							background-color: rgba(255, 255, 255, 0.4);
+							transform: translate(0, 0);
+						}
+						&:nth-of-type(even) {
+							transform: translateY(87%);
 						}
 					}
 				}
@@ -300,6 +303,11 @@
 
 	header.header {
 		padding-top: 2rem;
+		.header-head {
+			h5 {
+				padding-top: 1rem;
+			}
+		}
 		& .header-main #mobile-instructions {
 			display: block;
 			margin-bottom: 0.5rem;

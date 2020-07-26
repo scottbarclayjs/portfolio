@@ -95,6 +95,8 @@ for (let i = 0; i < projectCategory.length; i++) {
 	});
 }
 
+const imageLinks = document.querySelectorAll('.project-category a');
+
 // Mobile: scroll to window when project category is selected
 if (window.innerWidth < 420) {
 	for (let card of projectCards) {
