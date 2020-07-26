@@ -250,6 +250,9 @@
 		position: relative;
 		background-color: $secondary-color;
 		box-shadow: 0 0 25px $alt-color;
+		&.light {
+			background-color: $alt-color;
+		}
 		& .footer-content {
 			display: flex;
 			justify-content: space-between;
