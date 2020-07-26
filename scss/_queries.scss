@@ -337,6 +337,12 @@
 	}
 }
 
+@media screen and (min-width: 1600px) {
+	header.header {
+		padding: 6rem;
+	}
+}
+
 @media screen and (min-width: 2000px) {
 	nav.nav {
 		padding-right: 4rem;
