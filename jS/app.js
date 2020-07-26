@@ -273,7 +273,10 @@ function brainAnimation() {
 	skillBrain.classList.toggle('shrink');
 	setTimeout(brainAnimation, 1000);
 }
-brainAnimation();
+
+if (window.innerWidth > 415) {
+	brainAnimation();
+}
 
 // Form Validation
 
