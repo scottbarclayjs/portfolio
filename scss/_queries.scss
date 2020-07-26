@@ -1,5 +1,11 @@
 @media screen and (max-width: 1150px) {
 	nav.nav {
+		.toggle-container {
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 		padding: 2rem 2rem 2rem 0;
 		left: 0;
 		height: 20vh;
@@ -28,6 +34,9 @@
 	}
 
 	header.header {
+		.toggle-container {
+			display: none;
+		}
 		margin-top: 15vh !important;
 		padding-top: 5rem;
 		& h4 {
@@ -120,6 +129,9 @@
 	}
 
 	nav.nav {
+		.toggle-container {
+			display: none;
+		}
 		padding: 0;
 		& ul.nav-links li {
 			margin: 0.5rem;
@@ -145,25 +157,38 @@
 		}
 	}
 
-	header.header .header-container {
-		margin: 3rem 0.5rem;
-		padding: 1rem 0.5rem 5rem 0.5rem;
-		& .header-head {
-			text-align: center;
-		}
-		& .header-main .header-main-cards {
-			margin: 0;
-			& .card {
-				margin-right: 0;
-				width: 100%;
+	header.header {
+		.toggle-container {
+			display: block;
+			top: 1.5%;
+			right: 50%;
+			transform: translate(50%, 0);
+			.toggle {
+				i {
+					font-size: 1rem;
+				}
 			}
 		}
+		.header-container {
+			margin: 3rem 0.5rem;
+			padding: 1rem 0.5rem 5rem 0.5rem;
+			& .header-head {
+				text-align: center;
+			}
+			& .header-main .header-main-cards {
+				margin: 0;
+				& .card {
+					margin-right: 0;
+					width: 100%;
+				}
+			}
 
-		& .header-card-list {
-			margin: 0;
-			margin-top: 1.5rem;
-			padding: 1rem;
-			width: 90%;
+			& .header-card-list {
+				margin: 0;
+				margin-top: 1.5rem;
+				padding: 1rem;
+				width: 90%;
+			}
 		}
 	}
 
@@ -301,7 +326,7 @@
 	}
 }
 
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 2000px) {
 	nav.nav {
 		padding-right: 4rem;
 		&.navHover {
@@ -315,7 +340,7 @@
 		}
 		& .nav-links {
 			& li {
-				font-size: 1.25rem;
+				font-size: 1.1rem;
 				margin: 1.5rem 0;
 			}
 		}

@@ -7,6 +7,9 @@
 // =================================
 
 .nav {
+	.toggle-container {
+		display: none;
+	}
 	height: 100vh;
 	width: 15vw;
 	display: flex;
@@ -23,6 +26,31 @@
 	top: 0;
 	left: -12.75vw;
 	z-index: 998999 !important;
+	&.light {
+		background-color: $primary-color;
+		color: $secondary-color;
+		& .nav-name {
+			background-color: $alt-color;
+			& .name {
+				color: $primary-color;
+			}
+		}
+		& .nav-links {
+			& li {
+				color: $secondary-color;
+				& a {
+					color: $secondary-color;
+				}
+				&:last-of-type a {
+					color: $primary-color;
+					background-color: $alt-color;
+				}
+			}
+		}
+		& .nav-icons a {
+			color: $alt-color;
+		}
+	}
 	&.navHover {
 		transform: translateX(12.75vw);
 		transition: all 0.6s;
@@ -109,6 +137,74 @@
 	position: relative;
 	z-index: 99999;
 	background: rgba(17, 17, 17, 0.97);
+	&.light {
+		background-color: rgba(250, 250, 250, 0.95);
+		.header-container {
+			background-color: $primary-color;
+			.header-head {
+				h1 {
+					color: $secondary-color;
+					span {
+						color: $primary-color;
+					}
+				}
+				h5 {
+					color: $secondary-color;
+				}
+			}
+			.header-main {
+				.header-main-cards {
+					.card {
+						background-color: $primary-color;
+						color: $secondary-color;
+						&:hover {
+							color: $primary-color;
+							background-color: $alt-color;
+							h4 {
+								color: $primary-color;
+							}
+							i {
+								background-color: $primary-color;
+								color: $alt-color;
+							}
+						}
+						&.choose {
+							background-color: $alt-color;
+							color: $primary-color;
+							h4 {
+								color: $primary-color;
+							}
+						}
+						i {
+							background-color: $alt-color;
+							color: $primary-color;
+							&.choose {
+								background-color: $primary-color;
+								color: $alt-color;
+							}
+						}
+						h4 {
+							color: $secondary-color;
+						}
+					}
+				}
+				.header-card-list {
+					.list-overlay {
+						background: linear-gradient($alt-color, $primary-color),
+							$primary-color;
+					}
+					.project-category {
+						h4 {
+							color: $secondary-color;
+						}
+						i {
+							color: $secondary-color;
+						}
+					}
+				}
+			}
+		}
+	}
 	& .background-circle {
 		position: absolute;
 		height: 400px;
@@ -344,6 +440,105 @@
 	margin: 0.5rem 0;
 }
 
+// Dark mode toggler
+
+.toggle-container {
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	display: block;
+}
+
+.toggle {
+	height: 35px;
+	width: 70px;
+	padding: 17.5px 35px;
+	background-color: rgba(0, 0, 0, 0.377);
+	border: 2px solid #576d7b;
+	border-radius: 35px;
+	position: relative;
+	z-index: 9999;
+}
+
+.toggle:hover {
+	cursor: pointer;
+}
+
+.toggle.light {
+	background-color: rgb(240, 240, 240);
+	border: 2px solid $alt-color;
+}
+
+.toggle .fa-sun {
+	position: absolute;
+	top: 50%;
+	left: 33.3333%;
+	transform: translate(-70%, -50%);
+	color: $alt-color;
+}
+
+.toggle .fa-moon {
+	position: absolute;
+	top: 50%;
+	right: 33.3333%;
+	transform: translate(70%, -50%);
+	color: #576d7b;
+}
+
+.toggle-overlay {
+	height: 70%;
+	width: 35%;
+	position: absolute;
+	top: 50%;
+	left: 11%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+}
+
+.toggle.light .toggle-overlay {
+	background-color: rgb(240, 240, 240);
+	box-shadow: 0 0 5px $alt-color;
+	transition: all 0.7s;
+	animation: light 0.7s forwards;
+}
+
+.toggle.dark .toggle-overlay {
+	background-color: black;
+	box-shadow: 0 0 5px #576d7b;
+	transition: all 0.7s;
+	animation: dark 0.7s forwards;
+}
+
+@keyframes light {
+	0% {
+		transform: translate(0, -50%);
+	}
+	20% {
+		transform: translate(-3px, -50%);
+	}
+	80% {
+		transform: translate(32px, -50%);
+	}
+	100% {
+		transform: translate(29px, -50%);
+	}
+}
+
+@keyframes dark {
+	0% {
+		transform: translate(29px, -50%);
+	}
+	20% {
+		transform: translate(32px, -50%);
+	}
+	80% {
+		transform: translate(-2px, -50%);
+	}
+	100% {
+		transform: translate(0, -50%);
+	}
+}
+
 // =================================
 // ======== Skills Section =========
 // =================================
@@ -359,13 +554,30 @@
 	overflow-x: hidden;
 	position: relative;
 	background: rgba(17, 17, 17, 0.97);
+	&.light {
+		background: rgba(250, 250, 250, 0.95);
+		h1 {
+			color: $secondary-color;
+		}
+		.skill {
+			h4 {
+				color: $secondary-color;
+			}
+		}
+		.skill-display {
+			color: $alt-color;
+			text-shadow: 0 0 25px $primary-color;
+			h3 {
+				color: $secondary-color;
+			}
+		}
+	}
 	& h1 {
 		padding-bottom: 4rem;
 		font-size: 2.5rem;
 		font-weight: 300;
 		letter-spacing: 3px;
 		color: $primary-color;
-		align-self: flex-start;
 		text-shadow: 5px -1px 10px $alt-color;
 	}
 	& .skill {
@@ -516,14 +728,21 @@
 	overflow: hidden;
 	z-index: 999;
 	background: rgba(17, 17, 17, 0.97);
+	&.light {
+		background: rgba(250, 250, 250, 0.95);
+		h1 {
+			color: $secondary-color;
+		}
+		.fullScreen {
+			background-color: $alt-color;
+		}
+	}
 	& h1 {
 		font-weight: 300;
 		font-size: 3rem;
 		letter-spacing: 15px;
 		margin-bottom: 2rem;
 		color: $primary-color;
-		text-align: left;
-		padding-left: 5rem;
 		text-shadow: -5px -1px 10px $alt-color;
 	}
 	& img {
@@ -591,7 +810,47 @@
 	align-items: center;
 	overflow: hidden;
 	clip-path: polygon(0 -1%, 100% -1%, 100% 75%, 85% 100%, 0 100%);
-	// z-index: -9999;
+	&.light {
+		background: rgba(250, 250, 250, 0.95);
+		form {
+			color: $secondary-color;
+			background-color: $primary-color;
+			.form-content {
+				.name-email {
+					.name,
+					.email {
+						input {
+							color: $secondary-color;
+							border-bottom: 1px solid $secondary-color;
+						}
+					}
+				}
+				.company {
+					input {
+						color: $secondary-color;
+						border-bottom: 1px solid $secondary-color;
+					}
+				}
+				.message {
+					textarea {
+						color: $secondary-color;
+						border-bottom: 1px solid $secondary-color;
+					}
+				}
+				.submit {
+					button {
+						background-color: $alt-color;
+						color: $primary-color;
+						&:hover {
+							background-color: $box-shadow;
+							color: $alt-color;
+							border: 1px solid $primary-color;
+						}
+					}
+				}
+			}
+		}
+	}
 	& .contact-intro {
 		padding: 4rem 0 2rem 0;
 		background-color: $alt-color;

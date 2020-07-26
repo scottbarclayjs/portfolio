@@ -124,6 +124,21 @@ if (window.innerWidth < 420) {
 	});
 }
 
+// Dark mode
+
+const togglers = document.querySelectorAll('.toggle');
+const all = document.getElementsByTagName('*');
+
+for (let toggle of togglers) {
+	toggle.addEventListener('click', () => {
+		for (let i = 0; i < all.length; i++) {
+			all[i].classList.toggle('light');
+			all[i].classList.toggle('dark');
+		}
+		console.log('success');
+	});
+}
+
 // Nav load animation
 
 if (window.innerWidth > 1151) {
