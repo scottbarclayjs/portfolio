@@ -139,6 +139,20 @@ if (window.innerWidth < 420) {
 	});
 }
 
+// Hide project links initially on mobile
+if (window.innerWidth < 420) {
+	for (let link of projectLink) {
+		link.style.display = 'none';
+	}
+	for (let img of projectThumb) {
+		img.addEventListener('touchend', () => {
+			for (let link of projectLink) {
+				link.style.display = 'block';
+			}
+		});
+	}
+}
+
 // Dark mode/Light Mode
 
 const togglers = document.querySelectorAll('.toggle');
