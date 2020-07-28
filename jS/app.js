@@ -27,22 +27,55 @@ let circles = document.querySelectorAll('.background-circle');
 circleBgAnimation(circles);
 
 function circleBgAnimation(arr) {
-	// shapesColorRandomizer(bgShapes);
 	shapesShapeRandomizer(arr);
 	shapesLocationRandomizer(arr);
 	shapesRotationRandomizer(arr);
 }
 
+// Shape
+function shapesShapeRandomizer(arr) {
+	arr.forEach((item) => {
+		let borRad = Math.floor(Math.random() * 50);
+		let randomRadius = `${borRad}%`;
+		item.style.borderRadius = randomRadius;
+	});
+}
+
+// Location
+function shapesLocationRandomizer(arr) {
+	arr.forEach((item) => {
+		let height = Math.floor(Math.random() * body.offsetHeight - 500);
+		let width = Math.floor(Math.random() * window.innerWidth - 500);
+		let itemHeight = `${height}px`;
+		let itemWidth = `${width}px`;
+		item.style.top = itemHeight;
+		item.style.left = itemWidth;
+	});
+}
+
+// Rotation
+function shapesRotationRandomizer(arr) {
+	arr.forEach((item) => {
+		let rotation = Math.floor(Math.random() * 360);
+		let randomRotation = `rotate(${rotation}deg)`;
+		item.style.transform = randomRotation;
+	});
+}
+
 // Removes overlay when a card is clicked
+// Changes chosen card when a card is clicked
+// Replaces overlay when the user navigates away from header
 for (let card of projectCards) {
 	card.addEventListener('click', () => {
 		projectsOverlay.classList.remove('showOverlay');
 		projectsOverlay.classList.add('hideOverlay');
+		for (let card of projectCards) {
+			card.classList.remove('choose');
+			card.firstElementChild.classList.remove('choose');
+		}
+		card.classList.add('choose');
+		card.firstElementChild.classList.add('choose');
 	});
-}
-
-// Replaces overlay when the user navigates away from header
-for (let card of projectCards) {
 	header.addEventListener('mouseleave', () => {
 		projectsOverlay.classList.remove('hideOverlay');
 		projectsOverlay.classList.add('showOverlay');
@@ -57,33 +90,16 @@ for (let card of projectCards) {
 	});
 }
 
-// Changes chosen card when a card is clicked
-for (let card of projectCards) {
-	card.addEventListener('click', () => {
-		for (let card of projectCards) {
-			card.classList.remove('choose');
-			card.firstElementChild.classList.remove('choose');
-		}
-		card.classList.add('choose');
-		card.firstElementChild.classList.add('choose');
-	});
-}
-
 // Show the projects in the display that correspond to the card clicked
+// Go to project when project is clicked
+let projectThumb = document.querySelectorAll('.project-category img');
+
 for (let i = 0; i < projectCategory.length; i++) {
 	projectCards[i].addEventListener('click', () => {
 		for (let category of projectCategory) {
 			category.style.display = 'none';
 		}
 		projectCategory[i].style.display = 'flex';
-	});
-}
-
-// Go to project when project is clicked
-let projectThumb = document.querySelectorAll('.project-category img');
-
-for (let i = 0; i < projectCategory.length; i++) {
-	projectCards[i].addEventListener('click', () => {
 		for (let j = 0; j < projectThumb.length; j++) {
 			projectThumb[j].addEventListener('mouseenter', () => {
 				for (let project of projectThumb) {
@@ -98,16 +114,13 @@ for (let i = 0; i < projectCategory.length; i++) {
 const imageLinks = document.querySelectorAll('.project-category a');
 
 // Mobile: scroll to window when project category is selected
+// Mobile: Scroll to section when nav link is pressed
 if (window.innerWidth < 420) {
 	for (let card of projectCards) {
 		card.addEventListener('click', () => {
 			window.scrollTo(0, 1075);
 		});
 	}
-}
-
-// Mobile: Scroll to section when nav link is pressed
-if (window.innerWidth < 420) {
 	navLinks[0].addEventListener('click', (e) => {
 		e.preventDefault();
 		window.scrollTo(0, 0);
@@ -126,7 +139,7 @@ if (window.innerWidth < 420) {
 	});
 }
 
-// Dark mode
+// Dark mode/Light Mode
 
 const togglers = document.querySelectorAll('.toggle');
 const all = document.getElementsByTagName('*');
@@ -180,51 +193,8 @@ for (let link of navLinks) {
 	});
 }
 
-// Resume Animation
-
-resume.addEventListener('mouseenter', function () {
-	resumeHover();
-});
-
-resume.addEventListener('mouseleave', function () {
-	resumeLeave();
-});
-
-resumeBtn.addEventListener('mouseover', function () {
-	resumeHover();
-});
-
-resume.addEventListener('blur', function () {
-	resumeLeave();
-});
-
-function resumeHover() {
-	resume.classList.add('imgHover');
-	resume.classList.remove('imgBlur');
-	resumeBtn.classList.add('visible');
-	resumeBtn.classList.remove('hidden');
-}
-
-function resumeLeave() {
-	resumeBtn.classList.remove('visible');
-	resumeBtn.classList.add('hidden');
-	resume.classList.remove('imgHover');
-	resume.classList.add('imgBlur');
-}
-
-// Form Animation
-
-form.addEventListener('mouseenter', function () {
-	this.classList.add('formHover');
-	this.classList.remove('formBlur');
-});
-
-form.addEventListener('mouseleave', function () {
-	this.classList.remove('formHover');
-	this.classList.add('formBlur');
-});
-
 // Skills Animation
+
 const skills = document.querySelectorAll('.skill');
 const allSkills = [];
 const skillDisplayIcon = document.querySelector('.skill-display .icon-display');
@@ -278,6 +248,50 @@ if (window.innerWidth > 415) {
 	brainAnimation();
 }
 
+// Resume Animation
+
+resume.addEventListener('mouseenter', function () {
+	resumeHover();
+});
+
+resume.addEventListener('mouseleave', function () {
+	resumeLeave();
+});
+
+resumeBtn.addEventListener('mouseover', function () {
+	resumeHover();
+});
+
+resume.addEventListener('blur', function () {
+	resumeLeave();
+});
+
+function resumeHover() {
+	resume.classList.add('imgHover');
+	resume.classList.remove('imgBlur');
+	resumeBtn.classList.add('visible');
+	resumeBtn.classList.remove('hidden');
+}
+
+function resumeLeave() {
+	resumeBtn.classList.remove('visible');
+	resumeBtn.classList.add('hidden');
+	resume.classList.remove('imgHover');
+	resume.classList.add('imgBlur');
+}
+
+// Form Animation
+
+form.addEventListener('mouseenter', function () {
+	this.classList.add('formHover');
+	this.classList.remove('formBlur');
+});
+
+form.addEventListener('mouseleave', function () {
+	this.classList.remove('formHover');
+	this.classList.add('formBlur');
+});
+
 // Form Validation
 
 const name = document.querySelector('#name');
@@ -312,45 +326,3 @@ form.addEventListener('submit', function (e) {
 		message.classList.remove('invalid');
 	}
 });
-
-// Border Color
-function shapesColorRandomizer(arr) {
-	arr.forEach((item) => {
-		let r = Math.floor(Math.random() * 255);
-		let g = Math.floor(Math.random() * 255);
-		let b = Math.floor(Math.random() * 255);
-		let a = Math.random();
-		let randomColor = `rgba(${r}, ${g}, ${b}, ${a})`;
-		item.style.borderColor = randomColor;
-	});
-}
-
-// Shape
-function shapesShapeRandomizer(arr) {
-	arr.forEach((item) => {
-		let borRad = Math.floor(Math.random() * 50);
-		let randomRadius = `${borRad}%`;
-		item.style.borderRadius = randomRadius;
-	});
-}
-
-// Location
-function shapesLocationRandomizer(arr) {
-	arr.forEach((item) => {
-		let height = Math.floor(Math.random() * body.offsetHeight - 500);
-		let width = Math.floor(Math.random() * window.innerWidth - 500);
-		let itemHeight = `${height}px`;
-		let itemWidth = `${width}px`;
-		item.style.top = itemHeight;
-		item.style.left = itemWidth;
-	});
-}
-
-// Rotation
-function shapesRotationRandomizer(arr) {
-	arr.forEach((item) => {
-		let rotation = Math.floor(Math.random() * 360);
-		let randomRotation = `rotate(${rotation}deg)`;
-		item.style.transform = randomRotation;
-	});
-}
