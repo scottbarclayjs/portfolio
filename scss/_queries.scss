@@ -242,7 +242,7 @@
 				height: 100%;
 				width: 40px;
 				& .name {
-					height: 80%;
+					height: 100%;
 					font-size: 0.9rem;
 					padding: 0.9rem 0.45rem;
 				}
@@ -291,7 +291,7 @@
 	}
 
 	section.skills {
-		padding: 5rem 1rem;
+		padding: 5rem 1rem 15rem 1rem;
 		.skill-categories {
 			.skill-category-card {
 				width: 95vw;
