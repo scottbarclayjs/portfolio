@@ -1,15 +1,12 @@
 const nav = document.querySelector('.nav');
 const headerSection = document.querySelector('.header');
 const skillsSection = document.querySelector('.skills');
-const resumeSection = document.querySelector('.resume');
 const contactSection = document.querySelector('.contact');
 const navLinks = document.querySelectorAll('.nav-links li');
-const resume = document.querySelector('.resume-img');
-const resumeBtn = document.querySelector('.resume button');
 const form = document.querySelector('.form');
 const body = document.querySelector('body');
 const projectLink = document.querySelectorAll('.project-category a');
-const sections = [headerSection, skillsSection, resumeSection, contactSection];
+const sections = [headerSection, skillsSection, contactSection];
 
 // **************************************
 // *********** Header Content ***********
@@ -141,11 +138,7 @@ if (window.innerWidth < 420) {
 	});
 	navLinks[2].addEventListener('click', (e) => {
 		e.preventDefault();
-		window.scrollTo(0, 2475);
-	});
-	navLinks[3].addEventListener('click', (e) => {
-		e.preventDefault();
-		window.scrollTo(0, 3300);
+		window.scrollTo(0, 4600);
 	});
 }
 
@@ -174,7 +167,6 @@ for (let toggle of togglers) {
 			all[i].classList.toggle('light');
 			all[i].classList.toggle('dark');
 		}
-		console.log('success');
 	});
 }
 
@@ -215,93 +207,6 @@ for (let link of navLinks) {
 		}
 		this.classList.add('active');
 	});
-}
-
-// Skills Animation
-
-const skills = document.querySelectorAll('.skill');
-const allSkills = [];
-const skillDisplayIcon = document.querySelector('.skill-display .icon-display');
-const skillDisplayName = document.querySelector('.skill-display h3');
-
-for (let skill of skills) {
-	allSkills.push(skill);
-}
-
-if (body.offsetWidth > 600) {
-	skillDisplay();
-}
-
-function skillDisplay(skll) {
-	for (let i = 0; i < allSkills.length; i++) {
-		allSkills[i].addEventListener('mouseover', () => {
-			for (let skill of allSkills) {
-				skill.classList.remove('hover');
-			}
-			clearTimeout(t);
-			skll = i;
-			skillDisplayName.textContent =
-				allSkills[i].firstElementChild.textContent;
-			skillDisplayIcon.innerHTML =
-				allSkills[i].firstElementChild.nextElementSibling.innerHTML;
-		});
-	}
-	if (skll === undefined) {
-		for (let skill of allSkills) {
-			skill.classList.remove('hover');
-		}
-		skll = Math.floor(Math.random() * allSkills.length);
-		skillDisplayName.textContent =
-			allSkills[skll].firstElementChild.textContent;
-		skillDisplayIcon.innerHTML =
-			allSkills[skll].firstElementChild.nextElementSibling.innerHTML;
-		allSkills[skll].classList.add('hover');
-	}
-	let t = setTimeout(skillDisplay, 1500);
-}
-
-const skillBrain = document.querySelector('.skills img');
-
-function brainAnimation() {
-	skillBrain.classList.toggle('grow');
-	skillBrain.classList.toggle('shrink');
-	setTimeout(brainAnimation, 1000);
-}
-
-if (window.innerWidth > 415) {
-	brainAnimation();
-}
-
-// Resume Animation
-
-resume.addEventListener('mouseenter', function () {
-	resumeHover();
-});
-
-resume.addEventListener('mouseleave', function () {
-	resumeLeave();
-});
-
-resumeBtn.addEventListener('mouseover', function () {
-	resumeHover();
-});
-
-resume.addEventListener('blur', function () {
-	resumeLeave();
-});
-
-function resumeHover() {
-	resume.classList.add('imgHover');
-	resume.classList.remove('imgBlur');
-	resumeBtn.classList.add('visible');
-	resumeBtn.classList.remove('hidden');
-}
-
-function resumeLeave() {
-	resumeBtn.classList.remove('visible');
-	resumeBtn.classList.add('hidden');
-	resume.classList.remove('imgHover');
-	resume.classList.add('imgBlur');
 }
 
 // Form Animation

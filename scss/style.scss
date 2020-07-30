@@ -190,8 +190,8 @@
 				}
 				.header-card-list {
 					.list-overlay {
-						background: linear-gradient($alt-color, $primary-color),
-							$primary-color;
+						background: $primary-color;
+						box-shadow: 0 25px 35px -15px $box-shadow;
 					}
 					.project-category {
 						h4 {
@@ -330,8 +330,7 @@
 				height: 100%;
 				padding: 50%;
 				transform: translate(-2%, -1%);
-				background: linear-gradient($alt-color, $secondary-color),
-					$secondary-color;
+				background: $secondary-color;
 				background-size: cover;
 				border-radius: 1rem 1rem 0 0;
 				z-index: 1999;
@@ -552,245 +551,75 @@
 	justify-content: center;
 	align-items: center;
 	overflow-x: hidden;
-	position: relative;
 	background: rgba(17, 17, 17, 0.97);
 	&.light {
 		background: rgba(250, 250, 250, 0.95);
 		h1 {
 			color: $secondary-color;
 		}
-		.skill {
-			h4 {
-				color: $secondary-color;
+		.skill-categories {
+			.skill-category-card {
+				background-color: $primary-color;
+				i {
+					background-color: $alt-color;
+					color: $primary-color;
+				}
+				ul {
+					color: $secondary-color;
+				}
 			}
 		}
-		.skill-display {
-			color: $alt-color;
-			text-shadow: 0 0 25px $primary-color;
-			h3 {
-				color: $secondary-color;
-			}
-		}
-	}
-	& h1 {
-		padding-bottom: 4rem;
-		font-size: 2.5rem;
-		font-weight: 300;
-		letter-spacing: 3px;
-		color: $primary-color;
-		text-shadow: 5px -1px 10px $alt-color;
-	}
-	& .skill {
-		position: absolute;
-		border-radius: 50%;
-		letter-spacing: 1px;
-		height: 25px;
-		z-index: 999;
-		&:hover {
-			transform: scale(1.5) rotate(5deg);
-			transition: all 0.4s;
-		}
-		&.hover {
-			transform: scale(1.5) rotate(5deg);
-			transition: all 0.4s;
-		}
-		& h4 {
-			color: $alt-color;
-		}
-		& i {
-			opacity: 0;
-			display: none;
-			font-size: 3rem;
-		}
-		&.right {
-			& h4 {
-				display: none;
-			}
-			& i {
-				display: block;
-				opacity: 1;
-				text-shadow: 1px 1px 5px $alt-color;
-			}
-		}
-		&.html {
-			top: 27%;
-			left: 28%;
-		}
-		&.css {
-			top: 27%;
-			right: 28%;
-			& i {
-				color: #2fa7da;
-			}
-		}
-		&.js {
-			top: 34%;
-			left: 20%;
-		}
-		&.scss {
-			top: 34%;
-			right: 20%;
-			color: #c96196;
-		}
-		&.node {
-			top: 43%;
-			left: 18%;
-		}
-		&.bootstrap {
-			top: 43%;
-			right: 18%;
-			color: #613f8f;
-		}
-		&.gitgithub {
-			top: 52%;
-			left: 13%;
-		}
-		&.wordpressnetlify {
-			top: 52%;
-			right: 16%;
-			color: #207297;
-		}
-
-		&.excel {
-			top: 61%;
-			left: 17%;
-		}
-		&.photoshop {
-			top: 61%;
-			right: 16%;
-			color: #34beeb;
-		}
-		&.debug {
-			top: 70%;
-			left: 16%;
-		}
-		&.lightroom {
-			top: 70%;
-			right: 18%;
-			color: #30a3f8;
-		}
-		&.seo {
-			top: 79%;
-			left: 24%;
-		}
-		&.adobeXd {
-			top: 79%;
-			right: 23%;
-			color: #f30f00;
-		}
-	}
-	& img {
-		opacity: 0.1;
-		padding: 2.5rem 0;
-		width: 45vw;
-		&.grow {
-			transform: scale(1.025);
-			opacity: 0.4;
-			transition: all 1s;
-		}
-		&.shrink {
-			transform: scale(1);
-			opacity: 0.1;
-			transition: all 1s;
-		}
-	}
-	& .skill-display {
-		position: absolute;
-		top: 50%;
-		left: 51%;
-		transform: translate(-50%, -30%);
-		text-align: center;
-		color: $primary-color;
-		text-shadow: 0 0 25px $alt-color;
-		& i {
-			font-size: 10rem;
-			margin-bottom: 1rem;
-		}
-		& h3 {
-			font-size: 4rem;
-			font-weight: 300;
-			color: $alt-color;
-		}
-	}
-}
-
-// =================================
-// ======== Resume Section =========
-// =================================
-
-.resume {
-	margin-left: 2vw;
-	padding: 5rem 0;
-	text-align: center;
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	overflow: hidden;
-	z-index: 999;
-	background: rgba(17, 17, 17, 0.97);
-	&.light {
-		background: rgba(250, 250, 250, 0.95);
-		h1 {
+		a {
 			color: $secondary-color;
 		}
-		.fullScreen {
-			background-color: $alt-color;
-		}
 	}
-	& h1 {
+	h1 {
+		font-size: 3.5rem;
 		font-weight: 300;
-		font-size: 3rem;
-		letter-spacing: 15px;
+		letter-spacing: 10px;
 		margin-bottom: 2rem;
 		color: $primary-color;
 		text-shadow: -5px -1px 10px $alt-color;
 	}
-	& img {
-		height: 82vh;
-		box-shadow: 0 0 25px $alt-color;
-		position: relative;
-		z-index: 999;
-		&.imgHover {
-			opacity: 0.3;
-			transform: scale(0.9);
-			transition: all 1s;
-		}
-		&.imgBlur {
-			opacity: 1;
-			transform: scale(1);
-			transition: all 1s;
-		}
-	}
-	& .fullScreen {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: $secondary-color;
-		text-transform: uppercase;
-		border: none;
-		border-radius: 0.75rem;
-		letter-spacing: 2px;
-		text-align: center;
-		padding: 0.5rem 2rem;
-		opacity: 0;
-		z-index: 9999;
-		& a {
+	.skill-categories {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-bottom: 5rem;
+		.skill-category-card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 25rem;
+			margin: 3rem;
+			padding: 2rem;
+			text-align: center;
 			color: $primary-color;
+			background-color: $secondary-color;
+			box-shadow: 0 20px 25px -10px $alt-color;
+			i {
+				padding: 1rem;
+				border-radius: 50%;
+				background-color: $primary-color;
+				color: $alt-color;
+				font-size: 3rem;
+				margin-bottom: 1.5rem;
+			}
+			h3 {
+				font-size: 1.25rem;
+				font-weight: 300;
+				margin-bottom: 1.5rem;
+				padding: 0.5rem;
+				background-color: $alt-color;
+			}
+			ul {
+				list-style: none;
+				li {
+					margin: 0.25rem 0;
+				}
+			}
 		}
-	}
-	& button.visible {
-		opacity: 1;
-		transition: all 1s;
-		&:hover {
-			cursor: pointer;
-			border-radius: 0;
-			transition: all 0.4s;
-		}
-	}
-	& button.hidden {
-		opacity: 0;
-		transition: all 1s;
 	}
 }
 

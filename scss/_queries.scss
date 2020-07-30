@@ -88,23 +88,6 @@
 		}
 	}
 
-	section.skills {
-		& .skill-display {
-			& i {
-				font-size: 5rem;
-			}
-			& h3 {
-				font-size: 2.5rem;
-			}
-		}
-	}
-
-	section.resume .fullScreen {
-		height: 25px;
-		width: 100px;
-		font-size: 0.5rem;
-	}
-
 	section.contact {
 		clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
 		& .contact-info {
@@ -120,7 +103,6 @@
 
 	header.header,
 	section.skills,
-	section.resume,
 	section.contact {
 		margin-left: 0 !important;
 	}
@@ -193,38 +175,6 @@
 				width: 90%;
 			}
 		}
-	}
-
-	section.skills {
-		padding: 5rem 1rem;
-		& h1 {
-			font-size: 1.5rem;
-			align-self: center;
-		}
-		& .skill {
-			& h4 {
-				font-size: 0.8rem;
-			}
-			& i {
-				font-size: 1.5rem;
-			}
-			&.right {
-				& i {
-					text-shadow: none;
-				}
-			}
-		}
-		& img {
-			width: 95vw;
-		}
-		& .skill-display {
-			display: none;
-		}
-	}
-
-	section.resume h1 {
-		text-align: center;
-		padding: 0;
 	}
 
 	section.contact {
@@ -320,14 +270,13 @@
 		}
 	}
 
-	section.resume {
-		padding: 5rem 0;
-		& h1 {
-			font-size: 2rem;
-			letter-spacing: 10px;
-		}
-		& img {
-			max-width: 90vw;
+	section.skills {
+		padding: 5rem 1rem;
+		.skill-categories {
+			.skill-category-card {
+				width: 95vw;
+				margin: 3rem 0.5rem;
+			}
 		}
 	}
 
@@ -417,83 +366,6 @@
 					}
 				}
 			}
-		}
-	}
-
-	section.skills {
-		& .skill {
-			font-size: 1.5rem;
-			& i {
-				font-size: 4rem;
-			}
-			&.html {
-				left: 30%;
-			}
-			&.css {
-				right: 30%;
-				& i {
-					color: #2fa7da;
-				}
-			}
-			&.js {
-				left: 25%;
-			}
-			&.scss {
-				right: 25%;
-				color: #c96196;
-			}
-			&.node {
-				left: 23%;
-			}
-			&.bootstrap {
-				right: 23%;
-				color: #613f8f;
-			}
-			&.gitgithub {
-				left: 20%;
-			}
-			&.wordpressnetlify {
-				right: 21.5%;
-				color: #207297;
-			}
-
-			&.excel {
-				left: 23%;
-			}
-			&.photoshop {
-				right: 22%;
-				color: #34beeb;
-			}
-			&.debug {
-				left: 23%;
-			}
-			&.lightroom {
-				right: 23%;
-				color: #30a3f8;
-			}
-			&.seo {
-				left: 29%;
-			}
-			&.adobeXd {
-				right: 26%;
-				color: #f30f00;
-			}
-		}
-		& .skill-display {
-			& i {
-				font-size: 15rem;
-			}
-			& h3 {
-				font-size: 5rem;
-				letter-spacing: 2px;
-			}
-		}
-	}
-
-	section.resume {
-		& .fullScreen {
-			font-size: 1.75rem;
-			padding: 0.75rem 2.5rem;
 		}
 	}
 
