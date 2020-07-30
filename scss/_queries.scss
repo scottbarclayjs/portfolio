@@ -102,6 +102,7 @@
 	}
 
 	header.header,
+	section.blog,
 	section.skills,
 	section.contact {
 		margin-left: 0 !important;
@@ -267,6 +268,25 @@
 			display: block;
 			margin-bottom: 0.5rem;
 			color: $alt-color;
+		}
+	}
+
+	section.blog {
+		h1 {
+			text-align: center;
+		}
+		.blog-content {
+			.latest-read {
+				.book {
+					flex-direction: column;
+					.book-image {
+						text-align: center;
+						img {
+							max-width: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 
