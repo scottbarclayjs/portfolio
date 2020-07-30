@@ -134,11 +134,15 @@ if (window.innerWidth < 420) {
 	});
 	navLinks[1].addEventListener('click', (e) => {
 		e.preventDefault();
-		window.scrollTo(0, 1700);
+		window.scrollTo(0, 1800);
 	});
 	navLinks[2].addEventListener('click', (e) => {
 		e.preventDefault();
-		window.scrollTo(0, 4600);
+		window.scrollTo(0, 3800);
+	});
+	navLinks[3].addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo(0, 6700);
 	});
 }
 
