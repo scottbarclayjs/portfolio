@@ -130,3 +130,5 @@ function shapeRandomizer() {
 		shp.style.borderRadius = `${Math.floor(Math.random() * 50)}%`;
 	}
 }
+
+let t = setInterval(shapeRandomizer, 2000);
