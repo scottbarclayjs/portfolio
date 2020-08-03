@@ -61,7 +61,7 @@ function taskCompleted() {
 	let completeCircle = document.querySelectorAll('li div');
 	for (let i = 0; i < allTasks.length; i++) {
 		completeCircle[i].addEventListener('click', () => {
-			allTasks[i].classList.add('completed');
+			allTasks[i].classList.toggle('completed');
 		});
 	}
 }
