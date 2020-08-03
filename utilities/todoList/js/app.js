@@ -13,7 +13,7 @@ window.addEventListener('keypress', (e) => {
 	if (
 		e.which === 13 &&
 		itemInput.value !== '' &&
-		itemInput.value.length < 21
+		itemInput.value.length < 26
 	) {
 		addItem();
 		taskCompleted();
@@ -23,15 +23,13 @@ window.addEventListener('keypress', (e) => {
 const list = document.querySelector('#task-list');
 
 function footerAnimation() {
+	if (itemInput.value !== '' && itemInput.value.length < 26) {
+		addItem();
+	}
 	addBtn.classList.toggle('showInput');
 	addBtn.classList.toggle('hideInput');
 	itemInput.classList.toggle('showInput');
 	itemInput.classList.toggle('hideInput');
-	if (itemInput.value !== '' && itemInput.value.length < 21) {
-		addBtn.addEventListener('click', () => {
-			addItem();
-		});
-	}
 }
 
 let allTasks = [];
