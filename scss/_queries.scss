@@ -457,12 +457,6 @@
 	}
 }
 
-@media screen and (min-width: 1600px) {
-	header.header {
-		padding: 6rem;
-	}
-}
-
 @media screen and (min-width: 2000px) {
 	nav.nav {
 		padding-right: 4rem;
@@ -486,10 +480,6 @@
 		}
 	}
 	header.header {
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		& .header-container {
 			max-width: 75vw;
 			& .header-head {
