@@ -202,6 +202,30 @@ if (window.innerWidth < 1152) {
 	}
 }
 
+// Nav mobile menu animation
+
+const hamburger = document.querySelector('.hamburger');
+const closeMenu = document.querySelector('.close');
+const mobileMenu = document.querySelector('.mobile-menu-links');
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('showMenu');
+	hamburger.classList.toggle('hideMenu');
+	closeMenu.classList.toggle('showMenu');
+	closeMenu.classList.toggle('hideMenu');
+	mobileMenu.classList.toggle('showMenu');
+	mobileMenu.classList.toggle('hideMenu');
+});
+
+closeMenu.addEventListener('click', () => {
+	hamburger.classList.toggle('showMenu');
+	hamburger.classList.toggle('hideMenu');
+	closeMenu.classList.toggle('showMenu');
+	closeMenu.classList.toggle('hideMenu');
+	mobileMenu.classList.toggle('showMenu');
+	mobileMenu.classList.toggle('hideMenu');
+});
+
 // Link Animation
 
 for (let link of navLinks) {

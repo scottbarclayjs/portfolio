@@ -5,8 +5,22 @@
 // =================================
 // ======== Nav Section =========
 // =================================
-
+div.mobile-menu-links {
+	position: absolute;
+	opacity: 0;
+}
 .nav {
+	.mobile-menu {
+		display: none;
+		position: absolute;
+		top: 35%;
+		right: 15%;
+		text-align: center;
+		i {
+			position: absolute;
+			font-size: 2rem;
+		}
+	}
 	.toggle-container {
 		display: none;
 	}
