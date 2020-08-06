@@ -262,6 +262,14 @@
 			z-index: 999999;
 			text-align: center;
 			border-radius: 0 0 10px 10px;
+			&.light {
+				background-color: $primary-color;
+				li {
+					a {
+						color: $alt-color;
+					}
+				}
+			}
 			li {
 				align-self: center;
 				a {
@@ -275,6 +283,9 @@
 		}
 	}
 	nav.nav {
+		&.light {
+			color: $alt-color;
+		}
 		.mobile-menu {
 			display: block;
 			.hamburger.showMenu {
