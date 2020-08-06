@@ -195,13 +195,57 @@
 	section.contact {
 		clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
 		& .contact-info {
-			transform: translate(-30%, -30%);
+			display: none;
 			& a {
 				font-size: 0.8rem;
 			}
 		}
+		.contact-intro {
+			width: 100vw;
+			p {
+				margin: auto;
+			}
+		}
 		& form {
-			transform: translateX(25%);
+			width: 75vw;
+			transform: translateX(0);
+			& .form-content {
+				width: 100%;
+			}
+		}
+	}
+
+	footer.footer {
+		display: block;
+		color: $primary-color;
+		font-weight: 400;
+		font-size: 0.8rem;
+		position: relative;
+		background-color: $secondary-color;
+		box-shadow: 0 0 25px $alt-color;
+		&.light {
+			background-color: $alt-color;
+		}
+		& .footer-content {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 2rem;
+			padding: 1.5rem 0;
+			& .footer-left {
+				display: flex;
+				i {
+					margin-left: 2rem;
+				}
+				& p:nth-of-type(2) {
+					margin-left: 2rem;
+				}
+			}
+		}
+		& i {
+			color: $primary-color;
+			padding-top: 0rem;
+			margin: 0 0.5rem;
+			font-size: 1rem;
 		}
 	}
 
@@ -413,46 +457,45 @@
 				width: 90vw;
 			}
 		}
-		& .contact-info {
-			display: none;
-		}
-		& form {
-			width: 92vw;
-			transform: translateX(0);
-			& .form-content {
-				width: 100%;
+		& .form {
+			width: 95vw;
+			.name-email {
+				flex-direction: column;
+				div.name {
+					margin-bottom: 2.5rem;
+					input {
+						width: 100%;
+					}
+				}
+				div.email {
+					margin-left: 0;
+					input {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
 
 	footer.footer {
-		display: block;
-		color: $primary-color;
-		font-weight: 400;
-		font-size: 0.8rem;
-		position: relative;
-		background-color: $secondary-color;
-		box-shadow: 0 0 25px $alt-color;
-		&.light {
-			background-color: $alt-color;
-		}
-		& .footer-content {
-			display: flex;
-			justify-content: space-between;
-			margin: 0 2rem;
-			padding: 1.5rem 0;
-			& .footer-left {
-				display: flex;
-				& p:nth-of-type(2) {
-					margin-left: 2rem;
+		.footer-content {
+			margin: 0 1rem;
+			.footer-left {
+				flex-direction: column;
+				a {
+					font-size: 0.75rem;
+				}
+				p {
+					font-size: 0.75rem;
+				}
+				i {
+					margin-left: 0;
 				}
 			}
-		}
-		& i {
-			color: $primary-color;
-			padding-top: 0rem;
-			margin: 0 0.5rem;
-			font-size: 1rem;
+			.footer-right {
+				align-self: center;
+				margin: 0.5rem 0;
+			}
 		}
 	}
 }
