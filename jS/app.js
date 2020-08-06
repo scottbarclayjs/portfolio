@@ -64,11 +64,6 @@ function shapesRotationRandomizer(arr) {
 // Replaces overlay when the user navigates away from header
 for (let card of projectCards) {
 	card.addEventListener('click', () => {
-		// if (window.innerWidth < 420) {
-		// 	for (let link of projectLink) {
-		// 		link.style.display = 'none';
-		// 	}
-		// }
 		projectsOverlay.classList.remove('showOverlay');
 		projectsOverlay.classList.add('hideOverlay');
 		for (let card of projectCards) {
@@ -89,11 +84,6 @@ for (let card of projectCards) {
 		for (let category of projectCategory) {
 			category.style.display = 'none';
 		}
-		// if (window.innerWidth < 420) {
-		// 	for (let link of projectLink) {
-		// 		link.style.display = 'none';
-		// 	}
-		// }
 	});
 }
 
@@ -118,6 +108,18 @@ for (let i = 0; i < projectCategory.length; i++) {
 	});
 }
 
+// List overlay arrow animation
+
+const upArrow = document.querySelector('.upArrow');
+
+arrowUp();
+function arrowUp() {
+	upArrow.classList.toggle('moveUp');
+	upArrow.classList.toggle('moveDown');
+}
+
+let aU = setInterval(arrowUp, 1000);
+
 const imageLinks = document.querySelectorAll('.project-category a');
 
 // Mobile: scroll to window when project category is selected
@@ -125,7 +127,7 @@ const imageLinks = document.querySelectorAll('.project-category a');
 if (window.innerWidth < 420) {
 	for (let card of projectCards) {
 		card.addEventListener('click', () => {
-			window.scrollTo(0, 1075);
+			window.scrollTo(0, 1000);
 		});
 	}
 	navLinks[0].addEventListener('click', (e) => {
@@ -145,20 +147,6 @@ if (window.innerWidth < 420) {
 		window.scrollTo(0, 6700);
 	});
 }
-
-// Hide project links initially on mobile
-// if (window.innerWidth < 420) {
-// 	for (let link of projectLink) {
-// 		link.style.display = 'none';
-// 	}
-// 	for (let img of projectThumb) {
-// 		img.addEventListener('touchend', () => {
-// 			for (let link of projectLink) {
-// 				link.style.display = 'block';
-// 			}
-// 		});
-// 	}
-// }
 
 // Dark mode/Light Mode
 

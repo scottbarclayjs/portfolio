@@ -350,6 +350,9 @@
 				z-index: 1999;
 				box-shadow: 0 25px 25px -15px $box-shadow;
 				border: none;
+				.overlay-content {
+					display: none;
+				}
 				&.hideOverlay {
 					height: 0px;
 					padding: 0 50%;

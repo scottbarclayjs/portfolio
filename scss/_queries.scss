@@ -346,6 +346,36 @@
 		.header-main {
 			.header-card-list {
 				padding: 0;
+				.list-overlay {
+					.overlay-content {
+						display: block;
+						color: $primary-color;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						&.light {
+							color: $alt-color;
+						}
+						i {
+							font-size: 2rem;
+							&.moveUp {
+								transform: translateY(-15px) scale(1.1);
+								transition: all 1s;
+							}
+							&.moveDown {
+								transform: translateY(0) scale(1);
+								transition: all 1s;
+							}
+						}
+					}
+					&.hideOverlay {
+						.overlay-content {
+							opacity: 0;
+							transition: all 0.5s;
+						}
+					}
+				}
 				& div.project-category {
 					&.utilities {
 						i:nth-of-type(1) {
