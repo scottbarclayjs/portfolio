@@ -5,9 +5,8 @@
 // =================================
 // ======== Nav Section =========
 // =================================
-div.mobile-menu-links {
-	position: absolute;
-	opacity: 0;
+.mobile-menu-links {
+	display: none;
 }
 .nav {
 	.mobile-menu {
@@ -39,7 +38,7 @@ div.mobile-menu-links {
 	overflow-y: hidden;
 	top: 0;
 	left: -12.75vw;
-	z-index: 998999 !important;
+	z-index: 999999 !important;
 	&.light {
 		background-color: $primary-color;
 		color: $secondary-color;

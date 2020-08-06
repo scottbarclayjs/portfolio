@@ -235,12 +235,12 @@
 
 @media screen and (max-width: 415px) {
 	div.mobile-menu-links {
+		display: block;
 		position: fixed;
-		top: 0;
-		left: 50%;
+		width: 100%;
 		&.showMenu {
 			opacity: 1;
-			z-index: 999999;
+			z-index: 999998;
 			transition: all 0.7s;
 		}
 		&.hideMenu {
@@ -252,9 +252,10 @@
 			position: absolute;
 			display: flex;
 			flex-direction: column;
-			top: 6rem;
+			top: 15vh;
 			left: 50%;
-			background-color: $alt-color;
+			background-color: $secondary-color;
+			box-shadow: 0 2px 15px $alt-color;
 			width: 100vw;
 			transform: translateX(-50%);
 			align-items: center;
@@ -276,7 +277,6 @@
 	nav.nav {
 		.mobile-menu {
 			display: block;
-
 			.hamburger.showMenu {
 				opacity: 0;
 				transform: rotate(-360deg);
