@@ -362,6 +362,21 @@
 				}
 			}
 			& .project-category {
+				&.utilities {
+					i {
+						display: none;
+					}
+				}
+				&.websites {
+					i {
+						display: none;
+					}
+				}
+				&.games {
+					h4 {
+						max-width: 15rem;
+					}
+				}
 				height: 100%;
 				display: none;
 				flex-direction: column;

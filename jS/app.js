@@ -64,11 +64,11 @@ function shapesRotationRandomizer(arr) {
 // Replaces overlay when the user navigates away from header
 for (let card of projectCards) {
 	card.addEventListener('click', () => {
-		if (window.innerWidth < 420) {
-			for (let link of projectLink) {
-				link.style.display = 'none';
-			}
-		}
+		// if (window.innerWidth < 420) {
+		// 	for (let link of projectLink) {
+		// 		link.style.display = 'none';
+		// 	}
+		// }
 		projectsOverlay.classList.remove('showOverlay');
 		projectsOverlay.classList.add('hideOverlay');
 		for (let card of projectCards) {
@@ -89,11 +89,11 @@ for (let card of projectCards) {
 		for (let category of projectCategory) {
 			category.style.display = 'none';
 		}
-		if (window.innerWidth < 420) {
-			for (let link of projectLink) {
-				link.style.display = 'none';
-			}
-		}
+		// if (window.innerWidth < 420) {
+		// 	for (let link of projectLink) {
+		// 		link.style.display = 'none';
+		// 	}
+		// }
 	});
 }
 
@@ -147,18 +147,18 @@ if (window.innerWidth < 420) {
 }
 
 // Hide project links initially on mobile
-if (window.innerWidth < 420) {
-	for (let link of projectLink) {
-		link.style.display = 'none';
-	}
-	for (let img of projectThumb) {
-		img.addEventListener('touchend', () => {
-			for (let link of projectLink) {
-				link.style.display = 'block';
-			}
-		});
-	}
-}
+// if (window.innerWidth < 420) {
+// 	for (let link of projectLink) {
+// 		link.style.display = 'none';
+// 	}
+// 	for (let img of projectThumb) {
+// 		img.addEventListener('touchend', () => {
+// 			for (let link of projectLink) {
+// 				link.style.display = 'block';
+// 			}
+// 		});
+// 	}
+// }
 
 // Dark mode/Light Mode
 
