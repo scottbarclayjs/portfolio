@@ -409,7 +409,10 @@
 		& .header-main #mobile-instructions {
 			display: block;
 			margin-bottom: 0.5rem;
-			color: $alt-color;
+			color: $primary-color;
+			&.light {
+				color: $secondary-color;
+			}
 		}
 		.header-main {
 			.header-card-list {
