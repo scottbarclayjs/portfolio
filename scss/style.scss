@@ -610,7 +610,8 @@
 		max-width: 50rem;
 		color: $primary-color;
 		a {
-			color: $alt-color;
+			color: $primary-color;
+			text-decoration: underline;
 		}
 	}
 	h2 {
