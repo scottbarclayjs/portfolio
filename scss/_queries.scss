@@ -361,10 +361,12 @@
 							font-size: 2rem;
 							&.moveUp {
 								transform: translateY(-15px) scale(1.1);
+								text-shadow: 0 15px 10px $alt-color;
 								transition: all 1s;
 							}
 							&.moveDown {
 								transform: translateY(0) scale(1);
+								text-shadow: none;
 								transition: all 1s;
 							}
 						}
