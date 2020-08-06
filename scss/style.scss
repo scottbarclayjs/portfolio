@@ -834,7 +834,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 65%;
+		height: 60%;
+		font-size: 1rem;
 		& .contact-links {
 			display: flex;
 			flex-direction: column;
@@ -844,8 +845,8 @@
 				color: $primary-color;
 			}
 			& i {
-				font-size: 1.5rem;
-				margin-right: 2rem;
+				font-size: 1.25rem;
+				margin-right: 1rem;
 				color: $primary-color;
 			}
 		}
@@ -906,8 +907,7 @@
 						padding: 0.5rem 1rem;
 						color: $primary-color;
 						background-color: transparent;
-						border: none;
-						border-bottom: 1px solid $primary-color;
+						border: 1px solid $primary-color;
 					}
 				}
 			}
@@ -922,8 +922,7 @@
 					padding: 0.5rem 1rem;
 					color: $primary-color;
 					background-color: transparent;
-					border: none;
-					border-bottom: 1px solid $primary-color;
+					border: 1px solid $primary-color;
 				}
 			}
 			& .message {
@@ -937,12 +936,12 @@
 					padding: 0.5rem 1rem;
 					color: $primary-color;
 					background-color: transparent;
-					border: none;
-					border-bottom: 1px solid $primary-color;
+					border: 1px solid $primary-color;
 				}
 			}
 			& .submit {
 				width: 50%;
+				text-align: left;
 				& button {
 					padding: 0.75rem 3rem;
 					font-size: 1rem;
@@ -978,7 +977,7 @@
 #name.invalid,
 #email.invalid,
 #message.invalid {
-	border-bottom: 1px solid red;
+	border: 1px solid red;
 }
 
 .footer {
