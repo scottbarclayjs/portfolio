@@ -40,7 +40,7 @@
 	overflow-y: hidden;
 	top: 0;
 	left: -12.75vw;
-	z-index: 999999 !important;
+	z-index: 10 !important;
 	&.light {
 		background-color: $primary-color;
 		color: $secondary-color;
@@ -155,7 +155,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 99999;
+	z-index: 9;
 	background: rgba(17, 17, 17, 0.97);
 	&.light {
 		background-color: rgba(250, 250, 250, 0.95);
@@ -232,7 +232,7 @@
 		padding: 200px;
 		background-color: $secondary-color;
 		border-radius: 50%;
-		z-index: -99;
+		z-index: -1;
 	}
 }
 
@@ -245,7 +245,7 @@
 	box-shadow: 0 20px 25px -10px $alt-color;
 	max-width: 70rem;
 	margin: 0rem auto;
-	z-index: 99999;
+	z-index: 9;
 	& .header-head {
 		max-width: 33rem;
 		margin-bottom: 2.5rem;
@@ -353,7 +353,7 @@
 				background: $secondary-color;
 				background-size: cover;
 				border-radius: 1rem 1rem 0 0;
-				z-index: 1999;
+				z-index: 8;
 				box-shadow: 0 25px 25px -15px $box-shadow;
 				border: none;
 				.overlay-content {
@@ -446,7 +446,7 @@
 					}
 					&.chosenProject + a,
 					&.chosenProject + a + a {
-						z-index: 2;
+						z-index: 1;
 						opacity: 0.7;
 						transition: all 0.6;
 						&:hover {
@@ -490,7 +490,7 @@
 		border: 2px solid #576d7b;
 		border-radius: 35px;
 		position: relative;
-		z-index: 9999;
+		z-index: 9;
 		&:hover {
 			cursor: pointer;
 		}
@@ -826,7 +826,7 @@
 		transform: translate(-50%, -30%);
 		background-color: $alt-color;
 		color: $primary-color;
-		z-index: 9999;
+		z-index: 8;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -866,7 +866,7 @@
 		border: 1px solid $alt-color;
 		border-radius: 25px;
 		box-shadow: 0 0 30px $box-shadow;
-		z-index: 99;
+		z-index: 7;
 		color: $primary-color;
 		background-color: $secondary-color;
 		width: 50vw;
