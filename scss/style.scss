@@ -21,7 +21,9 @@
 		}
 	}
 	.toggle-container {
-		display: none;
+		display: absolute;
+		top: 25%;
+		right: 5rem;
 	}
 	height: 100vh;
 	width: 15vw;
@@ -472,73 +474,62 @@
 	margin: 0.5rem 0;
 }
 
-// Dark mode toggler
+// Dark mode / light mode toggler
 
 .toggle-container {
 	position: absolute;
-	top: 3rem;
-	right: 3rem;
-	display: block;
-}
-
-.toggle {
-	height: 35px;
-	width: 70px;
-	padding: 17.5px 35px;
-	background-color: rgba(0, 0, 0, 0.377);
-	border: 2px solid #576d7b;
-	border-radius: 35px;
-	position: relative;
-	z-index: 9999;
-}
-
-.toggle:hover {
-	cursor: pointer;
-}
-
-.toggle.light {
-	background-color: rgb(240, 240, 240);
-	border: 2px solid $alt-color;
-}
-
-.toggle .fa-sun {
-	position: absolute;
-	top: 50%;
-	left: 33.3333%;
-	transform: translate(-70%, -50%);
-	color: $alt-color;
-}
-
-.toggle .fa-moon {
-	position: absolute;
-	top: 50%;
-	right: 33.3333%;
-	transform: translate(70%, -50%);
-	color: #576d7b;
-}
-
-.toggle-overlay {
-	height: 70%;
-	width: 35%;
-	position: absolute;
-	top: 50%;
-	left: 11%;
-	transform: translateY(-50%);
-	border-radius: 50%;
-}
-
-.toggle.light .toggle-overlay {
-	background-color: rgb(240, 240, 240);
-	box-shadow: 0 0 5px $alt-color;
-	transition: all 0.7s;
-	animation: light 0.7s forwards;
-}
-
-.toggle.dark .toggle-overlay {
-	background-color: black;
-	box-shadow: 0 0 5px #576d7b;
-	transition: all 0.7s;
-	animation: dark 0.7s forwards;
+	.toggle {
+		height: 35px;
+		width: 70px;
+		padding: 17.5px 35px;
+		background-color: rgba(0, 0, 0, 0.377);
+		border: 2px solid #576d7b;
+		border-radius: 35px;
+		position: relative;
+		z-index: 9999;
+		&:hover {
+			cursor: pointer;
+		}
+		&.light {
+			background-color: rgb(240, 240, 240);
+			border: 2px solid $alt-color;
+		}
+		.fa-sun {
+			position: absolute;
+			top: 50%;
+			left: 33.3333%;
+			transform: translate(-70%, -50%);
+			color: $alt-color;
+		}
+		.fa-moon {
+			position: absolute;
+			top: 50%;
+			right: 33.3333%;
+			transform: translate(70%, -50%);
+			color: #576d7b;
+		}
+		.toggle-overlay {
+			height: 70%;
+			width: 35%;
+			position: absolute;
+			top: 50%;
+			left: 11%;
+			transform: translateY(-50%);
+			border-radius: 50%;
+		}
+		&.light .toggle-overlay {
+			background-color: rgb(240, 240, 240);
+			box-shadow: 0 0 5px $alt-color;
+			transition: all 0.7s;
+			animation: light 0.7s forwards;
+		}
+		&.dark .toggle-overlay {
+			background-color: black;
+			box-shadow: 0 0 5px #576d7b;
+			transition: all 0.7s;
+			animation: dark 0.7s forwards;
+		}
+	}
 }
 
 @keyframes light {
