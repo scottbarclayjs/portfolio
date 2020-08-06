@@ -132,13 +132,14 @@
 		}
 		& .nav-name {
 			height: 100%;
-			width: 50px;
-			background-color: $primary-color;
+			width: 25vw;
+			background-color: $alt-color;
 			box-shadow: none;
 			& .name {
-				font-size: 1.35rem;
-				color: $secondary-color;
+				font-size: 1.75rem;
+				color: $primary-color;
 				box-shadow: none;
+				padding: 2vh 0 0 0;
 			}
 		}
 	}
@@ -316,12 +317,6 @@
 			height: 100%;
 			& .nav-name {
 				height: 100%;
-				width: 40px;
-				& .name {
-					height: 100%;
-					font-size: 0.9rem;
-					padding: 0.75rem 0.5rem 0 0.5rem;
-				}
 			}
 		}
 		& .nav-middle {
