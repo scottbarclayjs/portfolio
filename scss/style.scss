@@ -778,20 +778,20 @@
 					.email {
 						input {
 							color: $secondary-color;
-							border-bottom: 1px solid $secondary-color;
+							border: 1px solid $secondary-color;
 						}
 					}
 				}
 				.company {
 					input {
 						color: $secondary-color;
-						border-bottom: 1px solid $secondary-color;
+						border: 1px solid $secondary-color;
 					}
 				}
 				.message {
 					textarea {
 						color: $secondary-color;
-						border-bottom: 1px solid $secondary-color;
+						border: 1px solid $secondary-color;
 					}
 				}
 				.submit {
