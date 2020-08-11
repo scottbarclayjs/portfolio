@@ -575,8 +575,8 @@
 	margin-left: 2rem;
 	padding: 15rem 0 10rem 0;
 	overflow-x: hidden;
-	overflow-y: hidden;
-	position: relative;
+	// overflow-y: hidden;
+	// position: relative;
 	background: rgba(17, 17, 17, 0.97);
 	&.light {
 		background-color: rgba(250, 250, 250, 0.95);
@@ -631,8 +631,11 @@
 			.book {
 				display: flex;
 				.book-image {
+					width: 45%;
+					max-height: 500px;
 					img {
 						height: 100%;
+						width: 100%;
 					}
 				}
 				.book-info {
